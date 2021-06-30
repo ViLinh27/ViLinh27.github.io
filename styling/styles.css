@@ -4,11 +4,14 @@ body {
   background-color: #dfd0ff;
   font-family: "Nunito", sans-serif;
 }
-
+#projectsList li {
+  list-style-type: none;
+}
 /*
 main color palette
 -#DFD0FF light purple
 -#B99DF4 a little darker purple
+-##9642cc darkest purple
 
 hover/active-color pallette
 -#C1F6E2 light green ish
@@ -20,11 +23,21 @@ hover/active-color pallette
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 300px;
   background-color: #b99df4;
   position: fixed;
   height: 100%;
   overflow: auto;
+}
+.logo-responsive {
+  text-align: center;
+}
+/*add space between the sidebar sections*/
+#resourcesTabs {
+  margin-bottom: 30px;
+}
+#projectTabs {
+  margin-top: 30px;
 }
 
 /* Sidebar links */
@@ -48,10 +61,10 @@ hover/active-color pallette
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
+.content {
+  margin-left: 300px;
   padding: 1px 16px;
-  height: 1000px;
+  height: 100%;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
