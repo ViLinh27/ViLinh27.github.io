@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="../../styling/styles.css">
+        <link rel="stylesheet" href="../../styling/modal.css">
     </head>
 
     <body>
@@ -13,7 +14,8 @@
                 <img src="../../assets/dogLOGO.png" alt="dog logo" width="200px">
             </div>
         
-            <h1 style="padding: 5px 16px;">Vi-Linh Nguyen</h1>
+            <h1 id="myBtn" style="padding: 5px 16px;">Vi-Linh Nguyen</h1>
+
             <div id="resourcesTabs">
                 <a class="active" href="../../index.html">Work</a>
                 <a href="../2about/about.html">About</a>
@@ -26,9 +28,19 @@
             </div>
         </div>
 
+        <!--modal for name pronounciation-->
+        <div id="myModal" class="modal">
+            <!--modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Pronounced: VEE LIN WIN</p>
+            </div>
+        </div>
+
         <!-- Page content -->
         <div class="content">
         </div>
-
+        
+        <script src="../../styling/js-effects/modal.js"></script>
     </body>
 </html>

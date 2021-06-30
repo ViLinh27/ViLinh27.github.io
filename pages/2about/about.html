@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="../../styling/styles.css">
+    <link rel="stylesheet" href="../../styling/modal.css">
+    <link rel="stylesheet" href="../../styling/resume.css">
 </head>
 
 <body>
@@ -14,7 +16,8 @@
             <img src="../../assets/dogLOGO.png" alt="dog logo" width="200px">
         </div>
     
-        <h1 style="padding: 5px 16px;">Vi-Linh Nguyen</h1>
+        <h1 id="myBtn" style="padding: 5px 16px;">Vi-Linh Nguyen</h1>
+        
         <div id="resourcesTabs">
             <a class="active" href="../../index.html">Work</a>
             <a href="./about.html">About</a>
@@ -26,6 +29,15 @@
             <a href="../1work/art.html">Art</a>
         </div>
     </div>
+
+    <!--modal for name pronounciation-->
+    <div id="myModal" class="modal">
+        <!--modal content-->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Pronounced: VEE LIN WIN</p>
+        </div>
+    </div>
     
     <!-- Page content -->
     <div class="content">
@@ -33,13 +45,175 @@
             <div class="flex-child image">
                 <img src="../../assets/mepic.jpg" 
                 alt="Vi-Linh Nguyen"
-                width="40%"
-                height="40%">
+                width="30%"
+                height="30%">
             </div>
+
             <div class="flex-child description">
+                <h2>Hello/Salut!</h2>
+                <p>
+                    Vi-Linh is a computer science studying for her masters with a bachelors focused in animation. She is originally from Canada but has studied in the United States for a while now.</p>
+            </div>
+
+            <div class="flex-child cv">
+                <p>
+                    Button for download here
+                </p>
+
+                <!--experience-->
+                <div class="timeline">
+                    <h2>Experience</h2>
+                    <!--event-->
+                    <div class="container left">
+                        <div class="content">
+                            <h3>Front End Developer</h3>
+                            <h4>SuperWorld ()</h4>
+                            <p>
+                            <ul>
+                                <li>
+                                    my duties...
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!--event-->
+                    <div class="container right">
+                        <div class="content">
+                            <h3>Henna Artist/Cashier</h3>
+                            <h4>Sitara Om ()</h4>
+                            <p>
+                            <ul>
+                                <li>
+                                    my duties...
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!--event-->
+                    <div class="container left">
+                        <div class="content">
+                            <h3>Remote Animation Intern</h3>
+                            <h4>Happy Mercs ()</h4>
+                            <p>
+                            <ul>
+                                <li>
+                                    my duties...
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!--event-->
+                    <div class="container right">
+                        <div class="container">
+                            <h3>Buddy Mentor</h3>
+                            <h4>Columbia College Chicago ()</h4>
+                            <p>
+                                <ul>
+                                    <li>
+                                        my duties...
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!--event-->
+                    <div class="container left">
+                        <div class="container">
+                            <h3>Sales Associate</h3>
+                            <h4>Saffron Red ()</h4>
+                            <p>
+                                <ul>
+                                    <li>
+                                        my duties...
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                <!--skills-->
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div id="languages">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>
+                                French
+                            </li>
+                            <li>
+                                Vietnamese
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="programming">
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>
+                                java
+                            </li>
+                            <li>
+                                c#
+                            </li>
+                            <li>
+                                python
+                            </li>
+                            <li>
+                                IDLE
+                            </li>
+                            <li>Eclipse</li>
+                            <li>Visual studio</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="webdev">
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+
+                    <div id="art-skills">
+                        <h3>Art</h3>
+                        <ul>
+                            <li>adobe illustrator</li>
+                            <li>adobe photoshop</li>
+                            <li>autodesk maya</li>
+                            <li>Zbrush</li>
+                        </ul>
+                    </div>
+
+                    <div id="office-skills">
+                        <h3>Logistical</h3>
+                        <ul>
+                            <li>
+                                microsoft word
+                            </li>
+                            <li>
+                                microsoft powerpoint
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                <!--education-->
+                <div class="education">
+
+                </div>
+
             </div>
         </div>
     </div>
+
+    <script src="../../styling/js-effects/modal.js"></script>
 </body>
 
 </html>
