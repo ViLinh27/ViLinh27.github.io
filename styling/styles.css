@@ -1,28 +1,27 @@
+/*global styles*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+body {
+  background-color: #dfd0ff;
+  font-family: "Nunito", sans-serif;
+}
+
 /*
 main color palette
 -#DFD0FF light purple
 -#B99DF4 a little darker purple
--#673CC2 way darker purple
 
 hover/active-color pallette
 -#C1F6E2 light green ish
 -#7DD7B5 a little darker
--# darker green
+-#229760 darker green
 */
-
-/*global styles*/
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
-.body {
-  background-color: #dfd0ff;
-  font-family: "Baloo Tammudu 2", cursive;
-}
 
 /* The side navigation menu */
 .sidebar {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #b99df4;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -38,14 +37,14 @@ hover/active-color pallette
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #04aa6d;
-  color: white;
+  background-color: #c1f6e2;
+  color: #229760;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+  background-color: #c1f6e2;
+  color: #229760;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
