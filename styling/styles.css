@@ -43,7 +43,7 @@ hover/active-color pallette
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 250px;
   background-color: #b99df4;
   position: fixed;
   height: 100%;
@@ -72,7 +72,7 @@ hover/active-color pallette
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 .content {
-  margin-left: 300px;
+  margin-left: 250px;
   padding: 1px 16px;
   height: 100%;
 }
