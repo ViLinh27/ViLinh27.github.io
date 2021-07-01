@@ -7,6 +7,26 @@ body {
 #projectsList li {
   list-style-type: none;
 }
+.logo-responsive {
+  text-align: center;
+}
+/*add space between the sidebar sections*/
+#resourcesTabs {
+  margin-bottom: 30px;
+}
+#projectTabs {
+  margin-top: 30px;
+}
+
+/*social icons*/
+#socials a {
+  text-align: left;
+}
+#insta,
+#twitter,
+#linkedin {
+  font-size: 16px;
+}
 /*
 main color palette
 -#DFD0FF light purple
@@ -28,16 +48,6 @@ hover/active-color pallette
   position: fixed;
   height: 100%;
   overflow: auto;
-}
-.logo-responsive {
-  text-align: center;
-}
-/*add space between the sidebar sections*/
-#resourcesTabs {
-  margin-bottom: 30px;
-}
-#projectTabs {
-  margin-top: 30px;
 }
 
 /* Sidebar links */

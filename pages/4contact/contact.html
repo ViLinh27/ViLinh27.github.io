@@ -4,6 +4,8 @@
 <head>
     <link rel="stylesheet" href="../../styling/styles.css">
     <link rel="stylesheet" href="../../styling/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styling/contact.css">
 </head>
 
 <body>
@@ -26,6 +28,13 @@
             <a href="../1work/games.html">Games</a>
             <a href="../1work/art.html">Art</a>
         </div>
+
+        <div id="socials">
+            <h2>Follow me!</h2>
+            <a href="https://www.instagram.com/linh_is_tibia/"><i class="fa fa-instagram" id="insta"></i></a>
+            <a href="https://twitter.com/vilinh27"><i class="fa fa-twitter" id="twitter"></i></a>
+            <a href="https://www.linkedin.com/in/vilinhnguyen27/"><i class="fa fa-linkedin" id="linkedin"></i></a>
+        </div>
     </div>
 
     <!--modal for name pronounciation-->
@@ -39,6 +48,37 @@
     
     <!-- Page content -->
     <div class="content">
+
+        <!--contact form-->
+        <div class="container">
+            <form action="action_page.php">
+        
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    
+                    <option value="malaysia">Malaysia</option>
+                    <option value="vietnam">Vietnam</option>
+
+                    <option value="australia">Australia</option>
+                    <option value="unitedkingdom">United Kingdom</option>
+                </select>
+        
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+                <input type="submit" value="Submit">
+        
+            </form>
+        </div>
+
     </div>
 
     <script src="../../styling/js-effects/modal.js"></script>
