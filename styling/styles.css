@@ -29,7 +29,7 @@ body {
 }
 
 .img-responsive {
-  margin: 15px 0;
+  margin: 15px;
 }
 /*
 main color palette
@@ -41,6 +41,9 @@ hover/active-color pallette
 -#C1F6E2 light green ish
 -#7DD7B5 a little darker
 -#229760 darker green
+
+timeline
+-#FFF0D7 light orange
 */
 
 /* The side navigation menu */
