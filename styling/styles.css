@@ -12,20 +12,23 @@ body {
 }
 /*add space between the sidebar sections*/
 #resourcesTabs {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #projectTabs {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /*social icons*/
 #socials a {
   text-align: left;
 }
+#socialsmenu {
+  display: inline;
+}
 #insta,
 #twitter,
 #linkedin {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .img-responsive {
@@ -55,6 +58,7 @@ timeline
   position: fixed;
   height: 100%;
   overflow: auto;
+  display: inline-block;
 }
 
 /* Sidebar links */
@@ -93,6 +97,10 @@ timeline
   }
   .sidebar a {
     float: left;
+  }
+
+  #socials {
+    display: inline-block;
   }
   div.content {
     margin-left: 0;
