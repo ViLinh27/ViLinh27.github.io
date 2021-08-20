@@ -9,6 +9,7 @@ body {
 }
 .logo-responsive {
   text-align: center;
+  margin: 0;
 }
 /*add space between the sidebar sections*/
 #resourcesTabs {
@@ -23,12 +24,13 @@ body {
   text-align: left;
 }
 #socialsmenu {
-  display: inline;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
 }
 #insta,
 #twitter,
 #linkedin {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .img-responsive {
