@@ -36,6 +36,16 @@ body {
 .img-responsive {
   margin: 15px;
 }
+.download-resume {
+  background-color: #c1f6e2;
+  color: #229760;
+  padding: 15px;
+  border: none;
+  font-size: 15px;
+}
+.download-resume:hover {
+  background-color: #c1f6e2;
+}
 /*
 main color palette
 -#DFD0FF light purple
