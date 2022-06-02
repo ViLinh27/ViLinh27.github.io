@@ -3,9 +3,13 @@
 body {
   background-color: #dfdaf4;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
 /*----- universal -----*/
+main {
+  margin: auto;
+}
 /*navbar*/
 .navbar {
   background-color: #c0b7e5;
@@ -15,8 +19,9 @@ body {
 }
 /*end of navbar*/
 /*footer*/
-.footer {
-  background-color: #c0b7e5;
+#footer {
+  display: flex;
+  justify-content: center;
 }
 .icons {
   height: 3rem;
@@ -26,9 +31,25 @@ body {
 /*----- end of universal -----*/
 
 /*----- home page -----*/
+#mainhome {
+  margin-bottom: 13rem;
+}
+#introcontent {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
 .doglogo {
   height: 30rem;
   width: 30rem;
+}
+#project-grid {
+  margin: 10rem 0;
+}
+#project-grid-item {
+  background-color: #c0b7e5;
+  height: 36rem;
+  width: 50%;
 }
 /*----- end home page ----- */
 

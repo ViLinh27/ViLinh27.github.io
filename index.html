@@ -18,7 +18,7 @@
     <!--custom css-->
     <link rel="stylesheet" type="text/css" href="./styling/styles.css">
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-default">
       <!-- <div class="container-fluid"> -->
         <div class="navbar-header">
@@ -32,22 +32,57 @@
       <!-- </div> -->
     </nav>
 
-    <div class="container p-12">
-      <div class="row">
+    <!--main content-->
+    <main class="container p-1" id="mainhome">
+      <!--intro-->
+      <div class="row" id="introcontent">
         <div class="col-lg-12 col-md-12 mb-12 mb-md-0">
           <img class="doglogo" src="./assets/dogLOGO.png" alt="logo">
           <h3>Hello!</h3>
           <h4>I do code and art stuff</h4>
         </div>
-        <div class="col">
-          project grid <br />
+      </div>
+      <!--end of intro-->
+
+      <!--project grid-->
+      <div class="container p-2">
+        <div id="project-grid" class="row text-center">
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+           <a href="#">
+             <img src="" alt="time to talk"/>
+            </a>
+          </div>
+
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="#">
+              <img src="" alt="Cartridge Collector" />
+            </a>
+          </div>
+
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="#"><img src="" alt="Twitter Bookmarks" /></a>
+          </div>
+
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="#"><img src="" alt="HellGhost"/></a>
+          </div>
+
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="#"><img src="" alt="carrd.co clone"></a>
+          </div>
+
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="#">ios booktracker app</a>
+          </div>
         </div>
       </div>
-    </div><!--end of container-->
+      <!--end of project grid-->
+    </main><!--end of main container-->
 
-    <div class="footer navbar-fixed-bottom">
+    <!--footer-->
+    <div class="navbar navbar-fixed-bottom" id="footer">
       <!--Grid ctonainer-->
-      <div class="container p-3">
+      <div class="container p-3 text-center">
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
@@ -56,23 +91,23 @@
             <p>vilinh27@gmail.com</p>
           </div>
           <!--Grid column-->
-          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0 ">
             <h4>More Projects</h4>
-            <a href="#"><p>Github</p></a>
-            <a href="#"><p>Codepen</p></a>
-            <a href="#"><p>itch.io</p></a>
+            <a href="https://github.com/ViLinh27"><p>Github</p></a>
+            <a href="https://codepen.io/vilinh27"><p>Codepen</p></a>
+            <a href="https://linh-is-tibia.itch.io/"><p>itch.io</p></a>
           </div>
           <!--Grid column-->
           <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
             <h4>Follow Me</h4>
-            <img class="icons" src="./assets/linkedin-icon.png" alt="linkedin"/>
-            <img class="icons" src="./assets/twitter-icon.png" alt="twitter" />
-            <img class="icons" src="./assets/insta-icon.png" alt="instagram" />
+            <a href="https://www.linkedin.com/in/vilinhnguyen27/"><img class="icons" src="./assets/linkedin-icon.png" alt="linkedin"/></a>
+            <a href="https://twitter.com/vilinh27"><img class="icons" src="./assets/twitter-icon.png" alt="twitter" /></a>
+            <a href="https://www.instagram.com/linh_is_tibia/"><img class="icons" src="./assets/insta-icon.png" alt="instagram" /></a>
           </div>
-
         </div>
       </div>
     </div>
+    <!--end of footer-->
     
   </body>
 </html>
