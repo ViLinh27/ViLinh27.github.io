@@ -10,13 +10,26 @@ body {
 .navbar {
   background-color: #c0b7e5;
 }
+.nav {
+  padding: 0 4rem;
+}
 /*end of navbar*/
 /*footer*/
+.footer {
+  background-color: #c0b7e5;
+}
+.icons {
+  height: 3rem;
+  width: 3rem;
+}
 /*end of footer*/
 /*----- end of universal -----*/
 
 /*----- home page -----*/
-
+.doglogo {
+  height: 30rem;
+  width: 30rem;
+}
 /*----- end home page ----- */
 
 /*----- projects page -----*/

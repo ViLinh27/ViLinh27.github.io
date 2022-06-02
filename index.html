@@ -20,22 +20,24 @@
   </head>
   <body>
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <!-- <div class="container-fluid"> -->
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Vi-Linh Nguyen</a>
         </div>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">About</a></li>
         </ul>
-      </div>
+      <!-- </div> -->
     </nav>
 
-    <div class="container">
+    <div class="container p-12">
       <div class="row">
-        <div class="col">
-          logo <br />
+        <div class="col-lg-12 col-md-12 mb-12 mb-md-0">
+          <img class="doglogo" src="./assets/dogLOGO.png" alt="logo">
+          <h3>Hello!</h3>
+          <h4>I do code and art stuff</h4>
         </div>
         <div class="col">
           project grid <br />
@@ -43,8 +45,33 @@
       </div>
     </div><!--end of container-->
 
-    <div class="footer">
-      footer
+    <div class="footer navbar-fixed-bottom">
+      <!--Grid ctonainer-->
+      <div class="container p-3">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h4>Contact Me</h4>
+            <p>vilinh27@gmail.com</p>
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h4>More Projects</h4>
+            <a href="#"><p>Github</p></a>
+            <a href="#"><p>Codepen</p></a>
+            <a href="#"><p>itch.io</p></a>
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h4>Follow Me</h4>
+            <img class="icons" src="./assets/linkedin-icon.png" alt="linkedin"/>
+            <img class="icons" src="./assets/twitter-icon.png" alt="twitter" />
+            <img class="icons" src="./assets/insta-icon.png" alt="instagram" />
+          </div>
+
+        </div>
+      </div>
     </div>
     
   </body>
