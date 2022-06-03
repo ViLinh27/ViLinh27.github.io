@@ -7,12 +7,21 @@ body {
   margin: 0;
   padding: 0;
 }
-
 /*----- universal -----*/
 main {
   margin: auto;
 }
-
+/*button*/
+.btn-primary {
+  background-color: #c0b7e5;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+}
+.btn-primary:hover {
+  background-color: #a496d9;
+}
+/*end of button*/
 /*navbar*/
 .navbar {
   background-color: #c0b7e5;
@@ -21,19 +30,6 @@ main {
   padding: 0 4rem;
 }
 /*end of navbar*/
-
-/*footer*/
-#footer {
-  display: flex;
-  justify-content: center;
-  margin: 0 0;
-  padding: 0 0;
-}
-.icons {
-  height: 3rem;
-  width: 3rem;
-}
-/*end of footer*/
 
 /*project grid*/
 #project-grid {
@@ -51,6 +47,19 @@ main {
   width: 100%;
 }
 /*end of project grid*/
+
+/*footer*/
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+  padding: 0 0;
+}
+.icons {
+  height: 3rem;
+  width: 3rem;
+}
+/*end of footer*/
 
 /*----- end of universal -----*/
 
@@ -74,5 +83,17 @@ main {
 /*----- end projects page ----- */
 
 /*----- about page -----*/
+#meblurb {
+  width: 45rem;
+  margin: auto auto;
+}
+#cv {
+  width: 90rem;
+  margin: auto auto;
+  padding: auto auto;
+}
+.media {
+  width: 40rem;
+}
 
 /*----- end about page ----- */
