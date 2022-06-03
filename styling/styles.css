@@ -4,12 +4,15 @@ body {
   background-color: #dfdaf4;
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /*----- universal -----*/
 main {
   margin: auto;
 }
+
 /*navbar*/
 .navbar {
   background-color: #c0b7e5;
@@ -18,6 +21,7 @@ main {
   padding: 0 4rem;
 }
 /*end of navbar*/
+
 /*footer*/
 #footer {
   display: flex;
@@ -28,6 +32,24 @@ main {
   width: 3rem;
 }
 /*end of footer*/
+
+/*project grid*/
+#project-grid {
+  margin: 10rem 0;
+}
+#project-grid-item {
+  background-color: #c0b7e5;
+  height: 36rem;
+  width: 50%;
+  padding: 0 0;
+}
+.project-grid-item-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+/*end of project grid*/
+
 /*----- end of universal -----*/
 
 /*----- home page -----*/
@@ -42,14 +64,6 @@ main {
 .doglogo {
   height: 30rem;
   width: 30rem;
-}
-#project-grid {
-  margin: 10rem 0;
-}
-#project-grid-item {
-  background-color: #c0b7e5;
-  height: 36rem;
-  width: 50%;
 }
 /*----- end home page ----- */
 
