@@ -32,7 +32,7 @@ main {
 .nav {
   padding: 0 4rem;
 }
-.active a {
+.active li {
   background-color: #a496d9;
 }
 /*end of navbar*/
