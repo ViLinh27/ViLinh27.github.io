@@ -25,13 +25,42 @@ main {
 /*navbar*/
 .navbar {
   background-color: #c0b7e5;
+  margin: 0 0;
+  padding: 0 0;
+  border: none;
 }
 .nav {
   padding: 0 4rem;
 }
+.active a {
+  background-color: #a496d9;
+}
 /*end of navbar*/
 
 /*project grid*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #a496d9;
+}
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 #project-grid {
   margin: 10rem 0;
 }
@@ -40,6 +69,9 @@ main {
   height: 36rem;
   width: 50%;
   padding: 0 0;
+}
+#project-grid-item:hover .overlay {
+  opacity: 0.7;
 }
 .project-grid-item-img {
   object-fit: cover;
@@ -79,13 +111,18 @@ main {
 /*----- end home page ----- */
 
 /*----- projects page -----*/
-
+.subnav {
+  padding: 0 0;
+  margin: 0 0;
+  background-color: #a496d9;
+  border: none;
+}
 /*----- end projects page ----- */
 
 /*----- about page -----*/
 #meblurb {
   width: 45rem;
-  margin: auto auto;
+  margin: 6rem auto;
 }
 #cv {
   width: 90rem;
