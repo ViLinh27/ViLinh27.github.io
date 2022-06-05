@@ -108,6 +108,7 @@ main {
   height: 30rem;
   width: 30rem;
 }
+
 /*----- end home page ----- */
 
 /*----- projects page -----*/
@@ -117,6 +118,7 @@ main {
   background-color: #a496d9;
   border: none;
 }
+
 /*----- end projects page ----- */
 
 /*----- about page -----*/
@@ -134,3 +136,55 @@ main {
 }
 
 /*----- end about page ----- */
+
+/*----- responsiveness -----*/
+@media screen and (max-width: 1440px) {
+  /*--med desktop--*/
+  #main-home {
+    padding: auto auto;
+  }
+  #project-grid {
+    width: 95%;
+    margin: auto auto;
+  }
+}
+/* @media screen and (max-width: 1000px) {
+  --smaller desktop--
+} */
+@media screen and (max-width: 768px) {
+  /*--tablet--*/
+  #mainhome {
+    padding: auto 0;
+  }
+  #introcontent,
+  #project-grid {
+    margin: auto 18rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  /*--big phone--*/
+  #mainhome {
+    padding: auto 0;
+    margin: auto 0;
+  }
+  #introcontent,
+  #project-grid {
+    margin: auto 10rem;
+  }
+  .doglogo {
+    width: 15rem;
+    height: 15rem;
+  }
+  #project-grid {
+    margin: 5rem 10.5rem;
+  }
+  #project-grid-item {
+    background-color: #c0b7e5;
+    height: 28rem;
+    width: 50%;
+    padding: 0 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  /*--small phone--*/
+}
