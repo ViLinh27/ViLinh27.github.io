@@ -94,6 +94,12 @@ main {
 }
 /*end of footer*/
 
+/*iframes*/
+.iframe-prev {
+  width: 90%;
+  height: 45rem;
+}
+
 /*----- end of universal -----*/
 
 /*----- home page -----*/
