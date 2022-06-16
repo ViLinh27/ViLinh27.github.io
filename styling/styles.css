@@ -17,6 +17,7 @@ main {
   color: black;
   border: none;
   padding: 1rem 2rem;
+  margin-top: 2rem;
 }
 .btn-primary:hover {
   background-color: #a496d9;
