@@ -120,6 +120,19 @@ main {
   border: none;
 }
 
+/*--project descriptions--individual proj--*/
+#project-desc {
+  margin: 3rem 3rem;
+}
+#project-desc-intro {
+  margin: 5rem 3rem;
+  text-align: left;
+}
+#project-desc-block {
+  margin: 6rem 3rem;
+  text-align: left;
+}
+
 /*----- end projects page ----- */
 
 /*----- about page -----*/
