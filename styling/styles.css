@@ -185,6 +185,18 @@ main {
   #back-to-top {
     margin: 5rem 0;
   }
+  /*individual proj*/
+  #project-desc {
+    margin: 3rem 0;
+  }
+  #project-desc-intro {
+    margin: 5rem 3rem;
+    text-align: left;
+  }
+  #project-desc-block {
+    margin: 6rem 3rem;
+    text-align: left;
+  }
 }
 @media screen and (max-width: 425px) {
   /*--big phone--*/
