@@ -138,6 +138,10 @@ main {
   margin: 6rem 3rem;
   text-align: left;
 }
+.ind-proj-text {
+  text-align: left;
+  width: 95%;
+}
 
 /*----- end projects page ----- */
 
