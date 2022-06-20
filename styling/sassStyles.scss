@@ -3,8 +3,9 @@
 body {
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: relative;
     background-color: #dfdaf4;
+    overflow-x:hidden;
 }
 
 .home-intro {
