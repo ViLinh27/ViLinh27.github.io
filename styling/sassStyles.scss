@@ -28,8 +28,8 @@ body {
     padding: 0 0;
 }
 
-.home-intro {
-    /*main header*/
+.home-intro { /*main header*/
+   
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,8 +44,8 @@ body {
     color: black;
 }
 
-.home-intro-subtitle {
-    /*subheader under anim*/
+.home-intro-subtitle {/*subheader under anim*/
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,8 +54,8 @@ body {
     overflow: hidden;
 }
 
-.animcontent {
-    /*animated text*/
+.animcontent {/*animated text*/
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -359,8 +359,8 @@ body {
 @media screen and (max-width: 425px) {}
 
 @media screen and (max-width: 375px) {
-    #dog {
-        /*logo*/
+    #dog { /*logo*/
+       
         position: relative;
         height: 12rem;
         top: 0%;
@@ -368,8 +368,8 @@ body {
         margin: 0 4rem;
     }
 
-    .home-intro {
-        /*main header*/
+    .home-intro {/*main header*/
+        
         position: absolute;
         top: 50%;
         left: 50%;
@@ -385,8 +385,8 @@ body {
         color: black;
     }
 
-    .home-intro-subtitle {
-        /*subheader under anim*/
+    .home-intro-subtitle {/*subheader under anim*/
+        
         position: absolute;
         top: 50%;
         left: 50%;
@@ -396,8 +396,8 @@ body {
         overflow: hidden;
     }
 
-    .animcontent {
-        /*animated text*/
+    .animcontent {/*animated text*/
+        
         position: absolute;
         top: 50%;
         left: 50%;

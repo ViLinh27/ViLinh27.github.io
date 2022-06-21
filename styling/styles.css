@@ -33,8 +33,9 @@ main {
 .nav {
   padding: 0 4rem;
 }
-.active li {
-  background-color: #a496d9;
+.active a{
+  background-color: #a496d9 !important;
+  color: white;
 }
 /*end of navbar*/
 
@@ -230,6 +231,19 @@ main {
     width: 100%;
     padding: 0 0;
   }
+  /*about page*/
+  #meblurb {
+    width: 100%;
+    margin: 5rem auto;
+  }
+  #cv {
+    width: 100%;
+    margin: auto auto;
+    padding: auto auto;
+  }
+  .media {
+    width: 25rem;
+  }
 }
 @media screen and (max-width: 375px) {
   /*--small phone--*/
@@ -239,5 +253,18 @@ main {
   .doglogo {
     width: 12rem;
     height: 12rem;
+  }
+  /*about page*/
+  #meblurb {
+    width: 100%;
+    margin: 4rem auto;
+  }
+  #cv {
+    width: 100%;
+    margin: auto auto;
+    padding: auto auto;
+  }
+  .media {
+    width: 20rem;
   }
 }
