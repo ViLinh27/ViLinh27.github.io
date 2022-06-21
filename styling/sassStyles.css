@@ -330,6 +330,93 @@ body {
     /*helps not stop in between lines*/
     margin: 0;
   }
+  /*animations*/
+  @-webkit-keyframes change {
+    0%,
+    7.5%,
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    12.5%,
+    20% {
+      -webkit-transform: translate3d(0, -20%, 0);
+              transform: translate3d(0, -20%, 0);
+    }
+    25%,
+    32.5% {
+      -webkit-transform: translate3d(0, -40%, 0);
+              transform: translate3d(0, -40%, 0);
+    }
+    37.5%,
+    45% {
+      -webkit-transform: translate3d(0, -60%, 0);
+              transform: translate3d(0, -60%, 0);
+    }
+    50%,
+    57.5% {
+      -webkit-transform: translate3d(0, -80%, 0);
+              transform: translate3d(0, -80%, 0);
+    }
+    62.5%,
+    70% {
+      -webkit-transform: translate3d(0, -60%, 0);
+              transform: translate3d(0, -60%, 0);
+    }
+    75%,
+    82.5% {
+      -webkit-transform: translate3d(0, -40%, 0);
+              transform: translate3d(0, -40%, 0);
+    }
+    87.5%,
+    95% {
+      -webkit-transform: translate3d(0, -20%, 0);
+              transform: translate3d(0, -20%, 0);
+    }
+  }
+  @keyframes change {
+    0%,
+    7.5%,
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    12.5%,
+    20% {
+      -webkit-transform: translate3d(0, -20%, 0);
+              transform: translate3d(0, -20%, 0);
+    }
+    25%,
+    32.5% {
+      -webkit-transform: translate3d(0, -40%, 0);
+              transform: translate3d(0, -40%, 0);
+    }
+    37.5%,
+    45% {
+      -webkit-transform: translate3d(0, -60%, 0);
+              transform: translate3d(0, -60%, 0);
+    }
+    50%,
+    57.5% {
+      -webkit-transform: translate3d(0, -80%, 0);
+              transform: translate3d(0, -80%, 0);
+    }
+    62.5%,
+    70% {
+      -webkit-transform: translate3d(0, -60%, 0);
+              transform: translate3d(0, -60%, 0);
+    }
+    75%,
+    82.5% {
+      -webkit-transform: translate3d(0, -40%, 0);
+              transform: translate3d(0, -40%, 0);
+    }
+    87.5%,
+    95% {
+      -webkit-transform: translate3d(0, -20%, 0);
+              transform: translate3d(0, -20%, 0);
+    }
+  }
 }
 
 /*------------end of index-------------*/
