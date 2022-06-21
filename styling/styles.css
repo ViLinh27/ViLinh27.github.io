@@ -172,6 +172,19 @@ main {
     width: 95%;
     margin: auto auto;
   }
+  /*about page*/
+  #meblurb {
+    width: 70rem;
+    margin: 4rem auto;
+  }
+  #cv {
+    width: 70rem;
+    margin: auto auto;
+    padding: auto auto;
+  }
+  .media {
+    width: 35rem;
+  }
 }
 /* @media screen and (max-width: 1000px) {
   --smaller desktop--
@@ -207,6 +220,20 @@ main {
   #project-desc-block {
     margin: 6rem 3rem;
     text-align: left;
+  }
+  /*about page*/
+  #meblurb {
+    width: 46rem;
+    margin: auto auto;
+  }
+  #cv {
+    width: 46rem;
+    margin: auto auto;
+    padding: auto auto;
+  }
+  .media {
+    width: 30rem;
+    margin: auto auto;
   }
 }
 @media screen and (max-width: 425px) {
