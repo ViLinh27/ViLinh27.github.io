@@ -1,5 +1,6 @@
 /*global styles*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 body {
   background-color: #dfdaf4;
   font-family: "Nunito", sans-serif;
@@ -7,10 +8,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /*----- universal -----*/
 main {
   margin: auto;
 }
+
 /*button*/
 .btn-primary {
   background-color: #c0b7e5;
@@ -19,9 +22,11 @@ main {
   padding: 1rem 2rem;
   margin-top: 2rem;
 }
+
 .btn-primary:hover {
   background-color: #a496d9;
 }
+
 /*end of button*/
 /*navbar*/
 .navbar {
@@ -30,13 +35,16 @@ main {
   padding: 0 0;
   border: none;
 }
+
 .nav {
   padding: 0 4rem;
 }
-.active a{
+
+.active a {
   background-color: #a496d9 !important;
   color: white;
 }
+
 /*end of navbar*/
 
 /*project grid*/
@@ -52,6 +60,7 @@ main {
   transition: 0.5s ease;
   background-color: #a496d9;
 }
+
 .overlay-text {
   color: white;
   font-size: 20px;
@@ -63,23 +72,28 @@ main {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 #project-grid {
   margin: 10rem 0;
 }
+
 #project-grid-item {
   background-color: #c0b7e5;
   height: 36rem;
   width: 50%;
   padding: 0 0;
 }
+
 #project-grid-item:hover .overlay {
   opacity: 0.7;
 }
+
 .project-grid-item-img {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
+
 /*end of project grid*/
 
 /*footer*/
@@ -89,10 +103,12 @@ main {
   margin: 0 0;
   padding: 0 0;
 }
+
 .icons {
   height: 3rem;
   width: 3rem;
 }
+
 /*end of footer*/
 
 /*iframes*/
@@ -107,11 +123,13 @@ main {
 #mainhome {
   margin-bottom: 13rem;
 }
+
 #introcontent {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
+
 .doglogo {
   height: 30rem;
   width: 30rem;
@@ -131,14 +149,17 @@ main {
 #project-desc {
   margin: 3rem 3rem;
 }
+
 #project-desc-intro {
   margin: 5rem 3rem;
   text-align: left;
 }
+
 #project-desc-block {
   margin: 6rem 3rem;
   text-align: left;
 }
+
 .ind-proj-text {
   text-align: left;
   width: 95%;
@@ -151,11 +172,13 @@ main {
   width: 45rem;
   margin: 6rem auto;
 }
+
 #cv {
   width: 90rem;
   margin: auto auto;
   padding: auto auto;
 }
+
 .media {
   width: 40rem;
 }
@@ -164,93 +187,112 @@ main {
 
 /*----- responsiveness -----*/
 @media screen and (max-width: 1440px) {
+
   /*--med desktop--*/
   #main-home {
     padding: auto auto;
   }
+
   #project-grid {
     width: 95%;
     margin: auto auto;
   }
+
   /*about page*/
   #meblurb {
     width: 70rem;
     margin: 4rem auto;
   }
+
   #cv {
     width: 70rem;
     margin: auto auto;
     padding: auto auto;
   }
+
   .media {
     width: 35rem;
   }
 }
+
 /* @media screen and (max-width: 1000px) {
   --smaller desktop--
 } */
 @media screen and (max-width: 768px) {
+
   /*--tablet--*/
   #mainhome {
     padding: auto 0;
   }
-  .navbar-header{
-    display:flex;
+
+  .navbar-header,
+  #introcontent {
+    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
   }
-  .nav{
+
+  .nav {
     text-align: center;
   }
-  #introcontent {
-    margin: auto 18rem;
-  }
+
   #project-grid {
     margin: auto 0.5rem;
   }
+
   #project-grid-item {
     height: 30rem;
     width: 100%;
     padding: 0 0;
   }
+
   /*project page*/
   #back-to-top {
     margin: 5rem 0;
   }
+
   /*individual proj*/
   #project-desc {
     margin: 3rem 0;
   }
+
   #project-desc-intro {
     margin: 5rem 3rem;
     text-align: left;
   }
+
   #project-desc-block {
     margin: 6rem 3rem;
     text-align: left;
   }
+
   /*about page*/
   #meblurb {
     width: 46rem;
     margin: auto auto;
   }
+
   #cv {
     width: 46rem;
     margin: auto auto;
     padding: auto auto;
   }
+
   .media {
     width: 30rem;
     margin: auto auto;
   }
 }
+
 @media screen and (max-width: 425px) {
+
   /*--big phone--*/
   #mainhome {
     padding: auto 0;
     margin: auto 0;
   }
+
   #introcontent {
     margin: auto 5rem;
   }
@@ -258,48 +300,59 @@ main {
   #project-grid {
     margin: 5rem 1rem;
   }
+
   .doglogo {
     width: 15rem;
     height: 15rem;
   }
+
   #project-grid-item {
     height: 28rem;
     width: 100%;
     padding: 0 0;
   }
+
   /*about page*/
   #meblurb {
     width: 100%;
     margin: 5rem auto;
   }
+
   #cv {
     width: 100%;
     margin: auto auto;
     padding: auto auto;
   }
+
   .media {
     width: 25rem;
   }
 }
+
 @media screen and (max-width: 375px) {
+
   /*--small phone--*/
   #project-grid {
     margin: 3rem 0.6rem;
   }
+
   .doglogo {
     width: 12rem;
     height: 12rem;
   }
+
   /*about page*/
   #meblurb {
     width: 100%;
     margin: 4rem auto;
   }
+
   #cv {
     width: 100%;
     margin: auto auto;
     padding: auto auto;
   }
+
   .media {
     width: 20rem;
   }
