@@ -215,9 +215,16 @@ main {
   }
 }
 
-/* @media screen and (max-width: 1000px) {
-  --smaller desktop--
-} */
+@media screen and (max-width: 900px) {
+
+  #introcontent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   /*--tablet--*/
