@@ -420,4 +420,52 @@ body {
 }
 
 /*------------end of index-------------*/
+/*------------project page-------------*/
+.decode-text {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.space {
+  display: inline-block;
+  width: 10px;
+}
+
+.text-animation {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+}
+
+.text-animation:before {
+  content: '';
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #0e182d;
+  width: 0;
+  height: 1.2em;
+  -webkit-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+
+.text-animation.state-1:before {
+  width: 1px;
+}
+
+.text-animation.state-2:before {
+  width: .9em;
+}
+
+.text-animation.state-3 {
+  color: black;
+}
+
+.text-animation.state-3:before {
+  width: 0;
+}
+
+/*------------project page-------------*/
 /*# sourceMappingURL=sassStyles.css.map */

@@ -28,8 +28,9 @@ body {
     padding: 0 0;
 }
 
-.home-intro { /*main header*/
-   
+.home-intro {
+    /*main header*/
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,8 +45,9 @@ body {
     color: black;
 }
 
-.home-intro-subtitle {/*subheader under anim*/
-    
+.home-intro-subtitle {
+    /*subheader under anim*/
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,8 +56,9 @@ body {
     overflow: hidden;
 }
 
-.animcontent {/*animated text*/
-    
+.animcontent {
+    /*animated text*/
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -359,8 +362,9 @@ body {
 @media screen and (max-width: 425px) {}
 
 @media screen and (max-width: 375px) {
-    #dog { /*logo*/
-       
+    #dog {
+        /*logo*/
+
         position: relative;
         height: 12rem;
         top: 0%;
@@ -368,8 +372,9 @@ body {
         margin: 0 4rem;
     }
 
-    .home-intro {/*main header*/
-        
+    .home-intro {
+        /*main header*/
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -385,8 +390,9 @@ body {
         color: black;
     }
 
-    .home-intro-subtitle {/*subheader under anim*/
-        
+    .home-intro-subtitle {
+        /*subheader under anim*/
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -396,8 +402,9 @@ body {
         overflow: hidden;
     }
 
-    .animcontent {/*animated text*/
-        
+    .animcontent {
+        /*animated text*/
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -648,3 +655,58 @@ body {
 }
 
 /*------------end of index-------------*/
+
+/*------------project page-------------*/
+.decode-text {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.space {
+    display: inline-block;
+    width: 10px;
+}
+
+.text-animation {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+
+    &:before {
+        content: '';
+        color: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #0e182d;
+        width: 0;
+        height: 1.2em;
+        -webkit-transform: translate(-50%, -55%);
+        -ms-transform: translate(-50%, -55%);
+        transform: translate(-50%, -55%);
+    }
+
+    &.state-1 {
+        &:before {
+            width: 1px;
+        }
+    }
+
+    &.state-2 {
+        &:before {
+            width: .9em;
+        }
+    }
+
+    &.state-3 {
+        color: black;
+
+        &:before {
+            width: 0;
+        }
+    }
+}
+
+/*------------project page-------------*/
