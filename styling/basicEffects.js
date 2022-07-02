@@ -64,8 +64,7 @@ function shuffle(array) {
     return array;
 }
 
-// Demo only stuff
-decodeText();
+decodeText();//does the thing
 
 // beware: refresh button can overlap this timer and cause state mixups
 setInterval(function(){ decodeText(); }, 10000);
