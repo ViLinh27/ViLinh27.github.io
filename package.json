@@ -1,0 +1,25 @@
+{
+  "name": "npm-init.js",
+  "version": "1.0.0",
+  "description": "packages this site depends on",
+  "main": "index.js",
+  "scripts": {
+    "test": "e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViLinh27/ViLinh27.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Vi-Linh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViLinh27/ViLinh27.github.io/issues"
+  },
+  "homepage": "https://github.com/ViLinh27/ViLinh27.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.4.1"
+  }
+}

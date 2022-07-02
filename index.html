@@ -3,103 +3,194 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./styling/styles.css">
-    <link rel="stylesheet" href="./styling/overlay.css">
-    <link rel="stylesheet" href="./styling/modal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <!--links to bootstrap CDN:-->
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow”
+      integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+  
+    <!--link to bootstrap styling-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="./styling/styles.css">
+    <link rel="stylesheet" href="/./styling/sassStyles.css">
   </head>
-  <body>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-default" id="toppage">
+      <!-- <div class="container-fluid"> -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Vi-Linh Nguyen</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/index.html">Home</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      <!-- </div> -->
+    </nav>
 
-    <!-- The sidebar -->
-    <div class="sidebar">
-      <div class="logo-responsive">
-        <img src="./assets/dogLOGO.png" 
-        alt="dog logo" width="100px">
-      </div>
-
-      
-      <h1 id="myBtn" style="padding: 5px 16px;">Vi-Linh Nguyen</h1>
-
-      <div id="resourcesTabs">
-        <a class="active" href="./index.html">Work</a>
-        <a href="./pages/2about/about.html">About</a>
-        <a href="./pages/4contact/contact.html">Contact</a>
-      </div>
-      <div id="projectTabs">
-        <a href="./pages/1work/code.html">Code</a>
-        <a href="./pages/1work/games.html">Games</a>
-        <a href="./pages/1work/art.html">Art</a>
-      </div>
-
-      <div id="socials">
-        <h2>Follow me!</h2>
-        <div id="socialsmenu">
-            <a href="https://www.instagram.com/linh_is_tibia/"><i class="fa fa-instagram" id="insta"></i></a>
-          
-            <a href="https://twitter.com/vilinh27"><i class="fa fa-twitter" id="twitter"></i></a>
-          
-            <a href="https://www.linkedin.com/in/vilinhnguyen27/"><i class="fa fa-linkedin" id="linkedin"></i></a>
-          
-            <a href="#git"><i class="fa fa-github" id="github"></i></a>
-          
-        </div><!--end of socialsmenu-->
-      </div>
-
-    </div>
-
-    <!--modal for name pronounciation-->
-    <div id="myModal" class="modal">
-      <!--modal content-->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Pronounced: VEE LIN WIN</p>
-      </div>
-    </div>
-
-    <!-- Page content -->
-    <div class="content">
-      <ul id="projectsList">
-
-        <li>
-          <a href="./pages/1work/code.html">
-            <div class="container">
-              <img 
-              src="./assets/projectThumbnails/code-processed.png" alt="code thumbnail" width="960px" height="240px"
-                class="image">
-              <div class="overlay">
-                <div class="text">Code</div>
+    <!--main content-->
+    <main class="container p-12 text-center" id="mainhome">
+      <!--intro-->
+      <div class="row " id="introcontent">
+        <div class="col-lg-12 col-md-12 mb-12 mb-md-0 page-header">
+          <img id="dog" class="doglogo" src="./assets/dogLOGO.png" alt="logo">
+          <div class="main-intro">
+            <h3 class="home-intro">Hello! I can...</h3>
+            
+            <div class="animcontent">
+              <div class="animcontent__container">
+                <ul class="animcontent__container__list">
+                  <li class="animcontent__container__list__item">
+                    code!
+                  </li>
+                  <li class="animcontent__container__list__item">
+                    draw!
+                  </li>
+                  <li class="animcontent__container__list__item">
+                    design!
+                  </li>
+                  <li class="animcontent__container__list__item">
+                    UX research!
+                  </li>
+                  <li class="animcontent__container__list__item">
+                    3D model!
+                  </li>
+                </ul>
               </div>
+              <!--end of animcontent__container-->
             </div>
-          </a>
-        </li>
-        
-        <li>
-          <a href="./pages/1work/games.html">
-            <div class="container">
-              <img src="./assets/projectThumbnails/games-processed.png" alt="games thumbnail" width="960px" height="240px"
-                class="image">
-              <div class="overlay">
-                <div class="text">Games</div>
-              </div>
-            </div>
-          </a>
-        </li>
+            <!--endo of animcontent-->
 
-        <li>
-          <a href="./pages/1work/art.html">
-            <div class="container">
-              <img src="./assets/projectThumbnails/art-processed.png" alt="art thumbnail" width="960px" height="240px" class="image">
-              <div class="overlay">
-                <div class="text">Art</div>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
+            <h5 class="home-intro-subtitle">
+              Scroll Down to see some featured projects.<br/>
+              Visit the Projects tab for more of my work.
+            </h5>
+          </div><!--main intro-->
 
+        </div><!--column-->
+      </div>
+      <!--end of intro-->
+
+      <!--project grid-->
+      <div id="project-grid" class="container p-2 ">
+        <div class="row">
+
+          <!--project 1-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/timeToTalk.html">
+              <img class="project-grid-item-img" src="./assets/timeToTalk-itchioCoverArtboard-1.png" alt="time to talk"/>
+              <div class="overlay">
+                  <div class="overlay-text">Time to Talk</div>
+              </div>
+            </a>
+          </div>
+
+          <!--project 2-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/cartridgeCollector.html">
+              <img class="project-grid-item-img" src="./assets/cartridgecollector.JPG" alt="Cartridge Collector" />
+              <div class="overlay">
+                <div class="overlay-text">Cartridge Collector</div>
+              </div>
+            </a>
+          </div>
+
+          <!--project 3-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/twitterBookmarks.html">
+              <img class="project-grid-item-img" src="./assets/twitter-bookmarks.jpg" alt="Twitter Bookmarks" />
+              <div class="overlay">
+                <div class="overlay-text">Twitter Bookmarks Storage</div>
+              </div>
+            </a>
+          </div>
+
+          <!--project 4-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/hellGhost.html">
+              <img class="project-grid-item-img" src="./assets/ghost01.JPG" alt="HellGhost" />
+              <div class="overlay">
+                <div class="overlay-text">HellGhost</div>
+              </div>
+            </a>
+          </div>
+
+          <!--project 5-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/carrdClone.html">
+              <img  class="project-grid-item-img" src="./assets/cardclone.jpg" alt="carrd.co clone">
+              <div class="overlay">
+                  <div class="overlay-text">Carrd.co Clone</div>
+              </div>
+            </a>
+            
+          </div>
+
+          <!--project 6-->
+          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/storyPlanner.html">
+              <img class="project-grid-item-img" src="./assets/storyplanner.jpg" alt="StoryPlanner Site" />
+              <div class="overlay">
+                <div class="overlay-text">StoryPlanner Site</div>
+              </div>
+            </a>
+          
+          </div>
+          <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+            <a href="./pages/code/iosBookTrackerApp.html">
+              <img class="project-grid-item-img" src="" alt="IOS BOOKTRACKER APP">
+              <div class="overlay">
+                <div class="overlay-text">IOS Booktracker App</div>
+              </div>
+            </a>
+            
+          </div> -->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of project grid-->
+
+      <!--back to top-->
+      <div id="back-to-top" class="col-lg-12 col-md-12 text-center">
+        <button class="btn-primary"><a href="#toppage">Back to Top</a></button>
+      </div>
+
+    </main><!--end of main container-->
+
+    <!--footer-->
+    <div class="navbar" id="footer">
+      <!--Grid ctonainer-->
+      <div class="container p-3 text-center">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h4>Contact Me</h4>
+            <p>vilinh27@gmail.com</p>
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0 ">
+            <h4>More Projects</h4>
+            <a href="https://github.com/ViLinh27"><p>Github</p></a>
+            <a href="https://codepen.io/vilinh27"><p>Codepen</p></a>
+            <a href="https://linh-is-tibia.itch.io/"><p>itch.io</p></a>
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+            <h4>Follow Me</h4>
+            <a href="https://www.linkedin.com/in/vilinhnguyen27/"><img class="icons" src="./assets/linkedin-icon.png" alt="linkedin"/></a>
+            <a href="https://twitter.com/vilinh27"><img class="icons" src="./assets/twitter-icon.png" alt="twitter" /></a>
+            <a href="https://www.instagram.com/linh_is_tibia/"><img class="icons" src="./assets/insta-icon.png" alt="instagram" /></a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script src="./styling/js-effects/modal.js"></script>
+    <!--end of footer-->
+    
   </body>
 </html>

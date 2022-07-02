@@ -1,146 +1,366 @@
 /*global styles*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 body {
-  background-color: #dfd0ff;
+  background-color: #dfdaf4;
   font-family: "Nunito", sans-serif;
-}
-#projectsList li {
-  list-style-type: none;
-  margin: 0%;
-}
-#projectList {
-  overflow: hidden;
-}
-.logo-responsive {
-  text-align: center;
-  margin: 0;
-}
-/*add space between the sidebar sections*/
-#resourcesTabs {
-  margin-bottom: 10px;
-}
-#projectTabs {
-  margin-top: 20px;
-}
-
-/*social icons*/
-#socials a {
-  text-align: left;
-}
-#socialsmenu {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-}
-#insta,
-#twitter,
-#linkedin {
-  font-size: 20px;
-}
-
-.img-responsive {
-  margin: 15px;
-}
-.download-resume {
-  background-color: #c1f6e2;
-  color: #229760;
-  padding: 15px;
-  border: none;
-  font-size: 15px;
-}
-.download-resume:hover {
-  background-color: #c1f6e2;
-}
-/*
-main color palette
--#DFD0FF light purple
--#B99DF4 a little darker purple
--##9642cc darkest purple
-
-hover/active-color pallette
--#C1F6E2 light green ish
--#7DD7B5 a little darker
--#229760 darker green
-
-timeline
--#FFF0D7 light orange
-*/
-
-/* The side navigation menu */
-.sidebar {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  width: 250px;
-  background-color: #b99df4;
-  position: fixed;
-  height: 100%;
-  overflow: hidden;
-  display: inline-block;
 }
 
-/* Sidebar links */
-.sidebar a {
-  display: block;
+/*----- universal -----*/
+main {
+  margin: auto;
+}
+
+/*button*/
+.btn-primary {
+  background-color: #c0b7e5;
   color: black;
-  padding: 16px;
-  text-decoration: none;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
 }
 
-/* Active/current link */
-.sidebar a.active {
-  background-color: #c1f6e2;
-  color: #229760;
+.btn-primary:hover {
+  background-color: #a496d9;
 }
 
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #c1f6e2;
-  color: #229760;
+/*end of button*/
+/*navbar*/
+.navbar {
+  background-color: #c0b7e5;
+  margin: 0 0;
+  padding: 0 0;
+  border: none;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-.content {
-  margin-left: 250px;
-  padding: 0px 16px;
-  height: fit-content;
-  overflow: hidden;
+.nav {
+  padding: 0 4rem;
 }
-@media screen and (max-width: 1920px) {
-  /*.sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }*/
+
+.active a {
+  background-color: #a496d9 !important;
+  color: white;
 }
-@media screen and (max-width: 1280px) {
-  /*.sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }*/
+
+/*end of navbar*/
+
+/*project grid*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #a496d9;
 }
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#project-grid {
+  margin: 10rem 0;
+}
+
+#project-grid-item {
+  background-color: #c0b7e5;
+  height: 36rem;
+  width: 50%;
+  padding: 0 0;
+}
+
+#project-grid-item:hover .overlay {
+  opacity: 0.7;
+}
+
+.project-grid-item-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/*end of project grid*/
+
+/*footer*/
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.icons {
+  height: 3rem;
+  width: 3rem;
+}
+
+/*end of footer*/
+
+/*iframes*/
+.iframe-prev {
+  width: 90%;
+  height: 45rem;
+}
+
+/*----- end of universal -----*/
+
+/*----- home page -----*/
+#mainhome {
+  margin-bottom: 13rem;
+}
+
+#introcontent {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.doglogo {
+  height: 30rem;
+  width: 30rem;
+}
+
+/*----- end home page ----- */
+
+/*----- projects page -----*/
+.subnav {
+  padding: 0 0;
+  margin: 0 0;
+  background-color: #a496d9;
+  border: none;
+}
+
+/*--project descriptions--individual proj--*/
+#project-desc {
+  margin: 3rem 3rem;
+}
+
+#project-desc-intro {
+  margin: 5rem 3rem;
+  text-align: left;
+}
+
+#project-desc-block {
+  margin: 6rem 3rem;
+  text-align: left;
+}
+
+.ind-proj-text {
+  text-align: left;
+  width: 95%;
+}
+
+/*----- end projects page ----- */
+
+/*----- about page -----*/
+#meblurb {
+  width: 45rem;
+  margin: 6rem auto;
+}
+
+#cv {
+  width: 90rem;
+  margin: auto auto;
+  padding: auto auto;
+}
+
+.media {
+  width: 40rem;
+}
+
+/*----- end about page ----- */
+
+/*----- responsiveness -----*/
+@media screen and (max-width: 1440px) {
+
+  /*--med desktop--*/
+  #main-home {
+    padding: auto auto;
   }
-  .sidebar a {
-    float: left;
+
+  #project-grid {
+    width: 95%;
+    margin: auto auto;
   }
 
-  #socials {
-    display: inline-block;
+  /*about page*/
+  #meblurb {
+    width: 70rem;
+    margin: 4rem auto;
   }
-  div.content {
-    margin-left: 0;
+
+  #cv {
+    width: 70rem;
+    margin: auto auto;
+    padding: auto auto;
+  }
+
+  .media {
+    width: 35rem;
   }
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
+@media screen and (max-width: 900px) {
+
+  #introcontent {
+    display: flex;
     text-align: center;
-    float: none;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /*--tablet--*/
+  #mainhome {
+    padding: auto 0;
+  }
+
+  .navbar-header,
+  #introcontent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav {
+    text-align: center;
+  }
+
+  #project-grid {
+    margin: auto 0.5rem;
+  }
+
+  #project-grid-item {
+    height: 30rem;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  /*project page*/
+  #back-to-top {
+    margin: 5rem 0;
+  }
+
+  /*individual proj*/
+  #project-desc {
+    margin: 3rem 0;
+  }
+
+  #project-desc-intro {
+    margin: 5rem 3rem;
+    text-align: left;
+  }
+
+  #project-desc-block {
+    margin: 6rem 3rem;
+    text-align: left;
+  }
+
+  /*about page*/
+  #meblurb {
+    width: 46rem;
+    margin: auto auto;
+  }
+
+  #cv {
+    width: 46rem;
+    margin: auto auto;
+    padding: auto auto;
+  }
+
+  .media {
+    width: 30rem;
+    margin: auto auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  /*--big phone--*/
+  #mainhome {
+    padding: auto 0;
+    margin: auto 0;
+  }
+
+  #introcontent {
+    margin: auto 5rem;
+  }
+
+  #project-grid {
+    margin: 5rem 1rem;
+  }
+
+  .doglogo {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  #project-grid-item {
+    height: 28rem;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  /*about page*/
+  #meblurb {
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  #cv {
+    width: 100%;
+    margin: auto auto;
+    padding: auto auto;
+  }
+
+  .media {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  /*--small phone--*/
+  #project-grid {
+    margin: 3rem 0.6rem;
+  }
+
+  .doglogo {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  /*about page*/
+  #meblurb {
+    width: 100%;
+    margin: 4rem auto;
+  }
+
+  #cv {
+    width: 100%;
+    margin: auto auto;
+    padding: auto auto;
+  }
+
+  .media {
+    width: 20rem;
   }
 }

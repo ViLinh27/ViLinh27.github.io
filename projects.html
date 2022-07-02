@@ -1,0 +1,423 @@
+<!--# ViLinh27.github.io-->
+<!--For my portfolio site.-->
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!--links to bootstrap CDN:-->
+        <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow”
+            integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+
+        <!--link to bootstrap styling-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!--custom css-->
+        <link rel="stylesheet" type="text/css" href="./styling/styles.css">
+        <link rel="stylesheet" href="/./styling/sassStyles.css">
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-default" id="toppage">
+            <!-- <div class="container-fluid"> -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Vi-Linh Nguyen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/index.html">Home</a></li>
+                <li class="active"><a href="/projects.html">Projects</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+            <!-- </div> -->
+        </nav>
+
+        <!--subnav-->
+        <nav class="subnav">
+            <ul class="nav nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link" href="#codeproj">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#miscproj">Miscellaneous</a>
+                </li>
+            </ul>
+        </nav>
+        <!--end of subnav-->
+
+        <!--main content-->
+        <main class="container p-1" id="mainhome">
+            <!--intro-->
+            <div class="row text-center">
+                <div class="col-lg-12 page-header">
+                    <img class="doglogo" src="./assets/dogLOGO.png" alt="logo">
+
+                    <div class="decode-text">
+                        <div class="text-animation"><h3>H</h3></div>
+                        <div class="text-animation"><h3>e</h3></div>
+                        <div class="text-animation"><h3>r</h3></div>
+                        <div class="text-animation"><h3>e</h3></div>
+                        <div class="text-animation"><h3>'</h3></div>
+                        <div class="text-animation"><h3>s</h3></div>
+                        <div class="space"></div>
+
+                        <div class="text-animation"><h3>s</h3></div>
+                        <div class="text-animation"><h3>o</h3></div>
+                        <div class="text-animation"><h3>m</h3></div>
+                        <div class="text-animation"><h3>e</h3></div>
+                        <div class="space"></div>
+
+                        <div class="text-animation"><h3>s</h3></div>
+                        <div class="text-animation"><h3>t</h3></div>
+                        <div class="text-animation"><h3>u</h3></div>
+                        <div class="text-animation"><h3>f</h3></div>
+                        <div class="text-animation"><h3>f</h3></div>
+                        <div class="space"></div>
+
+                        <div class="text-animation"><h3>I</h3></div>
+                        <div class="space"></div>
+
+                        <div class="text-animation"><h3>w</h3></div>
+                        <div class="text-animation"><h3>o</h3></div>
+                        <div class="text-animation"><h3>r</h3></div>
+                        <div class="text-animation"><h3>k</h3></div>
+                        <div class="text-animation"><h3>e</h3></div>
+                        <div class="text-animation"><h3>d</h3></div>
+                        <div class="space"></div>
+
+                        <div class="text-animation"><h3>o</h3></div>
+                        <div class="text-animation"><h3>n</h3></div>
+                        <div class="text-animation"><h3>.</h3></div>
+
+                    </div>
+
+                    <h4>Scroll down to see more or click one of the subnav tabs above.</h4>
+                </div>
+            </div>
+            <!--end of intro-->
+
+            <!--Code proj-->
+            <div id="codeproj" class="container p-2">
+                <div class="container text-center page-header">
+                    <h4>Code</h4>
+                </div>
+
+                <!--project grid-->
+                <div id="project-grid" class="row text-center">
+
+                    <!--project 1-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/portfolioOverhaul.html">
+                            <img class="project-grid-item-img" src="./assets/portfolio-site-old.jpg"
+                                    alt="Portfolio Site Overhaul" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Portfolio Site Overhaul</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+            
+                    <!--project 2-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/twitterBookmarks.html">
+                            <img class="project-grid-item-img" src="./assets/twitter-bookmarks.jpg" alt="Twitter Bookmarks Storage" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Twitter Bookmarks Storage</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                    <!--project 3-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/churchWebsite.html">
+                            <img class="project-grid-item-img" src="./assets/church-website.jpg" alt="Church Website" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Church Website</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                    <!--project 4-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/storyPlanner.html">
+                            <img class="project-grid-item-img" src="./assets/storyplanner.jpg" alt="StoryPlanner Site" />
+                            <div class="overlay">
+                                    <div class="overlay-text">StoryPlanner Site</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+            
+                    <!--project 5-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/hellGhost.html">
+                            <img class="project-grid-item-img" src="./assets/ghost01.JPG" alt="HellGhost">
+                            <div class="overlay">
+                                    <div class="overlay-text">HellGhost</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+            
+                    <!--project 6-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/timeToTalk.html">
+                            <img class="project-grid-item-img" src="./assets/timeToTalk-itchioCoverArtboard-1.png" alt="Time to Talk"/>
+                            <div class="overlay">
+                                
+                                <div class="overlay-text">Time to Talk</div>
+
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 7-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/cartridgeCollector.html">
+                            <img class="project-grid-item-img" src="./assets/cartridgecollector.JPG" alt="Cartrdige Collector" />
+                            <div class="overlay">
+                                <div class="overlay-text">Cartrdige Collector</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 8-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/carrdClone.html">
+                            <img class="project-grid-item-img" src="./assets/cardclone.jpg" alt="Card Clone" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Carrd.co Clone</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 9-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/androidNotesApp.html">
+                            <img class="project-grid-item-img" src="./assets/code/androidNotes-git.jpg" alt="Android notes app"/>
+                            <div class="overlay">
+                                    <div class="overlay-text">Android Notes App</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--project 10-->
+                    <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/iosBookTrackerApp.html">
+                            <img class="project-grid-item-img" src="" alt="IOS Book Tracker App" />
+                            <div class="overlay">
+                                    <div class="overlay-text">IOS Book Tracker App</div>
+                            </div>
+                        </a>
+                        
+                    </div> -->
+
+                    <!--project 11-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/sqlClassProj.html">
+                            <img class="project-grid-item-img" src="./assets/code/sql-proj-thumbnail.JPG" alt="SQL Class Projects" />
+                            <div class="overlay">
+                                    <div class="overlay-text">SQL Class Projects</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 12-->
+                    <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/pythonClassProj.html">
+                            <img class="project-grid-item-img" src="" alt="Python Class Projects" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Python Class Projects</div>
+                            </div>
+                        </a>
+                        
+                    </div> -->
+
+                    <!--project 13-->
+                  <!--   <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/javaClassProj.html">
+                            <img class="project-grid-item-img" src="" alt="Java Class Projects" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Java Class Projects</div>
+                            </div>
+                        </a>
+                        
+                    </div> -->
+
+                    <!--project 14-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/code/meetingDanteMoon.html">
+                            <img class="project-grid-item-img" src="./assets/dante-twinery/D-default.png" alt="Meeting Dante Moon" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Meeting Dante Moon</div>
+                            </div>
+                        </a>
+                      
+                    </div>
+                </div>
+                <!--end of project grid-->
+            </div>
+            <!--end of Code proj-->
+
+            <!--misc proj-->
+            <div id="miscproj" class="container p-2">
+                <div class="container text-center page-header">
+                    <h4>Miscellaneous</h4>
+                </div>
+
+                <!--project grid-->
+                <div id="project-grid" class="row text-center">
+                    <!--project 1-->
+                    <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/rouynNorandaUxProj.html">
+                            <img class="project-grid-item-img" src="" alt="Rouyn-Noranda Welcomes You">
+                            <div class="overlay">
+                                    <div class="overlay-text">Rouyn-Noranda Welcomes You</div>
+                            </div>
+                        </a>
+                       
+                    </div> -->
+
+                    <!--project 2-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/filmCollabProj.html">
+                            <img class="project-grid-item-img" src="./assets/art/ella-collab/foottown.jpg" alt="Chili Girl Film Pitch Collab" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Chili Girl Film Pitch Collab</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    
+                    <!--project 3-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/millicentEye.html">
+                            <img class="project-grid-item-img" src="./assets/art/Millicent's Eye.jpg" alt="Millicent's Eye" />
+                            <div class="overlay">
+                                
+                                    <div class="overlay-text">Millicent's Eye</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+            
+                    <!--project 4-->
+                    <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/storyBoardProj.html">
+                            <img class="project-grid-item-img" src="" alt="Storyboard Projects" /> 
+                            <div class="overlay">
+                                
+                                    <div class="overlay-text">Storyboard Projects</div>
+                            </div>
+                        </a>
+                       
+                    </div> -->
+            
+                    <!--project 5-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/fanArt.html">
+                            <img class="project-grid-item-img" src="./assets/art/fanart/theuden2-webtoon.jpg" alt="Fan Art" />
+                            <div class="overlay">
+                                
+                                    <div class="overlay-text">Fan Art</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+            
+                    <!--project 6-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/charArt.html">
+                            <img class="project-grid-item-img" src="./assets/marlowe.jpg" alt="Character Art" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Character Art</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 7-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/layouts.html">
+                            <img class="project-grid-item-img" src="./assets/art/layouts/layout5.jpg" alt="Layouts" />
+                            <div class="overlay">
+                                    <div class="overlay-text">Layouts</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                    <!--project 8-->
+                    <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
+                        <a href="./pages/misc/threeDSculpts.html">
+                            <img class="project-grid-item-img" src="./assets/art/3dwork/skull3.jpg" alt="3D Work">
+                            <div class="overlay">
+                                    <div class="overlay-text">3D Work</div>
+                            </div>
+                        </a>
+                        
+                    </div>
+
+                </div>
+                <!--end of project grid-->
+            </div>
+            <!--end of misc proj-->
+
+            <!--back to top-->
+            <div id="back-to-top" class="col-lg-12 col-md-12 text-center">
+                <button class="btn-primary"><a href="#toppage">Back to Top</a></button>
+            </div>
+        </main>
+        <!--end of main container-->
+
+        <!--footer-->
+        <div class="navbar" id="footer">
+            <!--Grid ctonainer-->
+            <div class="container p-3 text-center">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                        <h4>Contact Me</h4>
+                        <p>vilinh27@gmail.com</p>
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-4 mb-4 mb-md-0 ">
+                        <h4>More Projects</h4>
+                        <a href="https://github.com/ViLinh27">
+                            <p>Github</p>
+                        </a>
+                        <a href="https://codepen.io/vilinh27">
+                            <p>Codepen</p>
+                        </a>
+                        <a href="https://linh-is-tibia.itch.io/">
+                            <p>itch.io</p>
+                        </a>
+                    </div>
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                        <h4>Follow Me</h4>
+                        <a href="https://www.linkedin.com/in/vilinhnguyen27/"><img class="icons"
+                                src="./assets/linkedin-icon.png" alt="linkedin" /></a>
+                        <a href="https://twitter.com/vilinh27"><img class="icons" src="./assets/twitter-icon.png"
+                                alt="twitter" /></a>
+                        <a href="https://www.instagram.com/linh_is_tibia/"><img class="icons" src="./assets/insta-icon.png"
+                                alt="instagram" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+        <script src="./styling/basicEffects.js"></script>
+    </body>
+
+</html>
