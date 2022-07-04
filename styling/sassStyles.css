@@ -123,6 +123,7 @@ body {
   margin: 0;
 }
 
+/*animated logisitics*/
 @-webkit-keyframes opacity {
   0%,
   100% {
@@ -232,46 +233,39 @@ body {
 }
 
 /*responsiveness*/
-@media screen and (max-width: 375px) {
-  #dog {
-    /*logo*/
-    position: relative;
-    height: 12rem;
-    top: 0%;
-    padding: 0 0;
-    margin: 0 4rem;
-  }
+@media screen and (max-width: 768px) {
   .home-intro {
     /*main header*/
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
+    width: 90%;
     -webkit-transform: translate(-50%, -180%);
             transform: translate(-50%, -180%);
-    width: 100%;
     height: 80px;
     overflow: hidden;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 27px;
+    line-height: 40px;
     color: black;
   }
   .home-intro-subtitle {
     /*subheader under anim*/
+    font-size: 18px;
+    width: 90%;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     -webkit-transform: translate(-50%, -45%);
             transform: translate(-50%, -45%);
     height: 80px;
-    width: 100%;
     overflow: hidden;
   }
   .animcontent {
     /*animated text*/
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     -webkit-transform: translate(-50%, -55%);
             transform: translate(-50%, -55%);
@@ -279,8 +273,8 @@ body {
     overflow: hidden;
     font-family: "Nunito", sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 27px;
+    line-height: 40px;
     color: black;
   }
   .animcontent__container {
@@ -303,8 +297,8 @@ body {
     top: 0;
     color: #414280;
     /*colors brackets*/
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 42px;
+    line-height: 45px;
     /*helps not go in between lines*/
     -webkit-animation-name: opacity;
     -webkit-animation-duration: 2s;
@@ -327,6 +321,207 @@ body {
   }
   .animcontent__container__list__item {
     line-height: 45px;
+    /*helps not stop in between lines*/
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #dog {
+    /*logo*/
+    position: relative;
+    height: 15rem;
+    top: 0%;
+    padding: 0 0;
+    margin: 0 4rem;
+  }
+  .home-intro {
+    /*main header*/
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -180%);
+            transform: translate(-50%, -180%);
+    height: 80px;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 40px;
+    color: black;
+  }
+  .home-intro-subtitle {
+    /*subheader under anim*/
+    font-size: 15px;
+    width: 90%;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+    height: 80px;
+    overflow: hidden;
+  }
+  .animcontent {
+    /*animated text*/
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+    height: 160px;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 40px;
+    color: black;
+  }
+  .animcontent__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 45px;
+    padding: 0 40px;
+  }
+  .animcontent__container:before {
+    content: '{';
+    left: 0;
+  }
+  .animcontent__container:after {
+    content: '}';
+    position: absolute;
+    right: 0;
+  }
+  .animcontent__container:after, .animcontent__container:before {
+    position: absolute;
+    top: 0;
+    color: #414280;
+    /*colors brackets*/
+    font-size: 42px;
+    line-height: 45px;
+    /*helps not go in between lines*/
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .animcontent__container__list {
+    margin-top: 0;
+    padding: 0 40px;
+    text-align: center;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  .animcontent__container__list__item {
+    line-height: 45px;
+    /*helps not stop in between lines*/
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #dog {
+    /*logo*/
+    position: relative;
+    height: 12rem;
+    top: 0%;
+    padding: 0 0;
+    margin: 0 4rem;
+  }
+  .home-intro {
+    /*main header*/
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -180%);
+            transform: translate(-50%, -180%);
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+  }
+  .home-intro-subtitle {
+    /*subheader under anim*/
+    font-size: 15px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .animcontent {
+    /*animated text*/
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+    height: 160px;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+  }
+  .animcontent__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 35px;
+    padding: 0 40px;
+  }
+  .animcontent__container:before {
+    content: '{';
+    left: 0;
+  }
+  .animcontent__container:after {
+    content: '}';
+    position: absolute;
+    right: 0;
+  }
+  .animcontent__container:after, .animcontent__container:before {
+    position: absolute;
+    top: 0;
+    color: #414280;
+    /*colors brackets*/
+    font-size: 30px;
+    line-height: 30px;
+    /*helps not go in between lines*/
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .animcontent__container__list {
+    margin-top: 0;
+    padding: 0 40px;
+    text-align: center;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  .animcontent__container__list__item {
+    line-height: 35px;
     /*helps not stop in between lines*/
     margin: 0;
   }
@@ -417,6 +612,7 @@ body {
               transform: translate3d(0, -20%, 0);
     }
   }
+  /*end of main animation*/
 }
 
 /*------------end of index-------------*/
