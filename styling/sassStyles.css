@@ -239,6 +239,7 @@ body {
     position: absolute;
     top: 70%;
     left: 50%;
+    width: 90%;
     -webkit-transform: translate(-50%, -180%);
             transform: translate(-50%, -180%);
     height: 80px;
@@ -254,7 +255,7 @@ body {
     font-size: 18px;
     width: 90%;
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 50%;
     -webkit-transform: translate(-50%, -45%);
             transform: translate(-50%, -45%);
@@ -264,7 +265,7 @@ body {
   .animcontent {
     /*animated text*/
     position: absolute;
-    top: 90%;
+    top: 75%;
     left: 50%;
     -webkit-transform: translate(-50%, -55%);
             transform: translate(-50%, -55%);

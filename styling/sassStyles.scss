@@ -358,6 +358,8 @@ body {
 /*responsiveness*/
 @media screen and (max-width: 1440px) {}
 
+@media screen and (max-width: 1000px) {}
+
 @media screen and (max-width: 768px) {
     .home-intro {
         /*main header*/
@@ -365,6 +367,7 @@ body {
         position: absolute;
         top: 70%;
         left: 50%;
+        width: 90%;
         transform: translate(-50%, -180%);
         height: 80px;
         overflow: hidden;
@@ -382,7 +385,7 @@ body {
 
         width: 90%;
         position: absolute;
-        top: 90%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -45%);
         height: 80px;
@@ -393,7 +396,7 @@ body {
         /*animated text*/
 
         position: absolute;
-        top: 90%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -55%);
         height: 160px;
