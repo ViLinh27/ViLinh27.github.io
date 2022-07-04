@@ -358,7 +358,111 @@ body {
 /*responsiveness*/
 @media screen and (max-width: 1440px) {}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .home-intro {
+        /*main header*/
+
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -180%);
+        height: 80px;
+        overflow: hidden;
+
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 40px;
+        color: black;
+    }
+
+    .home-intro-subtitle {
+        /*subheader under anim*/
+        font-size: 18px;
+
+        width: 90%;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        height: 80px;
+        overflow: hidden;
+    }
+
+    .animcontent {
+        /*animated text*/
+
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        height: 160px;
+        overflow: hidden;
+
+        font-family: "Nunito", sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 40px;
+        color: black;
+
+        &__container {
+            font-weight: 600;
+            overflow: hidden;
+            height: 45px;
+            padding: 0 40px;
+
+            &:before {
+                content: '{';
+                left: 0;
+            }
+
+            &:after {
+                content: '}';
+                position: absolute;
+                right: 0;
+            }
+
+            &:after,
+            &:before {
+                position: absolute;
+                top: 0;
+
+                color: #414280;
+                /*colors brackets*/
+                font-size: 42px;
+                line-height: 45px;
+                /*helps not go in between lines*/
+
+                -webkit-animation-name: opacity;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-iteration-count: infinite;
+                animation-name: opacity;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            &__list {
+                margin-top: 0;
+                padding: 0 40px;
+                text-align: center;
+                list-style: none;
+
+                -webkit-animation-name: change;
+                -webkit-animation-duration: 10s;
+                -webkit-animation-iteration-count: infinite;
+                animation-name: change;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+
+                &__item {
+                    line-height: 45px;
+                    /*helps not stop in between lines*/
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 425px) {
     #dog {
@@ -507,7 +611,7 @@ body {
 
     .home-intro-subtitle {
         /*subheader under anim*/
-        font-size:15px;
+        font-size: 15px;
         position: absolute;
         top: 85%;
         left: 50%;
