@@ -18,8 +18,720 @@
     <!--custom css-->
     <link rel="stylesheet" type="text/css" href="./styling/styles.css">
     <link rel="stylesheet" href="/./styling/sassStyles.css">
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="d-flex flex-column min-vh-100">
-
+    <!--- TOP BANNER --->
+    <div class="banner">
+      <div class="top-banner">
+        <div class="topnav" id="mainTopNav">
+          <!--tabs container-->
+          <a><button class="tablinks" onclick="openTab(event,'project-grid')" id="defaultOpen">Home</button></a>
+          <a><button class="tablinks" onclick="openTab(event,'about-grid')">About</button></a>
+          <a><button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button></a>
+          <a><button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button></a>
+    
+          <a href="javascript:void(0);" class="icon" onClick="responsiveMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <!--end of topnav-->
+      </div>
+      <!--end of top banner-->
+      <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
+      <div class="top-banner_name">
+        Vi-Linh Nguyen
+      </div>
+    </div>
+    <!--end of banner-->
+    
+    <!--- PROJECT GRID --->
+    <div class="tabcontent" id="project-grid">
+    
+      <div class="pcontainer">
+        <div class="card" id="project1" onmouseenter="flipToBack(event,proj1text)"
+          onmouseleave="flipToFront(event,proj1text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj1text">
+            <p class="item_title">fan art</p>
+            <p class="item_description">This is the fan art gallery.</p>
+            <button class="modal-btn" href="#myModal1">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+        </div>
+      </div>
+      <!--end of project item 1-->
+    
+      <div class="pcontainer">
+        <div class="card" id="project2" onmouseenter="flipToBack(event,proj2text)"
+          onmouseleave="flipToFront(event,proj2text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj2text">
+            <p class="item_title">Public Figure Portraits</p>
+            <p class="item_description">This is the portrait gallery of real people.</p>
+            <button class="modal-btn" href="#myModal2">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+        </div>
+      </div>
+      <!--end of project item 2-->
+    
+      <div class="pcontainer">
+        <div class="card" id="project3" onmouseenter="flipToBack(event,proj3text)"
+          onmouseleave="flipToFront(event,proj3text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj3text">
+            <p class="item_title">Original Characters</p>
+            <p class="item_description">This is where my original characters are.</p>
+            <button class="modal-btn" href="#myModal3">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 3-->
+    
+      <div class="pcontainer">
+        <div class="card" id="project4" onmouseenter="flipToBack(event,proj4text)"
+          onmouseleave="flipToFront(event,proj4text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj4text">
+            <p class="item_title">DTIYS Challenges</p>
+            <p class="item_description">Instagram will often have drawing challenges. This is a gallery of them.</p>
+            <button class="modal-btn" href="#myModal4">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 4-->
+    
+    
+      <div class="pcontainer">
+        <div class="card" id="project5" onmouseenter="flipToBack(event,proj5text)"
+          onmouseleave="flipToFront(event,proj5text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj5text">
+            <p class="item_title">SQL</p>
+            <p class="item_description">I explore Sql here</p>
+            <button class="modal-btn" href="#myModal5">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 5-->
+    
+      <div class="pcontainer">
+        <div class="card" id="project6" onmouseenter="flipToBack(event,proj6text)"
+          onmouseleave="flipToFront(event,proj6text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj6text">
+            <p class="item_title">C#</p>
+            <p class="item_description">I explore C# here</p>
+            <button class="modal-btn" href="#myModal6">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 6-->
+    
+    </div>
+    <!--end of project grid-->
+    
+    <!---ABOUT CONTENT--->
+    <div class="tabcontent" id="about-grid">
+      <div class="about-container">
+        <div class="about-item">
+          <p class="about-txt">
+            Hello! This Vi-Linh (pronounced VEE LIN WIN). Lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p class="about-txt" id="about-email">
+            <button class="modal-btn" href="#myModal-e">
+              my@email.com
+            </button>
+          </p>
+        </div>
+        <div class="about-item">
+          <img src="https://pbs.twimg.com/media/FjgTPE3XgAAGAyM?format=jpg&name=medium" class="about-img" alt="ME"
+            id="aboutmepic" />
+        </div>
+      </div>
+    </div>
+    
+    <!---CV CONTENT--->
+    <div class="tabcontent" id="cv-grid">
+      <div class="cv-container">
+        <div class="cv-header">
+          <p>my@email.com | portfolio.com | linkedinprofile</p>
+        </div>
+        <div class="cv-education">
+          <h3>Education</h3>
+          <hr />
+          <div class="cv-e_item">
+            <div class="cv-e_school">
+              <h4>School name</h4>
+              <p>Degree</p>
+            </div>
+            <div class="cv_Info">
+              <p>Location</p>
+              <p>Date</p>
+            </div>
+          </div>
+    
+          <div class="cv-e_item">
+            <div class="cv-e_school">
+              <h4>School name</h4>
+              <p>Degree</p>
+            </div>
+            <div class="cv_Info">
+              <p>Location</p>
+              <p>Date</p>
+            </div>
+          </div>
+    
+        </div>
+        <div class="cv-work">
+          <h3>Work Experience</h3>
+          <hr />
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>Company name</h4>
+              <ul>
+                <li>bullet</li>
+                <li>bullet</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>location</p>
+              <p>date</p>
+            </div>
+          </div>
+    
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>Company name</h4>
+              <ul>
+                <li>bullet</li>
+                <li>bullet</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>location</p>
+              <p>date</p>
+            </div>
+          </div>
+    
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>Company name</h4>
+              <ul>
+                <li>bullet</li>
+                <li>bullet</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>location</p>
+              <p>date</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cv-skills">
+          <h3>Skills</h3>
+          <hr />
+          <div class="cv-s_table">
+            <table>
+              <tr>
+                <th>Frontend Development:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Backend Development:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                    <div> | </div>
+                    <div>Language</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Design:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Program</div>
+                    <div> | </div>
+                    <div>Program</div>
+                    <div> | </div>
+                    <div>Program</div>
+                    <div> | </div>
+                    <div>Program</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Miscellaneous:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Skill</div>
+                    <div> | </div>
+                    <div>Skill</div>
+                    <div> | </div>
+                    <div>Skill</div>
+                    <div> | </div>
+                    <div>Skill</div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="cv-courses">
+          <h3>Coursework</h3>
+          <hr />
+          <div class="cv-c_container">
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div> |
+            <div class="cv-c_course">course name</div>
+          </div>
+        </div>
+        <div class="cv-interests">
+          <h3>Interests</h3>
+          <hr />
+          <div class="cv-i_container">
+            <div class="cv-i_interest">interest</div> |
+            <div class="cv-i_interest">interest</div> |
+            <div class="cv-i_interest">interest</div> |
+            <div class="cv-i_interest">interest</div> |
+            <div class="cv-i_interest">interest</div> |
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--- MODALS --->
+    <div class="modal" id="myModal1">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Fan Art</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FVPnDX1WIAMP1vt?format=jpg&name=large" alt="me but show"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p class="">
+                Different show styles
+              </p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">
+                Different show styles
+              </p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FQGaDjGWUAseXdC?format=png&name=900x900" alt="owl house card"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>
+                Owl House Tarot: Hunter
+              </p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>
+                Owl House Tarot: Hunter
+              </p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FhEwQA1XkAMRFEX?format=jpg&name=medium" alt="acnh bunny aro"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>The Constellation Witch - Animal Crossing</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>The Constellation Witch - Animal Crossing</p>
+            </span>
+          </figure>
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <div class="modal" id="myModal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Public Figure Portraits</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/65dab7131d743e756a8252a7d71fc523/2dda13b65f6834c4-0b/s1280x1920/f02f116e2a8c70a1ddbe97657d2367cf0b9e2a71.pnj"
+              alt="Amazin Le Thi" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Amazin Le Thi</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Amazin Le Thi</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/0285f58a8bf3d6ca9a7b047f2c8ef80c/2dda13b65f6834c4-39/s1280x1920/bc037f4905054066830b15e29f9a05d7a0301d8e.pnj"
+              alt="Kevin Kreider" class="modal-img" />
+            <figcaption class="mbc_content">
+              <div class="modal-body_txt">
+                <p>Kevin Kreider</p>
+              </div>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Kevin Kreider</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/cf4ca6ca18d889cc795278f7f1af42ec/2dda13b65f6834c4-f6/s1280x1920/a7671c84f9566320e92bd479fc952b342936261e.pnj"
+              alt="Oscar Isaac" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Oscar Isaac</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Oscar Isaac</p>
+            </span>
+          </figure>
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <div class="modal" id="myModal3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Original Characters</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FgXTfecXgA0L2Rk?format=jpg&name=medium" alt="Zolin" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Zolin</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Zolin</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container"> <img src="https://pbs.twimg.com/media/FgXTfebXgAI2_Jt?format=jpg&name=medium"
+              alt="Beatriz" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Beatriz</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Beatriz</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FgXTfedWYAEUk3E?format=jpg&name=medium" alt="Erdutza" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Erdutza</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Erdutza</p>
+            </span>
+          </figure>
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <div class="modal" id="myModal4">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>DTIYS</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/09d6bf531f7513fab4d950080b133834/c0bfb20c65b25ea2-eb/s1280x1920/06453f0ba0305c6d19e4596887c38a9a2fcf7565.pnj"
+                alt="silka" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by silka.art on Instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by silka.art on Instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/1e26be774ca115516055d40247278ba8/c0bfb20c65b25ea2-9b/s1280x1920/ba8598291a5491d4c2ba1539927ac360b7b5a048.pnj"
+                alt="bellebubben" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by bellebubben on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by bellebubben on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/47e83b72a97ef65f359fd303e27ccaf1/c0bfb20c65b25ea2-bc/s1280x1920/b4d0f84ccabaa35e83ec5baae07b1bdce3f8a95e.pnj"
+                alt="cookysparks" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by cookysparks on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by cookysparks on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/b20a63f116088d533e6698b601f8479b/c0bfb20c65b25ea2-97/s1280x1920/4f60ee2b6ccaef7f717f9d71d0ba32035df86ea5.pnj"
+                alt="cyarine" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by cyarine on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by cyarine on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img src="" alt="" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by</p>
+              </span>
+            </figure>
+          </div>
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <div class="modal" id="myModal5">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>SQL</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="modal-body_itms">
+            <figure>
+              <img src="" alt="" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p class="modal-body_txt">Original subject by</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <div class="modal" id="myModal6">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>C#</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="modal-body_itms">
+            <figure>
+              <img src="" alt="" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p class="modal-body_txt">Original subject by</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal 
+    containaer-->
+    
+    <div class="modal" id="myModal-e">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Contact Me</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="contact-form_container">
+    
+            <form action="action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name...">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="usa">USA</option>
+              </select>
+    
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+              <input type="submit" value="Submit">
+            </form>
+    
+          </div>
+          <!--end of contact form container-->
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal container-->
+    
+    <!--- FOOTER --->
+    <div class="footer">
+      <div class="f_contact">
+        <p class="f_title">Contact Me</p>
+        <p class="f_desc">
+          <button class="modal-btn" href="#myModal-e">my@email.com
+          </button>
+        </p>
+      </div>
+    
+      <div class="f_morelinks">
+        <p class="f_title">More Projects</p>
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Codepen</a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Github</a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Itch.io</a></button>
+        </p>
+      </div>
+    
+      <div class="f_socials">
+        <p class="f_title">Follow Me</p>
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-instagram" id="i-insta"></i></a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-twitter" id="i-twit"></i></a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-snapchat" id="i-snap"></i></a></button>
+        </p>
+    
+      </div>
+    </div>
+    <!--end of footer-->
   </body>
 </html>
