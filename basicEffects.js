@@ -1,9 +1,5 @@
 //svg to code: https://nikitahl.github.io/svg-2-code/
 //svg code to css: https://www.svgbackgrounds.com/tools/svg-to-css/
-console.log("--test--");//--------debug
-require("@babel/core").transform("code", {
-  presets: ["@babel/preset-env"],
-});
 
 //-- DARK MODE ---//
 let dmBtn = document.getElementById("darkModebtn");
