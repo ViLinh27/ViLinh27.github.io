@@ -88,7 +88,9 @@ hr {
 /*--- SITE HEADER ---*/
 .banner {
   position: relative;
-  distribute: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -199,7 +201,8 @@ hr {
 }
 
 .pcontainer {
-  perspectie: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .card {
@@ -480,7 +483,8 @@ hr {
      object-fit: cover;
   -webkit-transform: scale(1);
           transform: scale(1);
-  trnasition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .modal-img:hover {
@@ -506,7 +510,7 @@ hr {
 .mbc_content-hover {
   z-index: 1;
   position: absolute;
-  whie-space: nowrap;
+  white-space: nowrap;
   display: none;
   padding: 1rem;
   background: #f8f7fc;
@@ -675,7 +679,7 @@ input[type=submit]:hover {
     display: block;
   }
   .topnav.responsive {
-    positoin: relative;
+    position: relative;
   }
   .topnav.responsive a.icon {
     position: absolute;
