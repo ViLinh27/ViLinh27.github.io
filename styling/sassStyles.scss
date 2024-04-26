@@ -97,7 +97,7 @@ hr {
 /*--- SITE HEADER ---*/
 .banner {
     position: relative;
-    distribute: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -186,7 +186,7 @@ hr {
 }
 
 .pcontainer {
-    perspectie: 1000px;
+    perspective: 1000px;
 }
 
 .card {
