@@ -234,14 +234,14 @@ hr {
 /*-- project square content --*/
 .is-active {
     position: absolute;
-    backface-visiblity: hidden;
+    // backface-visiblity: hidden;
 }
 
 .item_content {
     background-color: $cardpurple;
     position: absolute;
     box-sizing: border-box;
-    backface-visiblity: hidden;
+    // backface-visiblity: hidden;
     transform: rotateY(180deg);
     display: none;
     padding: 40px 80px;
@@ -471,7 +471,7 @@ input[type=submit]:hover {
 }
 
 /*-- modal animation --*/
-@-webkit-keyframes animateop {
+/* @-webkit-keyframes animateop {
     from {
         top: -300px;
         opacity: 0;
@@ -481,7 +481,7 @@ input[type=submit]:hover {
         top: 0;
         opacity: 1;
     }
-}
+} */
 
 @keyframes animatetop {
     from {

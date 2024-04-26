@@ -262,7 +262,6 @@ hr {
 /*-- project square content --*/
 .is-active {
   position: absolute;
-  backface-visiblity: hidden;
 }
 
 .item_content {
@@ -270,7 +269,6 @@ hr {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  backface-visiblity: hidden;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   display: none;
@@ -557,17 +555,17 @@ input[type=submit]:hover {
 }
 
 /*-- modal animation --*/
-@-webkit-keyframes animateop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
+/* @-webkit-keyframes animateop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
 
+    to {
+        top: 0;
+        opacity: 1;
+    }
+} */
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
@@ -578,7 +576,6 @@ input[type=submit]:hover {
     opacity: 1;
   }
 }
-
 @keyframes animatetop {
   from {
     top: -300px;
