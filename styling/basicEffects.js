@@ -1,6 +1,10 @@
 //svg to code: https://nikitahl.github.io/svg-2-code/
 //svg code to css: https://www.svgbackgrounds.com/tools/svg-to-css/
 
+require("@babel/core").transform("code", {
+  presets: ["@babel/preset-env"],
+});
+
 //-- DARK MODE ---//
 let dmBtn = document.getElementById("darkModebtn");
 let dmTxt = "Dark Mode";
@@ -47,7 +51,7 @@ function flipToFront(t,txt){
 }
 
 //--- MODAL FUNCTIONS ---//
-var modals = document.querySelectorAll('.modal');
+var modals = document.querySelectorAll(".modal");
 var modalbtn = document.querySelectorAll("button.modal-btn");
 var spans = document.getElementsByClassName("close");
 
@@ -64,7 +68,7 @@ for(var i = 0;i <modalbtn.length ;i++){
 for(vari=0;i<spans.length;i++){
   spans[i].onclick = function(){
     for(var index in modals){
-      if(typeof modals[index].style !== 'undefined'){
+      if(typeof modals[index].style !== "undefined"){
         modals[index].style.display = "none";
       }
     }//end of for loop
@@ -73,9 +77,9 @@ for(vari=0;i<spans.length;i++){
 
 //user clicks outside modal, close too
 window.onclick = function(event){
-  if(event.target.classList.contains('modal')){
+  if(event.target.classList.contains("modal")){
     for(var index in modals){
-      if(typeof modals[index].style !== 'undefined'){
+      if(typeof modals[index].style !== "undefined"){
         modals[index].style.display = "none";
       }
     }
