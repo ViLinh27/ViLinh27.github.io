@@ -39,10 +39,10 @@ function flipToBack(event,txt){
     txt.style.display = "block";
   }
 };
-function flipToFront(t,txt){
-  var t = t.currentTarget;
-  if(t.className === "card"){
-    t.style.transform = "rotateY(0deg)";
+function flipToFront(e,txt){
+  var e = e.currentTarget;
+  if(e.className === "card"){
+    e.style.transform = "rotateY(0deg)";
     txt.style.display = "none";
   }
 }
