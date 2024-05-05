@@ -93,6 +93,19 @@
         </div>
       </div>
       <!--end of project item 5-->
+
+      <!--android notes-->
+      <div class="pcontainer">
+        <div class="card" id="project10" onmouseenter="flipToBack(event,proj10text)"
+          onmouseleave="flipToFront(event,proj10text)">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj10text">
+            <p class="item_title">Android Notes</p>
+            <p class="item_description">A simple android app from my Android development class</p>
+            <button class="modal-btn" href="#myModal10">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
       
       <!--c# projects-->
       <!-- <div class="pcontainer">
@@ -370,93 +383,8 @@
     </div>
     
     <!--- MODALS --->
-    <div class="modal" id="myModal7">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Time To Talk</h2>
-          <h3>A short visual novel made in the Renpy game engine.</h3>
-        </div>
-        <div class="modal-body">
-          <figure class="mbc_container">           
-            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTMuanBn/original/Vs8uti.jpg" alt="time to talk" class="modal-img"/>
-            <figcaption class="mbc_content">
-              Game Screenshot
-            </figcaption>
-            <span class="mbc_content-hover">
-              <p class="">Game Screenshot</p>
-            </span>
-        
-          </figure>
-
-          <figure class="mbc_container">
-            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTQuanBn/original/Mcwm%2Fj.jpg" alt="time to talk" class="modal-img"/>
-            <figcaption class="mbc_content">
-              Game Screenshot
-            </figcaption>
-            <span class="mbc_content-hover">
-              <p class="">Game Screenshot</p>
-            </span>
-          </figure>
-
-          <figure class="mbc_container">
-            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTUuanBn/original/3GrWrY.jpg" alt="time to talk" class="modal-img"/>
-            <figcaption class="mbc_content">
-              Game Screenshot
-            </figcaption>
-            <span class="mbc_content-hover">
-              <p class="">Game Screenshot</p>
-            </span>
-          </figure>
-
-          <figure class="mbc_container">
-            <p>My sister is a big visual novel fan, and told me about the renpy game engine. I've
-            only played a few visual novel games though.</p>
-          </figure>
-        </div>
-        <div class="modal-footer">
-            <p>More details and a downloadable version of the game can be seen on my itchio page
-            <a href="https://linh-is-tibia.itch.io/time-to-talk">here</a>.</p>
-        </div>
-      </div>
-    </div>
-    <!--end of modal container-->
     
-    <div class="modal" id="myModal9">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>HellGhost</h2>
-          <h3>An endless runner game made in Unity</h3>
-        </div>
-        <div class="modal-body">
-          <figure class="mbc_container">
-            <img src="https://img.itch.zone/aW1hZ2UvNzM1MDAwLzQwOTAwOTQuanBn/original/yapMgU.jpg" alt="" class="modal-img"/>
-            <figcaption class="mbc_content">
-              Game Screenshot
-            </figcaption>
-            <span class="mbc_content-hover">
-              <p class="">Game Screenshot</p>
-            </span>
-          </figure>
-
-          <figure class="mbc_container">
-          <img src="" alt="" class="modal-img" />
-          <figcaption class="mbc_content">
-            Game Screenshot
-          </figcaption>
-          <span class="mbc_content-hover">
-            <p class="">Game Screenshot</p>
-          </span>
-          </figure>
-        </div>
-        <div class="modal-footer">
-          <p>More details and a downloadable version of the game can be seen on my itchio page
-            <a href="https://linh-is-tibia.itch.io/hellghost">here</a>.
-          </p>
-        </div>
-      </div><!--modal content-->
-    </div>
-
-    <div class="modal" id="myModal1">
+    <div class="modal" id="myModal1"><!--fan art-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -516,7 +444,7 @@
     </div>
     <!--end of modal containaer-->
     
-    <div class="modal" id="myModal2">
+    <div class="modal" id="myModal2"><!--celeb portraits-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -572,7 +500,7 @@
     </div>
     <!--end of modal containaer-->
     
-    <div class="modal" id="myModal3">
+    <div class="modal" id="myModal3"><!--my OCs-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -621,7 +549,7 @@
     </div>
     <!--end of modal containaer-->
     
-    <div class="modal" id="myModal4">
+    <div class="modal" id="myModal4"><!--dtiys-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -708,7 +636,7 @@
     </div>
     <!--end of modal containaer-->
     
-    <div class="modal" id="myModal5">
+    <div class="modal" id="myModal5"><!--sql projects-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -749,7 +677,7 @@
     </div>
     <!--end of modal containaer-->
     
-    <div class="modal" id="myModal6">
+    <div class="modal" id="myModal6"><!--c# projects-->
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -776,6 +704,104 @@
     </div>
     <!--end of modal 
     containaer-->
+
+    <div class="modal" id="myModal7"><!--time to talk-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Time To Talk</h2>
+          <h3>A short visual novel made in the Renpy game engine.</h3>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTMuanBn/original/Vs8uti.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+    
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTQuanBn/original/Mcwm%2Fj.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTUuanBn/original/3GrWrY.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <p>My sister is a big visual novel fan, and told me about the renpy game engine. I've
+              only played a few visual novel games though.</p>
+          </figure>
+        </div>
+        <div class="modal-footer">
+          <p>More details and a downloadable version of the game can be seen on my itchio page
+            <a href="https://linh-is-tibia.itch.io/time-to-talk">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end of modal container-->
+
+    <div class="modal" id="myModal9"><!--hell ghost game-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>HellGhost</h2>
+          <h3>An endless runner game made in Unity</h3>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="./assets/ghost01.JPG" alt="" class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <span>
+              <p>
+                This was a test game project to help me understand some basic game making mechanics in Unity, but in
+                2D of course.
+              </p>
+            </span>
+          </figure>
+        </div>
+        <div class="modal-footer">
+          <p>More details and a downloadable version of the game can be seen on my itchio page
+            <a href="https://linh-is-tibia.itch.io/hellghost">here</a>.
+          </p>
+        </div>
+      </div>
+      <!--modal content-->
+    </div>
+
+    <div class="modal" id="myModal10"><!--android project-->
+      <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-body"></div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
     
     <div class="modal" id="myModal-e">
       <div class="modal-content">
