@@ -26,12 +26,19 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    color: $darkModeBg;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: $darkModeBg;
+
+    &:hover {
+        text-decoration: underline;
+        transform: scale(1.03);
+    }
 }
+
 
 button {
     background: inherit;
@@ -242,7 +249,8 @@ hr {
 #project9 {
     background-image: url('/assets/ghost01.JPG');
 }
-#project10{
+
+#project10 {
     background-image: url('/assets/code/android-code.jpg');
 }
 
