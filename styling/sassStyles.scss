@@ -200,9 +200,9 @@ hr {
     height: 300px;
     text-align: center;
     overflow: hidden;
-    position: relative;
-    transition: transform 0.65s;
-    transform-style: preserve-3d;
+    // position: relative;
+    // transition: transform 0.65s;
+    // transform-style: preserve-3d;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -242,9 +242,9 @@ hr {
     background-image: url("/assets/timeToTalk-itchioCoverArtboard-1.png");
 }
 
-/* #project8 {
+#project8 {
     background-image: url('/assets/cartridgecollector.JPG');
-} */
+}
 
 #project9 {
     background-image: url('/assets/ghost01.JPG');
@@ -267,12 +267,19 @@ hr {
 .item_content {
     background-color: $cardpurple;
     position: absolute;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     // backface-visiblity: hidden;
-    transform: rotateY(180deg);
-    display: none;
+    // transform: rotateY(180deg);
+    // display: none;
     padding: 40px 80px;
     border-radius: 40px;
+    transform:scale(0);
+    transform: 50 50;
+    transition: transform 1s 0s;
+}
+
+.card:hover > .item_content{
+    transform:scale(1);
 }
 
 /*back of card*/
