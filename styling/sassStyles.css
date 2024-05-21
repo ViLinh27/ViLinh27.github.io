@@ -22,12 +22,11 @@ body {
 a {
   text-decoration: none;
   color: #230f44;
-}
-
-a:hover {
-  text-decoration: underline;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  /* &:hover {
+        text-decoration: underline;
+        transform: scale(1.05);
+        font-weight: 600;
+    } */
 }
 
 button {
@@ -471,14 +470,16 @@ hr {
   /*black with low opacity*/
 }
 
-.modal-btn {
+.modal-btn,
+.proj_outsideLink {
   padding: 6px 12px;
   background-color: inherit;
   border: none;
   font-size: 14px;
 }
 
-.modal-btn:hover {
+.modal-btn:hover,
+.proj_outsideLink:hover {
   /*background-color:pink;*/
   text-decoration: underline;
   font-weight: 600;

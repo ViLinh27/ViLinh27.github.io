@@ -33,10 +33,11 @@ a {
     text-decoration: none;
     color: $darkModeBg;
 
-    &:hover {
+    /* &:hover {
         text-decoration: underline;
-        transform: scale(1.03);
-    }
+        transform: scale(1.05);
+        font-weight: 600;
+    } */
 }
 
 
@@ -399,14 +400,16 @@ hr {
     /*black with low opacity*/
 }
 
-.modal-btn {
+.modal-btn,
+.proj_outsideLink {
     padding: 6px 12px;
     background-color: inherit;
     border: none;
     font-size: 14px;
 }
 
-.modal-btn:hover {
+.modal-btn:hover,
+.proj_outsideLink:hover{
     /*background-color:pink;*/
     text-decoration: underline;
     font-weight: 600;
