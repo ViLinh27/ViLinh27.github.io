@@ -279,6 +279,10 @@ hr {
   background-image: url("https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
+#project12 {
+  background-image: url("https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;

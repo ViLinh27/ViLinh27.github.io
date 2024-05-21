@@ -258,6 +258,10 @@ hr {
     background-image: url('https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 
+#project12 {
+    background-image: url('https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
 /*-- project square content --*/
 .is-active {
     position: absolute;
@@ -273,13 +277,13 @@ hr {
     // display: none;
     padding: 40px 80px;
     border-radius: 40px;
-    transform:scale(0);
+    transform: scale(0);
     transform: 50 50;
     transition: transform 1s 0s;
 }
 
-.card:hover > .item_content{
-    transform:scale(1);
+.card:hover>.item_content {
+    transform: scale(1);
 }
 
 /*back of card*/
