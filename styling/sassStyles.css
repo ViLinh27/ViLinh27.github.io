@@ -29,6 +29,7 @@ a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   font-weight: 600;
+  background-color: #bba6de;
 }
 
 button {
