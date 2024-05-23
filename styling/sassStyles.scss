@@ -37,7 +37,7 @@ a {
         text-decoration: underline;
         transform: scale(1.05);
         font-weight: 600;
-    } 
+    }
 }
 
 
@@ -263,6 +263,10 @@ hr {
     background-image: url('https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 
+#project13 {
+    background-image: url('https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
 /*-- project square content --*/
 .is-active {
     position: absolute;
@@ -409,7 +413,7 @@ hr {
 }
 
 .modal-btn:hover,
-.proj_outsideLink:hover{
+.proj_outsideLink:hover {
     /*background-color:pink;*/
     text-decoration: underline;
     font-weight: 600;
