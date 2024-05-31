@@ -52,6 +52,13 @@ hr {
     border-color: $darkpinkpurple;
 }
 
+table,th,td{
+    border-color:$darkModeBg;
+    border:2px solid;
+    border-collapse: collapse;
+    background-color: $lilac;
+}
+
 /*---DARK MODE ---*/
 .darkMode,
 .darkMode .modal-content {

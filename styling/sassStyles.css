@@ -42,6 +42,13 @@ hr {
   border-color: #7b4899;
 }
 
+table, th, td {
+  border-color: #230f44;
+  border: 2px solid;
+  border-collapse: collapse;
+  background-color: #bba6de;
+}
+
 /*---DARK MODE ---*/
 .darkMode,
 .darkMode .modal-content {
