@@ -3,194 +3,2018 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  
-    <!--links to bootstrap CDN:-->
-    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow”
-      integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
-  
-    <!--link to bootstrap styling-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
-    <!--custom css-->
-    <link rel="stylesheet" type="text/css" href="./styling/styles.css">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <title>Portfolio 2024-Linh Nguyen</title>
     <link rel="stylesheet" href="/./styling/sassStyles.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-default" id="toppage">
-      <!-- <div class="container-fluid"> -->
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Vi-Linh Nguyen</a>
+    <!--- TOP BANNER --->
+    <div class="banner">
+      <div class="top-banner">
+        <div class="topnav" id="mainTopNav">
+          <!--tabs container-->
+          <a><button class="tablinks" onclick="openTab(event,'project-grid')" id="defaultOpen">Home</button></a>
+          <a><button class="tablinks" onclick="openTab(event,'about-grid')">About</button></a>
+          <a><button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button></a>
+          <a><button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button></a>
+    
+          <a href="javascript:void(0);" class="icon" onClick="responsiveMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="/index.html">Home</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/about.html">About</a></li>
-        </ul>
-      <!-- </div> -->
-    </nav>
+        <!--end of topnav-->
+      </div>
+      <!--end of top banner-->
+      <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
+      <div class="top-banner_name">
+        Vi-Linh Nguyen
+      </div>
+    </div>
+    <!--end of banner-->
+    
+    <!--- PROJECT GRID --->
+    <div class="tabcontent" id="project-grid">
 
-    <!--main content-->
-    <main class="container p-12 text-center" id="mainhome">
-      <!--intro-->
-      <div class="row " id="introcontent">
-        <div class="col-lg-12 col-md-12 mb-12 mb-md-0 page-header">
-          <img id="dog" class="doglogo" src="./assets/dogLOGO.png" alt="logo">
-          <div class="main-intro">
-            <h3 class="home-intro">Hello! I can...</h3>
-            
-            <div class="animcontent">
-              <div class="animcontent__container">
-                <ul class="animcontent__container__list">
-                  <li class="animcontent__container__list__item">
-                    code!
-                  </li>
-                  <li class="animcontent__container__list__item">
-                    draw!
-                  </li>
-                  <li class="animcontent__container__list__item">
-                    design!
-                  </li>
-                  <li class="animcontent__container__list__item">
-                    UX research!
-                  </li>
-                  <li class="animcontent__container__list__item">
-                    3D model!
-                  </li>
-                </ul>
-              </div>
-              <!--end of animcontent__container-->
+      <!--OOP class proj-->
+      <div class="pcontainer">
+        <div class="card" id="project16">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj16text">
+            <p class="item_title">Drawing App in Java</p>
+            <p class="item_description">This is a simple drawing app made in Java</p>
+            <button class="proj_outsideLink"><a href="https://github.com/ViLinh27/se450-FinalProject">Click to explore more.</a></button>
+          </div>
+        </div> 
+      </div>
+
+      <!-- time to talk Game-->
+      <div class="pcontainer">
+        <div class="card" id="project7">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj7text">
+            <p class="item_title">Time To Talk</p>
+            <p class="item_description">This is a visual novel game project</p>
+            <button class="proj_outsideLink"><a href="https://linh-is-tibia.itch.io/time-to-talk">Click to explore more.</a></button>
+          </div>
+        </div>
+      </div>
+      <!--end of project 7-->
+      
+      <!--Cartridge collector game-->
+      <div class="pcontainer">
+        <div class="card" id="project8">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj8text">
+            <p class="item_title">Cartridge Collector</p>
+            <p class="item_description">This is a platformer game project</p>
+            <button class="proj_outsideLink"><a href="https://linh-is-tibia.itch.io/cartridge-collector">Click to explore more.</a></button>
+          </div>
+        </div>
+      </div>
+      <!--end of project 8-->
+
+      <!--Hell ghost game-->
+      <div class="pcontainer">
+        <div class="card" id="project9">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj9text">
+            <p class="item_title">Hell Ghost</p>
+            <p class="item_description">This is an endless runner game.</p>
+            <button class="proj_outsideLink"><a href="https://linh-is-tibia.itch.io/hellghost">Click to explore more.</a></button>
+          </div>
+        </div>
+      </div>
+      <!--end of project 9-->
+
+      <!--sql projects-->
+      <div class="pcontainer">
+        <div class="card" id="project5">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj5text">
+            <p class="item_title">SQL</p>
+            <p class="item_description">I explore Sql here</p>
+            <button class="modal-btn" href="#myModal5">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+      
+        </div>
+      </div>
+      <!--end of project item 5-->
+
+      <!--android notes-->
+      <div class="pcontainer">
+        <div class="card" id="project10">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj10text">
+            <p class="item_title">Android Notes</p>
+            <p class="item_description">A simple android app from my Android development class</p>
+            <button class="modal-btn" href="#myModal10">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+
+      <!--ios book tracker app-->
+      <div class="pcontainer">
+        <div class="card" id="project11">
+        <div class="is-active"></div>
+        <div class="item_content" id="proj11text">
+          <p class="item_title">IOS book tracker</p>
+          <p class="item_description">A simple book tracker app from my IOS development class</p>
+          <button class="modal-btn" href="#myModal11">Click to explore more.</button>
+        </div>
+        </div>
+      </div>
+      
+      <!--IA Rouyn Noranda project-->
+      <div class="pcontainer">
+        <div class="card" id="project12">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj12text">
+            <p class="item_title">Rouyn Noranda UX project</p>
+            <p class="item_description">An exploration of the information architecture of an existing site.</p>
+            <button class="modal-btn" href="#myModal12">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+
+      <!--tiny fingers discussion UX-->
+      <div class="pcontainer">
+        <div class="card" id="project13">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj13text">
+            <p class="item_title">UX discussion paper</p>
+            <p class="item_description">Discussing two external papers about UX and design.</p>
+            <button class="modal-btn" href="#myModal13">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+
+      <!--peezyfind-->
+      <div class="pcontainer">
+        <div class="card" id="project14">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj14text">
+            <p class="item_title">PeezyFind</p>
+            <p class="item_description">A mobile application concept.</p>
+            <button class="modal-btn" href="#myModal14">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+
+      <!--c# projects-->
+      <!-- <div class="pcontainer">
+        <div class="card" id="project6">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj6text">
+            <p class="item_title">C#</p>
+            <p class="item_description">I explore C# here</p>
+            <button class="modal-btn" href="#myModal6">Click to explore more.</button>
+          </div>
+      
+        </div>
+      </div> -->
+      <!--end of project item 6-->
+
+      <!--fan art-->
+      <div class="pcontainer">
+        <div class="card" id="project1">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj1text">
+            <p class="item_title">fan art</p>
+            <p class="item_description">This is the fan art gallery.</p>
+            <button class="modal-btn" href="#myModal1">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+        </div>
+      </div>
+      <!--end of project item 1-->
+    
+      <!--monochrome celeb portraits-->
+      <div class="pcontainer">
+        <div class="card" id="project2">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj2text">
+            <p class="item_title">Public Figure Portraits</p>
+            <p class="item_description">This is the portrait gallery of real people.</p>
+            <button class="modal-btn" href="#myModal2">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+        </div>
+      </div>
+      <!--end of project item 2-->
+    
+      <!--OCs-->
+      <div class="pcontainer">
+        <div class="card" id="project3">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj3text">
+            <p class="item_title">Original Characters</p>
+            <p class="item_description">This is where my original characters are.</p>
+            <button class="modal-btn" href="#myModal3">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 3-->
+    
+      <!--draw this in your style-->
+      <div class="pcontainer">
+        <div class="card" id="project4">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj4text">
+            <p class="item_title">DTIYS Challenges</p>
+            <p class="item_description">Instagram will often have drawing challenges. This is a gallery of them.</p>
+            <button class="modal-btn" href="#myModal4">Click to explore more.</button>
+          </div>
+          <!--end of item content-->
+    
+        </div>
+      </div>
+      <!--end of project item 4-->
+
+      <!--ella collab-->
+      <div class="pcontainer">
+        <div class="card" id="project15">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj15text">
+            <p class="item_title">Concept Collaboration Project</p>
+            <p class="item_description">Collaborate on a film concept project</p>
+            <button class="modal-btn" href="#myModal15">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+
+      <!--layouts-->
+      <div class="pcontainer">
+        <div class="card" id="project17">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj17text">
+            <p class="item_title">Layouts and Backgrounds</p>
+            <p class="item_description">Environments drawn in different styles.</p>
+            <button class="modal-btn" href="#myModal17">Click to explore more.</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <!--end of project grid-->
+    
+    <!---ABOUT CONTENT--->
+    <div class="tabcontent" id="about-grid">
+      <div class="about-container">
+        <div class="about-item">
+          <p class="about-txt">
+            Hello! This Vi-Linh Nguyen (pronounced VEE LIN WIN). She is a DePaul University alumni with a degree in computer
+            science. Computer Science has offered her a flexibility that
+            satisfies the technical side of her brain into building sites
+            and apps for people to interact with. A bachelors in animation and a lifelong passion for art helps Vi-Linh 
+            understand the principles of visual appeal from a user perspective.
+          </p>
+          <p class="about-txt" id="about-email">
+            <button class="modal-btn" href="#">
+              vilinh27@gmail.com
+            </button>
+          </p>
+        </div>
+        <div class="about-item">
+          <img src="https://pbs.twimg.com/media/FjgTPE3XgAAGAyM?format=jpg&name=medium" class="about-img" alt="ME"
+            id="aboutmepic" />
+        </div>
+      </div>
+    </div>
+    
+    <!---CV CONTENT--->
+    <div class="tabcontent" id="cv-grid">
+      <div class="cv-container">
+        <div class="cv-header">
+          <p>vilinh27@gmail.com | portfolio.com | linkedinprofile</p>
+        </div>
+        <div class="cv-education">
+          <h3>Education</h3>
+          <hr />
+          <div class="cv-e_item">
+            <div class="cv-e_school">
+              <h4>DePaul University</h4>
+              <p>M.S. - Computer Science, Human Computer Interaction Concentration</p>
             </div>
-            <!--endo of animcontent-->
-
-            <h5 class="home-intro-subtitle">
-              Scroll Down to see some featured projects.<br/>
-              Visit the Projects tab for more of my work.
-            </h5>
-          </div><!--main intro-->
-
-        </div><!--column-->
-      </div>
-      <!--end of intro-->
-
-      <!--project grid-->
-      <div id="project-grid" class="container p-2 ">
-        <div class="row">
-
-          <!--project 1-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/timeToTalk.html">
-              <img class="project-grid-item-img" src="./assets/timeToTalk-itchioCoverArtboard-1.png" alt="time to talk"/>
-              <div class="overlay">
-                  <div class="overlay-text">Time to Talk</div>
-              </div>
-            </a>
+            <div class="cv_Info">
+              <p>Chicago, IL</p>
+              <p>Graduation Date: Dec 2023</p>
+            </div>
           </div>
-
-          <!--project 2-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/cartridgeCollector.html">
-              <img class="project-grid-item-img" src="./assets/cartridgecollector.JPG" alt="Cartridge Collector" />
-              <div class="overlay">
-                <div class="overlay-text">Cartridge Collector</div>
-              </div>
-            </a>
+    
+          <div class="cv-e_item">
+            <div class="cv-e_school">
+              <h4>Columbia College Chicago</h4>
+              <p>B.A. - Cinema Arts and Sciences, Animation Concentration</p>
+            </div>
+            <div class="cv_Info">
+              <p>Chicago, IL</p>
+            </div>
           </div>
-
-          <!--project 3-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/twitterBookmarks.html">
-              <img class="project-grid-item-img" src="./assets/twitter-bookmarks.jpg" alt="Twitter Bookmarks" />
-              <div class="overlay">
-                <div class="overlay-text">Twitter Bookmarks Storage</div>
-              </div>
-            </a>
-          </div>
-
-          <!--project 4-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/hellGhost.html">
-              <img class="project-grid-item-img" src="./assets/ghost01.JPG" alt="HellGhost" />
-              <div class="overlay">
-                <div class="overlay-text">HellGhost</div>
-              </div>
-            </a>
-          </div>
-
-          <!--project 5-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/carrdClone.html">
-              <img  class="project-grid-item-img" src="./assets/cardclone.jpg" alt="carrd.co clone">
-              <div class="overlay">
-                  <div class="overlay-text">Carrd.co Clone</div>
-              </div>
-            </a>
-            
-          </div>
-
-          <!--project 6-->
-          <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/storyPlanner.html">
-              <img class="project-grid-item-img" src="./assets/storyplanner.jpg" alt="StoryPlanner Site" />
-              <div class="overlay">
-                <div class="overlay-text">StoryPlanner Site</div>
-              </div>
-            </a>
-          
-          </div>
-          <!-- <div id="project-grid-item" class="col-lg-6 col-md-6 mb-12 mb-md-0">
-            <a href="./pages/code/iosBookTrackerApp.html">
-              <img class="project-grid-item-img" src="" alt="IOS BOOKTRACKER APP">
-              <div class="overlay">
-                <div class="overlay-text">IOS Booktracker App</div>
-              </div>
-            </a>
-            
-          </div> -->
+    
         </div>
-        <!--end of row-->
-      </div>
-      <!--end of project grid-->
-
-      <!--back to top-->
-      <div id="back-to-top" class="col-lg-12 col-md-12 text-center">
-        <button class="btn-primary"><a href="#toppage">Back to Top</a></button>
-      </div>
-
-    </main><!--end of main container-->
-
-    <!--footer-->
-    <div class="navbar" id="footer">
-      <!--Grid ctonainer-->
-      <div class="container p-3 text-center">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
-            <h4>Contact Me</h4>
-            <p>vilinh27@gmail.com</p>
+        <div class="cv-work">
+          <h3>Work Experience</h3>
+          <hr />
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>CIP Chicago</h4>
+              <h5>Web Developer | Web Designer</h5>
+              <ul>
+                <li>Conducted competitive analysis of 6 industry leading websites, indentifying 3 key design trends and best practices
+                directly applicable to organization goals.</li>
+                <li>Executed a complete overhaul of the organization's website, following new branding guidelines from the supervisor,
+                resulting in a 20% increase in organic website traffic and a 15% boost in conversion rates.</li>
+                <li>Analyzed and evaluated potential international talent based on supervisor criteria, resulting in a 30% increase in the
+                number of qualified candidates for consideration.</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>Chicago</p>
+              <p>Mar 2023 - Jun 2023</p>
+            </div>
           </div>
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-4 mb-4 mb-md-0 ">
-            <h4>More Projects</h4>
-            <a href="https://github.com/ViLinh27"><p>Github</p></a>
-            <a href="https://codepen.io/vilinh27"><p>Codepen</p></a>
-            <a href="https://linh-is-tibia.itch.io/"><p>itch.io</p></a>
+    
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>HUGS International</h4>
+              <h5>Frontend Web Developer</h5>
+              <ul>
+                <li>Developed responsive website pages adhering to W3C standards and cross-browser compatibility best practices.</li>
+                <li>Successfully fixed high severity bugs as needed by the product manager, ensuring more efficient code review.</li>
+                <li>Integrated frontend with backend ensuring smooth data flow between user interface and server-side logic with
+                guidance from backend team.</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>San Diego</p>
+              <p>Feb 2022 - May 2022</p>
+            </div>
           </div>
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
-            <h4>Follow Me</h4>
-            <a href="https://www.linkedin.com/in/vilinhnguyen27/"><img class="icons" src="./assets/linkedin-icon.png" alt="linkedin"/></a>
-            <a href="https://twitter.com/vilinh27"><img class="icons" src="./assets/twitter-icon.png" alt="twitter" /></a>
-            <a href="https://www.instagram.com/linh_is_tibia/"><img class="icons" src="./assets/insta-icon.png" alt="instagram" /></a>
+    
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>SuperWorld</h4>
+              <h5>Frontend Web Developer</h5>
+              <ul>
+                <li>Troubleshooted React and Javascript errors in organization's website application, leading to a smoother user
+                experience.</li>
+                <li>Navigated series of iterative design tests on application page sections to meet evolving supervisor requirements,
+                guided closely UX team, resulting in 20% increase in user engagement metrics.</li>
+                <li>Collaborated with design team to seamlessly integrate new branding elements into web application sections, resulting
+                in a 10% improvement in overall user experience.</li>
+              </ul>
+            </div>
+            <div class="cv_Info">
+              <p>San Francisco</p>
+              <p>Jan 2021 - Jun 2021</p>
+            </div>
+          </div>
+
+          <div class="cv-w_item">
+            <div class="cv-w_job">
+              <h4>Happy Mercs</h4>
+              <h5>Animator</h5>
+              <ul>
+                <li>Presented constructive feedback on colleagues' assigned animation clips, actively participated in brainstorming
+                sessions to refine pilot project concepts.</li>
+                <li>Collaborated with on remote team of 8 people to develop cohesive animation sequences that seamlessly integrate
+                with pilot trailer.</li>
+                <li>Delivered high-quality 2D character animations with a frame rate of 24 fps, ensuring fluid movement by industry
+                standard.</li>
+              </ul>
+            </div>
+
+            <div class="cv_Info">
+              <p>New York City</p>
+              <p>Oct 2018 - Jan 2019</p>
+            </div>
+
+          </div>
+
+        </div>
+    
+        <div class="cv-skills">
+          <h3>Skills</h3>
+          <hr />
+          <div class="cv-s_table">
+            <table>
+              <tr>
+                <th>Frontend Development:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>React JS</div>
+                    <div> | </div>
+                    <div>HTML5</div>
+                    <div> | </div>
+                    <div>CSS3</div>
+                    <div> | </div>
+                    <div>Javascript</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Backend Development:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Node.js</div>
+                    <div> | </div>
+                    <div>Swift</div>
+                    <div> | </div>
+                    <div>Java</div>
+                    <div> | </div>
+                    <div>SQL</div>
+                    <div> | </div>
+                    <div>C#</div>
+                    <div> | </div>
+                    <div>Python</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Design:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Adobe Illustrator</div>
+                    <div> | </div>
+                    <div>Adobe Photoshop</div>
+                    <div> | </div>
+                    <div>Adobe Flash</div>
+                    <div> | </div>
+                    <div>Figma</div>
+                    <div> | </div>
+                    <div>Axure</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Miscellaneous:</th>
+                <td>
+                  <div class="cv-s_tableInfo">
+                    <div>Git</div>
+                    <div> | </div>
+                    <div>French Fluency</div>
+                    <div> | </div>
+                    <div>Vietnamese Fluency</div>
+                    <div> | </div>
+                    <div>Microsoft Word</div>
+                    <div> | </div>
+                    <div>Microsoft Powerpoint</div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="cv-courses">
+          <h3>Coursework</h3>
+          <hr />
+          <div class="cv-c_container">
+            <div class="cv-c_course">Data Structures I & II</div> |
+            <div class="cv-c_course">Applied Algorithms</div> |
+            <div class="cv-c_course">Discrete Math</div> |
+            <div class="cv-c_course">Systems I & II</div> |
+            <div class="cv-c_course">Android Development I </div> |
+            <div class="cv-c_course">IOS Development I </div> |
+            <div class="cv-c_course">User Centered Design</div> |
+            <div class="cv-c_course">Prototyping and Implementation</div> |
+            <div class="cv-c_course">Information Architecture</div>
+            <div class="cv-c_course">Automata Theory</div>
+          </div>
+        </div>
+        <div class="cv-interests">
+          <h3>Interests</h3>
+          <hr />
+          <div class="cv-i_container">
+            <div class="cv-i_interest">Web Development</div> |
+            <div class="cv-i_interest">Mobile Application Development</div> |
+            <div class="cv-i_interest">UX</div> |
+            <div class="cv-i_interest">Illustration</div> |
+            <div class="cv-i_interest">Design</div> |
           </div>
         </div>
       </div>
     </div>
-    <!--end of footer-->
     
+    <!--- MODALS --->
+    
+    <!--fan art-->
+    <div class="modal" id="myModal1">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Fan Art</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FVPnDX1WIAMP1vt?format=jpg&name=large" alt="me but show"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p class="">
+                Different show styles
+              </p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">
+                Different show styles
+              </p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/fanart/theuden2-webtoon.jpg" alt="isran" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Theuden in the rain</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Theuden in the rain</p>
+            </span>
+          </figure>
+
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FQGaDjGWUAseXdC?format=png&name=900x900" alt="owl house card"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>
+                Owl House Tarot: Hunter
+              </p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>
+                Owl House Tarot: Hunter
+              </p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FhEwQA1XkAMRFEX?format=jpg&name=medium" alt="acnh bunny aro"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>The Constellation Witch - Animal Crossing</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>The Constellation Witch - Animal Crossing</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/fanart/isran-webtoon.jpg" alt="isran" class="modal-img"/>
+            <figcaption class="mbc_content">
+              <p>Isran but animal crossing</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>isran but animal crossing</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/fanart/theuden3-webtoon.jpg" alt="isran" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Theuden but animal crossing</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Theuden but animal crossing</p>
+            </span>
+          </figure>
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+
+    <!--celeb portraits-->
+    <div class="modal" id="myModal2">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Public Figure Portraits</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/65dab7131d743e756a8252a7d71fc523/2dda13b65f6834c4-0b/s1280x1920/f02f116e2a8c70a1ddbe97657d2367cf0b9e2a71.pnj"
+              alt="Amazin Le Thi" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Amazin Le Thi</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Amazin Le Thi</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/0285f58a8bf3d6ca9a7b047f2c8ef80c/2dda13b65f6834c4-39/s1280x1920/bc037f4905054066830b15e29f9a05d7a0301d8e.pnj"
+              alt="Kevin Kreider" class="modal-img" />
+            <figcaption class="mbc_content">
+              <div class="modal-body_txt">
+                <p>Kevin Kreider</p>
+              </div>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Kevin Kreider</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img
+              src="https://64.media.tumblr.com/cf4ca6ca18d889cc795278f7f1af42ec/2dda13b65f6834c4-f6/s1280x1920/a7671c84f9566320e92bd479fc952b342936261e.pnj"
+              alt="Oscar Isaac" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Oscar Isaac</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Oscar Isaac</p>
+            </span>
+          </figure>
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+
+    <!--my OCs-->
+    <div class="modal" id="myModal3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>Original Characters</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FgXTfecXgA0L2Rk?format=jpg&name=medium" alt="Zolin" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Zolin</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Zolin</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container"> <img src="https://pbs.twimg.com/media/FgXTfebXgAI2_Jt?format=jpg&name=medium"
+              alt="Beatriz" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Beatriz</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Beatriz</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://pbs.twimg.com/media/FgXTfedWYAEUk3E?format=jpg&name=medium" alt="Erdutza" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Erdutza</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Erdutza</p>
+            </span>
+          </figure>
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+
+    <!--dtiys-->
+    <div class="modal" id="myModal4">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>DTIYS</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/09d6bf531f7513fab4d950080b133834/c0bfb20c65b25ea2-eb/s1280x1920/06453f0ba0305c6d19e4596887c38a9a2fcf7565.pnj"
+                alt="silka" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by silka.art on Instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by silka.art on Instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/1e26be774ca115516055d40247278ba8/c0bfb20c65b25ea2-9b/s1280x1920/ba8598291a5491d4c2ba1539927ac360b7b5a048.pnj"
+                alt="bellebubben" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by bellebubben on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by bellebubben on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/47e83b72a97ef65f359fd303e27ccaf1/c0bfb20c65b25ea2-bc/s1280x1920/b4d0f84ccabaa35e83ec5baae07b1bdce3f8a95e.pnj"
+                alt="cookysparks" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by cookysparks on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by cookysparks on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img
+                src="https://64.media.tumblr.com/b20a63f116088d533e6698b601f8479b/c0bfb20c65b25ea2-97/s1280x1920/4f60ee2b6ccaef7f717f9d71d0ba32035df86ea5.pnj"
+                alt="cyarine" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by cyarine on instagram</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by cyarine on instagram</p>
+              </span>
+            </figure>
+          </div>
+    
+          <!-- <div class="modal-body_itms">
+            <figure class="mbc_container">
+              <img src="" alt="" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p>Original subject by</p>
+              </figcaption>
+              <span class="mbc_content-hover">
+                <p>Original subject by</p>
+              </span>
+            </figure>
+          </div> -->
+    
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+    
+    <!--sql projects-->
+    <div class="modal" id="myModal5">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>SQL</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+
+          <figure class="mbc_container">
+            <img src="/assets/code/relationalModel-SQLproj.JPG" alt="Relational model" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p></p>
+            </figcaption>
+          </figure>
+
+          <figure class="mbc_container">
+            <p>
+              These projects were for a database course during my graduate studies. Learning databases were a
+              fundamentals course for my program. 
+            </p>
+            <p>
+              Repositories I've used for the database course:
+            </p>
+            <ol>
+              <li>
+                <a href="https://github.com/ViLinh27/RelationalModel">
+                  Relational Model
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/ViLinh27/SimpleSQL">
+                  Simple SQL</a></li>
+              <li>
+                <a href="https://github.com/ViLinh27/IntermediateSQL">
+                  Intermediate SQL</a></li>
+              <li>
+                <a href="https://github.com/ViLinh27/AdvancedSQL">
+                  Advanced SQL</a></li>
+              <li>
+                <a href="https://github.com/ViLinh27/MoreAdvancedSQL">
+                  More Advanced SQL</a></li>
+            </ol>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/code/simpeSQLcode.JPG" alt="" class="modal-img"/>
+            <figcaption class="mbc_content">
+              <p></p>
+            </figcaption>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/code/intermediateSQLcode.JPG" alt="" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p></p>
+            </figcaption>
+          </figure>
+
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">
+          I have more SQL projects on my github linked here: 
+          <a href="https://github.com/ViLinh27?tab=repositories&q=databases&type=&language=&sort=">CLICK</a>
+        </div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+
+    <!--c# projects-->
+    <div class="modal" id="myModal6">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+               <i class="fa fa-window-close" aria-hidden="true"></i>
+               </span>-->
+          <h2>C#</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <div class="modal-body_itms">
+            <figure>
+              <img src="" alt="" class="modal-img" />
+              <figcaption class="mbc_content">
+                <p class="modal-body_txt">Original subject by</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal 
+    containaer-->
+
+    <!--time to talk-->
+<!--     <div class="modal" id="myModal7">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Time To Talk</h2>
+          <h3>A short visual novel made in the Renpy game engine.</h3>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTMuanBn/original/Vs8uti.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+    
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTQuanBn/original/Mcwm%2Fj.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <img src="https://img.itch.zone/aW1hZ2UvNzI2Nzk0LzQwMzczNTUuanBn/original/3GrWrY.jpg" alt="time to talk"
+              class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <p>My sister is a big visual novel fan, and told me about the renpy game engine. I've
+              only played a few visual novel games though.</p>
+          </figure>
+        </div>
+        <div class="modal-footer">
+          <p>More details and a downloadable version of the game can be seen on my itchio page
+            <a href="https://linh-is-tibia.itch.io/time-to-talk">here</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--end of modal container-->
+
+    <!-- cartridge collector-->
+    <!-- <div class="modal" id="myModal8">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Cartrdige Collector</h2>
+          <h3>A short platformer for a chill game jam.</h3>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="" alt="cartridge collector" class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Game Screenshot</p>
+            </span>
+          
+          </figure>
+          
+          <figure class="mbc_container">
+            <p>My sister had shown me a chill game jam that didn't have a deadline. I had never done a game jam
+              before so I liked that there wasn't too much pressure. The cartridge motif had to do with the theme if
+              I remember correctly.
+            </p>
+          </figure>
+        </div>
+        <div class="modal-footer">
+          <p>
+            More details and a downloadable version of the game can be seen on my itchio page
+            <a href="https://linh-is-tibia.itch.io/cartridge-collector">here</a>.
+          </p>
+
+        </div>
+      </div>
+    </div> -->
+    <!--end of modal container-->
+
+    <!--hell ghost game-->
+<!--     <div class="modal" id="myModal9">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>HellGhost</h2>
+          <h3>An endless runner game made in Unity</h3>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="./assets/ghost01.JPG" alt="" class="modal-img" />
+            <figcaption class="mbc_content">
+              Game Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Game Screenshot</p>
+            </span>
+          </figure>
+    
+          <figure class="mbc_container">
+            <span>
+              <p>
+                This was a test game project to help me understand some basic game making mechanics in Unity, but in
+                2D of course.
+              </p>
+            </span>
+          </figure>
+        </div>
+        <div class="modal-footer">
+          <p>More details and a downloadable version of the game can be seen on my itchio page
+            <a href="https://linh-is-tibia.itch.io/hellghost">here</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <!--android project-->
+    <div class="modal" id="myModal10">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Android Notes App</h2>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="/assets/code/android-app.jpg" alt="screenshot" class="modal-img"/>
+            <figcaption class="mbc_content">
+              App Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">App Screenshot</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <p>
+              This was a project made for an Android Development elective course during my graduate studies. The purpose of the app is to
+              make notes at the users leisure where the user can navigate the screens and keep the content of the notes persistent. Android 
+              Studio was the IDE used.
+            </p>
+            <p>
+              The repository for the code can be linked here: <a href="https://github.com/ViLinh27/android-notes">Android repository</a>.
+            </p>
+          </figure>
+
+        </div>
+        <div class="modal-footer">Learning Android Development is a continuous journey.</div>
+      </div>
+    </div>
+
+    <!--ios book tracker-->
+    <div class="modal" id="myModal11">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>IOS Book tracker App</h2>
+        </div>
+        <div class="modal-body">
+          
+          <figure class="mbc_container">
+            <img src="/assets/code/iosbookapp01.jpg" alt="ios screenshot" class="modal-img" />
+            <figcaption class="mbc_content">
+              App Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">App Screenshot</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/code/iosbookapp02.jpg" alt="ios screenshot" class="modal-img" />
+            <figcaption class="mbc_content">
+              App Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">App Screenshot</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/code/iosbookapp03.jpg" alt="ios screenshot" class="modal-img" />
+            <figcaption class="mbc_content">
+              App Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">App Screenshot</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <p>
+              This was a project for an IOS development elective course during my graduate studies. Below is a link
+              to the repository.
+              <a href="https://github.com/ViLinh27/csc471_iOSfinalProject">repository link</a>
+            </p>
+          </figure>
+      
+        </div>
+        <div class="modal-footer">Learning IOS Development is a continuous journey.</div>
+      </div>
+    </div>
+
+    <!--IA Rouyn project-->
+    <div class="modal" id="myModal12">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>An Exploration of Rouyn Noranda's website</h2>
+        </div>
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="/assets/ux/rouyn-site.jpg" alt="website screenshot" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Existing original website</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Existing Original website</p>
+            </span>
+            <br/>
+
+            <p>
+              The original city website actually went through a rebrand as my partner and I worked on this project.
+              The most current website can be found at this link:
+              <a href="https://www.rouyn-noranda.ca">here</a>.
+            </p>
+            
+            <p>
+              Here, you can read the the proposal for the project to our professor:
+              <a href="/assets/ux/proposal-draft.pdf">Proposal Draft</a>
+            </p>
+            
+            <p>
+              The content inventory was meant to categorize the existing content of the website. You can read through it
+              with this link:
+              <a href="/assets/ux/Rouyn-Content Inventory.pdf">Content Inventory</a>
+            </p>
+            
+            <p>
+              The final deliverables can be downloaded with this PDF link here:
+              <a href="/assets/ux/Group2-FinalProject_Deliverables.pdf">Deliverables</a>
+            </p>
+            <br/>
+
+            <h2>🍁 Rouyn Noranda Welcomes You. 🍁</h2>
+            <h3>Information Architecture- Group 2</h3>
+            <h4>May 16 2022</h4>
+            <br/>
+
+            <h3>Project Overview</h3>
+            <p>
+              Rouyn-Noranda is a small town in Northern Quebec in the Abitibi-Témiscamingue region, with a population of over 42 000
+              people.
+            </p>
+            <p>
+              This project will look at the way information is organized for non-locals, who know less about the town, vs locals, who
+              tend to know more. The website caters more towards established locals because of how information centered around already
+              living there is concentrated in a smaller number of clearly labeled areas.
+            </p>
+            <p>
+              Our goal is to reconfigure the navigation to make it easier and more efficient for non- locals, be it tourists or
+              newcomers, to access the information they need about the town.
+            </p>
+
+            <h4>Major Content Items</h4>
+            <p>
+              Information presented on the homepage shows five categories. We will be focusing on the English version of the website.
+            </p>
+            <h5>History</h5>
+            <p>
+              There is a bunch of content on how the town came to be starting off as multiple different settlements. Each settlement
+              had something unique about them and eventually the communities came together to form Rouyn-Noranda.
+
+            </p>
+            <h5>Visiting/ Newcomers</h5>
+            <p>
+              Resources and information for visiting tourists who want to sight- see as well as needed sources for new faces who want
+              to move to the area and adjust to a new life there.
+            </p>
+            <h5>Business</h5>
+            <p>
+              Mining and metallurgy are the driving economic industries of the area, but many smaller businesses can thrive too. Here
+              are the resources and information needed for such ventures. There are resources for contractors who want to work with
+              local businesses too.
+            </p>
+            <h5>Transportation</h5>
+            <p>
+              Different methods of getting to the area via provincial highways, local highways or the Rouyn airport. The Rouyn airport
+              is also useful for commercial travel. Information on public transport is also listed.
+
+            </p>
+            <h5>Life in Rouyn-Noranda</h5>
+            <p>
+              What is it like to live in this town as a student? What about a full-time worker with a family? There are also several
+              events held in town at various points of the year to get more involved and different municipal organizations to get
+              involved within the local political scene.
+            </p>
+
+            <h4>Personas</h4>
+            <h5>Persona 1</h5>
+            <p>Ron. The new graduate who wants to start life in a small town.</p>
+            <h5>Persona 2</h5>
+            <p>Janine. The tourist who wants to get to know rural Canada.</p>
+
+            <h4>Scenarios</h4>
+            <h5>Scnario 1</h5>
+            <p>
+              You found a town to have a new start in.
+            </p>
+            <h5>Scenario 2</h5>
+            <p>
+              You are visiting rural Canada for the first time.
+            </p>
+            <h5>Scenario 3</h5>
+            <p>
+              You are looking for work in Rouyn-Noranda.
+            </p>
+
+            <h3>Testing Process</h3>
+            <h4>Content Inventory</h4>
+            <p>Our group proceeded to lay out the website's information architecture into a content inventory, using each component of
+            the main navigation, there was a total of 113 content items.</p>
+            <h5>Purpose</h5>
+            <p>The inventory would help the group understand the main components of the website and evaluate a more efficient
+            organizational scheme for the user.</p>
+            <h5>What we learned</h5>
+            <p>There were too many links in the website's main navigation. Certain pages contained links that lead to other parts of
+            the navigation. The existing category names were unclear at what information they presented based on the user scenario
+            possibilities. Localization added to the ambiguity of the naming conventions of the navigation.</p>
+            
+            <br/>
+
+            <h4>Card Sorts</h4>
+            <p>From the initial content inventory, areas of opportunity to reorganize were found. Three card sorts were conducted: Open
+            card sort, closed card sort, and another closed card sort for validation purposes. Our group used OptimalSort to conduct
+            the card sort testings. Participants were recruited by family, friends and social media connections. The following
+            sections are the results and changes.</p>
+            <h5>Round 1: Open</h5>
+            <p>There were 2 parcipants for the first card sort as a pilot card sort, with 3 iterations per participant. This was an
+            open card sort.</p>
+            <h6>Results</h6>
+            <h5>Round2: Closed</h5>
+            <p>There were 6 participants for the second card sort. This was a closed card sort.</p>
+            <h6>Results</h6>
+            <h6>Needs Changes?</h6>
+            <h5>Round 3: Closed, validation</h5>
+            <p>This closec card sort serves to validate the result of the second round of card sorts.</p>
+            <h6>Results</h6>
+
+            <h4>Task Based Tests</h4>
+            <h5>Treejack Test</h5>
+            <h6>Tasks</h6>
+            <p>You are visiting rural Canada for the first time. You're looking for something to do. Where would you look for that
+            information?</p>
+            <p>You want to move to a small town, but it's a big step? Where could you find information to start the moving process?</p>
+            <p>You settled in to Rouyn-Noranda, but you need to find work to pay the bills. Where would you find that information?</p>
+          </figure>
+      
+        </div>
+        <div class="modal-footer">UX</div>
+      </div>
+    </div>
+
+    <!--tiny fingers discussion-->
+    <div class="modal" id="myModal13">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>UX Discussion</h2>
+        </div>
+        <div class="modal-body">
+          
+          <figure class="mbc_container">
+            <p>
+              This paper was for a prototyping and implementation course during my graduate studies. This course fell
+              under the Human Computer Interaction concentration of my department. We were to discuss two papers and 
+              how each author approached the topic of user experience and design.
+            </p>
+            <p>
+              Provided here is a link to the donwloadable pdf of my own discussion of the two aforementioned articles: 
+              <a href="/assets/ux/HCI430-A1_papersDiscussion.pdf">Discussion PDF</a>. 
+            </p>
+            <p>
+              I have provided my discussion of the Rettig and Erickson articles under the links
+              as well. Scroll down to read.
+            </p>
+
+            <!--the discussion :-->
+            <br/>
+            <h3>A Look into the Nuance of UX from a Programmer</h3>
+            <p>
+              Technology as a field is a vast field that extends more than what people outside the domain expect it to be often. As
+              someone who comes from an artistic background learning programming, this has been confirmed again and again throughout
+              my time studying computer science. The concentration of human computer interaction, often colloquially referred to as
+              UX, has been the most enlightening part in seeing the intricacies of how people interact with technology. From the
+              developer's side, who tends to focus on the code that builds an application, I've found that the information extracted
+              from user centered tests involving prototypes to have the most nuance in planning out a software product.
+            </p>
+            <p>
+              The Tiny Fingers article by Mark Rettig talked about the advantages of a paper prototype mainly. Some of the ideas
+              discussed started with how the field of human computer interaction evolved from the emphasis on software and fidelity to
+              the efficiency of low fidelity and how important that can be. The advantages of the low fidelity were explained in the
+              context of the timeline of a product's development so this offered efficiency benefits because it's cheap and easy to
+              change making iteration easier to streamline through.
+              
+            </p>
+            <p>
+              As mentioned, going with a high-fidelity prototype from the start has the risk of not getting enough valuable
+              information from such a detailed prototype early in the development process (Rettig 1994). The kind of valuable
+              information in question can potentially speak to how well the usability measures to the user. According to Rettig,
+              developers can prioritize usability more during the planning stages of the project. This allows for the “formative
+              evaluation” Rettig explains in detail in the article.
+              
+            </p>
+            <p>
+              The entire process from ideation to prototyping is consistent with what is taught in DePaul's User Centered Design
+              class. From what has been taught so far in this prototyping class, the development process is the same (because both
+              classes explore the same field), except students will have the opportunity to dive more into the later stages of the
+              development process of UX (where in contrast, the start of the process focused more on the research aspects of UX). Both
+              of the aforementioned articles from Erickson and Rettig explore the standard development and design process in detail.
+              The ideation part of the process does share similarities to how a programmer would plan out how to implement a software,
+              but the high-level concepts differ.
+              
+            </p>
+            <p>
+              The Notes on Design paper seems to focus more on the design and development process in the scope of how large
+              organizations handle it, so good communication becomes tantamount to the project's chance of success. Although they do
+              bring up the communicative aspect of individual work through the importance of physical artifacts in the design process
+              (Erickson 1995). Furthermore, the influences at what kicks off the communication over the project is also multi-faceted.
+              
+            </p>
+            <p>
+              There is a bigger focus in the Erickson paper about the different audiences that come up during the design and
+              development cycle of an application or product, however unlike the Tiny Fingers article. The diversity of one single
+              facet of an audience, like the design team as mentioned, is considered more and what kind of knowledge the varying
+              disciplines contribute to the project at hand (Erickson 1995).
+            </p>
+            <p>
+              Erickson also goes into more detail about design artefacts that Rettig doesn't focus on as much, stories. The story's
+              role in the design and development process explained by both authors play the part in considering how users would
+              approach a certain problem using the product the designers are trying to design and develop, or a “framework” (Erickson
+              1995). Because of how unpredictable users can be, stories help consider that ambiguity before any solid plan is fully
+              committed to. This would mean that designers are given a fair degree of adaptability to work with during the beginning
+              stages of the design process, what Erickson calls the “exploratory stage” (Erickson 1995). To add on to the use of
+              stories, Erickson goes onto explain the equalizing benefits of them in the team project, similar to the low fidelity
+              prototype that comes up later in the process (Erickson 1995). To summarize, because both authors use the context of a
+              large organization to explain their individual concepts, UX teams in bigger organizations tend to have various
+              disciplines because it's such a collaborative field. Stories help get across concepts that may normally only be clear to
+              certain disciplines if discussed formally.
+              
+            </p>
+            <p>
+              In the field of UX, especially in large organizations both authors use to contextualize the type of project that's
+              common enough to explain in such articles, teams that design a product and develop it can have people from so many
+              different fields and disciplines. Likewise, the development stages explained in the Notes on Design Paper are emphasized
+              as not “clearly separated” unlike the Tiny Fingers article (Erickson 1995). Take the Refinement stage for example, where
+              the project is at a point where the designers know what the product is supposed to accomplish (Erickson 1995). However,
+              the planning and discussions involved here lends to what is discussed by Rettig when the benefits of the lo-fi prototype
+              in the process get explained more in detail in terms of determining requirements for the project. This is where Rettig
+              describes preparing for testing. Returning to the core of what both mentioned articles share, prototypes, designers must
+              consider that each kind of prototype made will be used for different kinds of information gathering. The testing Rettig
+              describes includes the use of low fidelity prototyping, but the information there is to convey the overall concept of a
+              product (Erickson 1995). Designers at this point tend to not prioritize the interactivity in their prototype just yet.
+              That's saved for when more data is gathered.
+              
+            </p>
+            <p>
+              From what I have learned in DePaul's User Centered Design class, the low fidelity prototype our team built did in fact
+              go through several iterations just as Rettig's examples had, although the difference there is we used a low fidelity
+              software prototype to get around location differences between the group of designers and the users we tested the
+              prototype with. The reasoning for low fidelity included the tight deadline but the ease at adding changes with each user
+              test was easier to grasp in practice than in theory. The “vision prototype” acted closely to a low fidelity prototype
+              because it's generally quite easy to get lost in adding details when working with a software prototype. The biggest
+              challenge to this phase of our team's product development is the very advantage Erickson described when the development
+              stages were ambiguously separated (Erickson 1995). It may help in flexibility in planning but to a design team that is
+              still figuring out their baring's into a new field, it makes gauging the team progress incredibly difficult. With a
+              tight time, frame of a school project, there isn't always time for lengthy discussions of ideas. Plus, some of our group
+              members were new to the high-level concepts involved in UX, what Erickson calls the “exploratory stage” (Erickson 1995).
+              
+            </p>
+            <p>
+              In short, technological projects that heavily rely on users have a nuance in their high-level concepts that contrast
+              starkly to the high-level concepts one would find in programming. The user adds a layer of unpredictability that poses
+              both a flexibility and obstacle to how to tackle a problem. And that's if the team of designers can figure out what the
+              problem is at hand. This is why prototyping plays such a vital role in UX, whether that team of designers is
+              multidisciplinary or not. That data gathered thanks to the prototyping and testing lets the team know how to move
+              forward.
+            </p>
+            <br/>
+            <!--citation-->
+            <p>
+              Citation
+    
+            </p>
+            <p>
+              Rettig, Marc. “Prototyping for tiny fingers.” Commun. ACM 37 (1994): 21-27.
+              Erickson, Thomas. “Notes on design practice: stories and prototypes as catalysts for communication.” (1995).
+            </p>
+            <br/>
+
+            <h4>Provided here are links to downloadable versions of the articles discussed. </h4>
+            <p>
+              <a href="/assets/ux/TinyFingers.pdf">Tiny Fingers PDF</a>
+            </p>
+            <p>
+              <a href="/assets/ux/Notes on Design Practice.pdf">Notes on Design PDF</a>
+            </p>
+          </figure>
+        </div>
+        <div class="modal-footer">UX</div>
+      </div>
+    </div>
+
+    <!--peezyfind-->
+    <div class="modal" id="myModal14">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>PeezyFind</h2>
+        </div>
+        <div class="modal-body">
+          <!-- <figure class="mbc_container">
+            <img src="" alt="screenshot" class="modal-img" />
+            <figcaption class="mbc_content">
+              Screenshot
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p class="">Screenshot</p>
+            </span>
+          </figure> -->
+    
+          <figure class="mbc_container">
+
+            <button><a href="/assets/ux/HCI430-A3_Group3.pdf">Download PDF</a></button>
+
+            <br/>
+
+            <h3>Idea and Introduction</h3>
+            <p>
+              The availability of public bathrooms for tourists and locals is not always obvious in major cities like Chicago. The
+              existing mobile applications do not always have the most updated location despite having other details like keys,
+              cleanliness, and accessibility information. This product will focus on providing the most accurate, detailed, and
+              extensive list of public restrooms in any city. The PeezyFind mobile and smart watch application will include maps and
+              augmented reality to aid the user in finding the most efficient way to the nearest public restroom.
+            </p>
+
+            <br/>
+
+            <h3>
+              Sketches during Charette
+            </h3>
+            <p>
+              The sketches below provide a visual to the ideation and design charette phase of product development. The primary
+              focus
+              was on the augmented reality functionality therefore, a mobile phone interface was the first one that was considered.
+              After developing the mobile interface sketches, the addition of a smart watch interface became a simple integration.
+              Current mobile map applications have an option of also using a smart watch for navigation. Figure 2.0 details sketches
+              for the added smart watch interface.
+            
+              An obstacle that came up during the sketching portion of the charette was whether our product would need a profile and
+              log in feature (illustrated in Figure 1.2). There is a bigger convenience to the user not needing to log in to search
+              public restrooms in their area, so Figure 3.0 focuses on that user situation.
+            </p>
+
+            <br/>
+            <h4>Concept sketches:</h4>
+
+            <div class="slideshow-container">
+              <!--slides with caption-->
+              <div class="mySlides fade">
+                <div class="slideNumbertext">1/5</div>
+                <img src="/assets/ux/peezyfind-sketches/sketch-10.jpg"/>
+                <div class="slideText">Figure 1.0</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="slideNumbertext">2/5</div>
+                <img src="/assets/ux/peezyfind-sketches/sketch-11.jpg" />
+                <div class="slideText">Figure 1.1</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="slideNumbertext">3/5</div>
+                <img src="/assets/ux/peezyfind-sketches/sketch12.jpg" />
+                <div class="slideText">Figure 1.2</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="slideNumbertext">4/5</div>
+                <img src="/assets/ux/peezyfind-sketches/sketch20.jpg" />
+                <div class="slideText">Figure 2.0</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="slideNumbertext">5/5</div>
+                <img src="/assets/ux/peezyfind-sketches/sketch30.jpg" />
+                <div class="slideText">Figure 3.0</div>
+              </div>
+
+              <!--next prev btns-->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <!--dots for the slideshow-->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <br/>
+
+            <h3>Personas</h3>
+
+            <table>
+              <tr>
+                <th>Name:</th>
+                <td>Eden</td>
+              </tr>
+              <tr>
+                <th>Tagline:</th>
+                <td>
+                  “What would be the easiest way to make sure everyone is on the same page, so I don't have to do as much?”
+                </td>
+              </tr>
+              <tr>
+                <th>Background:</th>
+                <td>
+                  <ul>
+                    <li>Age:26</li>
+                    <li>Sex: Female</li>
+                    <li>User Role: Local</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Goals:</th>
+                <td>Balance familial responsibilities with personal responsibilities.</td>
+              </tr>
+              <tr>
+                <th>Frustration Points:</th>
+                <td>
+                  <ul>
+                    <li>
+                      Prefers alone time so big gatherings can be socially exhausting
+                    </li>
+                    <li>
+                      Prefers to stick to an itinerary so unpredictability can be a source of
+                      anxiety.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Narrative:</th>
+                <td>
+                  Eden has family from out of town coming over and wants to take them sightseeing, but it is going to be a large
+                  gathering, so she wants to make sure there is a convenient way to keep the day trip going smoothly. Large family
+                  gatherings often means that there is going to be a good number of kids involved so their parents must know the quickest
+                  way to the toilet when going out as a family to help with inevitable messes.
+                </td>
+              </tr>
+            </table>
+            <br />
+            <caption>Table 1: Eden Persona</caption>
+            <br/>
+            <table>
+              <tr>
+                <th>Name:</th>
+                <td>Jessica</td>
+              </tr>
+              <tr>
+                <th>Tagline:</th>
+                <td>"Exploring the Windy City, one restroom at a time!"</td>
+              </tr>
+              <tr>
+                <th>Background:</th>
+                <td>
+                  <ul>
+                    <li>Age:32</li>
+                    <li>Sex: Female</li>
+                    <li>User Role: Tourist</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Goals:</th>
+                <td>
+                  <ul>
+                    <li>Jessica wants to see Chicago without being concerned about finding a restroom. She plans to visit a variety of
+                      restaurants and sites to get the most out of her trip.</li>
+                    <li>She wants a way to easily locate restrooms so she can spend less time looking and more time sightseeing.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Frustration Points:</th>
+                <td>
+                  <ul>
+                    <li>Jessica has tried restroom locator apps before, but they frequently provide outdated information that causes annoyance
+                    and time loss.</li>
+                    <li>Jessica wishes there were a more straightforward way to locate r Table 2: Jessica Persona</li>
+                    <li>Needs restrooms fast because she occasionally has trouble navigating in a new city.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Narrative:</th>
+                <td>
+                  A 32-year-old marketing manager from New York City visiting Chicago alone encounters the usual difficulty of locating a
+                  clean, convenient public restroom in the busy city. Jessica gets the PeezyFinder app because she is fed up with how
+                  inaccurate other toilet applications are. With this device, she moves across Chicago with ease, discovering its
+                  attractions, sampling the cuisine, and easily finding clean, accessible restrooms. Her journey is now more joyful and
+                  worry-free, and she leaves with beautiful memories and a renewed respect for PeezyFinder, which she heartily suggests to
+                  other travelers.
+                </td>
+              </tr>
+            </table>
+            <br />
+            <caption>Table 2: Jessica Persona</caption>
+            <br/>
+            <h4>Scenarios</h4>
+            <ol type="1">
+              <li>Eden, a local, helps lead a sightseeing day trip with their family and wants to make sure everyone knows how to get to
+              the nearest public restroom with ease.
+              <ol type="a">
+                <li>Before: Determines which sightseeing spots the family wants to see, checks where local bathrooms are in her specified radius,
+                sends bathroom locator link to family members.
+                  <ol type="i">
+                    <li>
+                      After a few weeks of mentally preparing and researching local attractions for a big family gathering, Eden double checks
+                      for spots her family wanted to see the most. She checks the application for where the local public bathrooms are in the
+                      area and their proximity to the sights. This will ensure the aunts and uncles know where to take their younger kids in
+                      case any of them need to use the bathroom or if any accidents happen. After finding all that information she sends the
+                      location links to her family before she meets up with them.
+                    </li>
+                  </ol>
+                </li>
+                <li>During: Shows family members how AR directions to bathroom works, shows how map to public bathrooms works, and details about
+                bathrooms to make the pit stop quick.
+                  <ol type="i">
+                    <li>
+                      During the trip one of the aunties tells Eden that one of the kids needs a restroom and they want to make sure they
+                      understand the link Eden sent. Eden shows them how the directions work and how to get to the list of details about a
+                      specific location while her younger cousin is squirming next to Eden's aunty.
+                    </li>
+                  </ol>
+                </li>
+                <li>After: Look up locations for neighborhoods that aren't visited as much for future day trips
+                  <ol type="i">
+                    <li>
+                      Since the family sightseeing trip went well, Eden realizes the app could be useful for her
+                      own day trips exploring neighborhoods she has not gotten the chance to see much of yet,
+                      and knowing where public bathrooms are will help make the trip more bearable.
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              </li>
+              <li>Jessica, a tourist, finds restrooms in Chicago with PeezyFinder.
+                <ol type="a">
+                  <li>Before: She was looking excited about visiting the city's attractions, but she was concerned about finding clean and easily
+                  accessible public restrooms. Her previous encounters with untrustworthy restroom-finding applications had left her
+                  dissatisfied and looking for a more dependable alternative for her vacation.
+                    
+                  </li>
+                  <li>During:
+                    Jessica got the PeezyFinder app to help her with her restroom-finding issues. She launched the app and entered her
+                    present location in Millennium Park, where she was pleasantly surprised to find an extensive list of public restrooms
+                    with thorough cleanliness and accessibility ratings. The program plotted these facilities on a map, allowing her to
+                    readily locate neighboring restrooms that fit her requirements. She easily approached her selected restroom using
+                    PeezyFinder's navigation and augmented reality features, confident that it would be clean and accessible as promised.
+                    Jessica depended on PeezyFinder whenever nature called throughout her day of travel, enjoying clean and hassle-free
+                    toilet experiences that enriched her overall vacation.
+                  </li>
+                  <li>After:
+                    essica was pleased with her time in Chicago, owing to PeezyFinder's aid. She finished her explorations in the city's
+                    attractions, restaurants, and cultural institutions without having to worry about seeking a restroom. Her great
+                    experience prompted her to submit a nice comment on the app store, thanking PeezyFinder for helping to make her visit
+                    memorable and stress-free. Jessica also happily suggested the app to her companions, knowing it would improve their
+                    Chicago and beyond travel experiences.
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            
+            <br/>
+
+            <h3>Competitive Analysis</h3>
+            <table>
+              <tr>
+                <th>Feature Comparison</th>
+                <th>Flush</th>
+                <th>Loo Locator</th>
+                <th>Fast Loo</th>
+                <th>Restroom Locator</th>
+              </tr>
+              <tr>
+                <td>AR Bathroom Locator</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Real-time Tracking</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>User Revews/Rating</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Bathroom Info</td>
+                <td>Extensive</td>
+                <td>Extensive</td>
+                <td>Moderate</td>
+                <td>Extensive</td>
+              </tr>
+              <tr>
+                <td>User-Friendly UI</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Offline Access</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Additional Features</td>
+                <td>Cleanliness Ratings</td>
+                <td>Directions, accessibility info</td>
+                <td>Nearby Amenities</td>
+                <td>Reviews, Cleanliness Ratings</td>
+              </tr>
+            </table>
+
+            <h4>Takeaways & Suggestions for PeezyFind post-analysis:</h4>
+            <p>
+              The key features of similar applications listed in the competition analysis show heavy similarities, so to stand out,
+              PeezyFind would have to provide a more extensive overview of amenities in a more customizable way. Below are key points,
+              considering physical & emotional needs to users, business monetization and effective experience.
+            </p>
+            <ul>
+              <li>
+                User-Centric Design: Prioritize user comfort and ease during restroom searches. Implement features like a “Rush
+                Restroom” for urgent situations, which directs users to the nearest available restroom and provides a reassuring
+                message.
+              </li>
+              <li>
+                Restroom Partnerships: Collaborate with businesses to promote their restrooms within the app. Offer businesses
+                advertising space, featured listings, and cleanliness rating boosts in exchange for sponsorship.
+              </li>
+              <li>
+                Adaptive UI: Implement an adaptive user interface that adjusts to different device types and screen sizes, optimizing
+                the experience for both mobile and smartwatch users.
+              </li>
+              <li>
+                Inclusive Restroom Categories: Include a category for "Gender-Neutral Restrooms" that users can select to find restrooms
+                suitable for everyone. Emphasize the importance of inclusive restroom facilities for all gender identities.
+              </li>
+              <li>
+                Accessibility Icons: Use clear accessibility icons or symbols to indicate restrooms that are wheelchair accessible. This
+                helps users quickly identify restrooms suitable for those with mobility challenges.
+              </li>
+              <li>
+                Virtual Queues: In some cases, users may encounter restrooms with predictable but busy periods, such as during
+                intermissions at events, during peak travel times, or in busy shopping areas. Joining a virtual queue can provide them
+                with an estimated wait time, allowing them to plan their restroom break more effectively.
+              </li>
+            </ul>
+            <br/>
+
+            <h3>Mood Board</h3>
+            <img src="/assets/ux/peezyFindMoodboard.jpg" alt="" class=""/>
+            <br/>
+            <h4>Calm and Convenient: The PeezyFind Mood-board</h4>
+              <p>
+                Discover the essence of PeezyFind through our thoughtfully curated mood-board, where tranquility meets practicality.
+                Soft, soothing colors invite you to explore without distractions, while intuitive elements are placed for easy
+                navigation. Gentle, tactile buttons guide your journey, complemented by clear and lighthearted copywriting that adds a
+                touch of fun to your experience. Augmented Reality (AR) takes restroom-finding to the next level, making it visually
+                engaging, and our expressive illustrations tell the story of convenience and inclusivity. With PeezyFind, finding a
+                restroom isn't just about functionality; it's about enjoying the journey with style and ease.
+              </p>
+            <br/>
+
+          </figure>
+    
+        </div>
+        <div class="modal-footer">UX</div>
+      </div>
+    </div>
+
+    <!--ella collab-->
+    <div class="modal" id="myModal15">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--<span class="close">
+                  <i class="fa fa-window-close" aria-hidden="true"></i>
+                  </span>-->
+          <h2>Chili Concept Collaboration</h2>
+        </div>
+        <!--end of modal header-->
+        <div class="modal-body">
+          <figure class="mbc_container">
+            <img src="/assets/art/ella-collab/chili-board.jpg" alt="chili board" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Chili board</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Chili board</p>
+            </span>
+
+            <p>The initial concept focused on our protagonist's journey to the big city.</p>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/ella-collab/foottown.jpg" alt="food town" class="modal-img"/>
+            <figcaption class="mbc_content">
+              <p>food town</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>food town</p>
+            </span>
+
+            <p>The big city that holds the opportunities for our main character.</p>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/ella-collab/kitchen.jpg" alt="kitchen" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>kitchen concept</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>kitchen concept</p>
+            </span>
+
+            <p>The main character's first time in an industrial kitchen.</p>
+          </figure>
+
+        </div>
+        <!--end of modalbody-->
+        <div class="modal-footer">Modal footer</div>
+        <!--end of modal footer-->
+      </div>
+      <!--end of modal content-->
+    </div>
+    <!--end of modal containaer-->
+
+    <!--layouts-->
+    <div class="modal" id="myModal17">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Layouts Projects</h2>
+        </div>
+        <div class="modal-body">
+
+          <figure class="mbc_container">
+            <img src="/assets/art/layouts/layout1.jpg" alt="woods" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Woods</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Woods</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/layouts/layout2.jpg" alt="woods 2" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>Woods 2</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>Woods 2</p>
+            </span>
+          </figure>
+          
+          <figure class="mbc_container">
+            <img src="/assets/art/layouts/layout3.jpg" alt="cliffside" class="modal-img"/>
+            <figcaption class="mbc_content"><p>cliffside</p></figcaption>
+            <span class="mbc_content-hover"><p>cliffside</p></span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/layouts/layout4.jpg" alt="sunset" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>sunset</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>sunset</p>
+            </span>
+          </figure>
+
+          <figure class="mbc_container">
+            <img src="/assets/art/layouts/layout5.jpg" alt="night time" class="modal-img" />
+            <figcaption class="mbc_content">
+              <p>night time</p>
+            </figcaption>
+            <span class="mbc_content-hover">
+              <p>night time</p>
+            </span>
+          </figure>
+
+        </div>
+        <div class="modal-footer">Layouts</div>
+      </div>
+    </div>
+
+    <!-- <div class="modal" id="myModal-e">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Contact Me</h2>
+        </div>
+
+        <div class="modal-body">
+          <div class="contact-form_container">
+    
+            <form action="action_page.php" method="post">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name...">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="sender">Your email</label>
+              <input type="text" id="senderemail" name="sendermail" placeholder="Your email...">
+    
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="usa">USA</option>
+              </select>
+    
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+    
+              <input name="submit" type="submit" value="Submit">
+            </form>
+    
+          </div>
+          
+        </div>
+        
+        <div class="modal-footer">Modal footer</div>
+        
+      </div>
+      
+    </div> -->
+    <!--end of modal container-->
+    
+    <!--- FOOTER --->
+    <div class="footer">
+      <div class="f_contact">
+        <p class="f_title">Contact Me</p>
+        <p class="f_desc">
+          <button class="modal-btn" href="#">vilinh27@gmail.com
+          </button>
+        </p>
+      </div>
+    
+      <div class="f_morelinks">
+        <p class="f_title">More Projects</p>
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Codepen</a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Github</a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">Itch.io</a></button>
+        </p>
+      </div>
+    
+      <div class="f_socials">
+        <p class="f_title">Follow Me</p>
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-instagram" id="i-insta"></i></a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-twitter" id="i-twit"></i></a></button>
+        </p>
+    
+        <p class="f_desc">
+          <button class="f_btns"><a href="#">
+              <i class="fa fa-snapchat" id="i-snap"></i></a></button>
+        </p>
+    
+      </div>
+    </div>
+    <!--end of footer-->
+    <!-- partial -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.min.js'></script>
+    <script src="/basicEffects.js"></script>
   </body>
 </html>
