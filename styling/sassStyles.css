@@ -300,6 +300,10 @@ table, th, td {
   background-image: url("/assets/ux/peezyFindMoodboard.jpg");
 }
 
+#project15 {
+  background-image: url("/assets/art/ella-collab/kitchen.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
