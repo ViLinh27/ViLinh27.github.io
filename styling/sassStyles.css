@@ -304,6 +304,10 @@ table, th, td {
   background-image: url("/assets/art/ella-collab/kitchen.jpg");
 }
 
+#project16 {
+  background-image: url("/assets/code/javadrawingapp.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
