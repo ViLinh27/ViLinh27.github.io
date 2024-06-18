@@ -308,6 +308,10 @@ table, th, td {
   background-image: url("/assets/code/javadrawingapp.jpg");
 }
 
+#project17 {
+  background-image: url("/assets/art/layouts/layout5.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
