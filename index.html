@@ -16,10 +16,10 @@
       <div class="top-banner">
         <div class="topnav" id="mainTopNav">
           <!--tabs container-->
-          <a><button class="tablinks" onclick="openTab(event,'project-grid')" id="defaultOpen">Home</button></a>
-          <a><button class="tablinks" onclick="" id="code-filter">Code</button></a>
-          <a><button class="tablinks" onclick="" id="ux-filter">UX</button></a>
-          <a><button class="tablinks" onclick="" id="art-filter">Art</button></a>
+          <a><button class="tablinks filter-active" onclick="openTab(event,'project-grid')" id="defaultOpen" data-filter=".filter-code, .filter-ux, .filter-art">Home</button></a>
+          <a><button class="tablinks" onclick="" id="code-filter" data-filter=".filter-code">Code</button></a>
+          <a><button class="tablinks" onclick="" id="ux-filter" data-filter=".filter-ux">UX</button></a>
+          <a><button class="tablinks" onclick="" id="art-filter" data-filter=".filter-art">Art</button></a>
           <a><button class="tablinks" onclick="openTab(event,'about-grid')">About</button></a>
           <a><button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button></a>
           <a><button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button></a>
@@ -41,20 +41,32 @@
     <!--- PROJECT GRID --->
     <div class="tabcontent" id="project-grid">
 
+      <!--todo react app-->
+      <div class="pcontainer filter-code">
+        <div class="card" id="project18">
+          <div class="is-active"></div>
+          <div class="item_content" id="proj18text">
+            <p class="item_title">To Do blog application in React</p>
+            <p class="item_description">This is a simple blog code project made in React JS</p>
+            <button class=""><a href="">Click to explore more.</a></button>
+          </div>
+        </div>
+      </div>
+      
       <!--OOP class proj-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project16">
           <div class="is-active"></div>
           <div class="item_content" id="proj16text">
             <p class="item_title">Drawing App in Java</p>
-            <p class="item_description">This is a simple drawing app made in Java</p>
+            <p class="item_description">This is a simple drawing app made in Java code</p>
             <button class="proj_outsideLink"><a href="https://github.com/ViLinh27/se450-FinalProject">Click to explore more.</a></button>
           </div>
         </div> 
       </div>
 
       <!-- time to talk Game-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project7">
           <div class="is-active"></div>
           <div class="item_content" id="proj7text">
@@ -67,7 +79,7 @@
       <!--end of project 7-->
       
       <!--Cartridge collector game-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project8">
           <div class="is-active"></div>
           <div class="item_content" id="proj8text">
@@ -80,7 +92,7 @@
       <!--end of project 8-->
 
       <!--Hell ghost game-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project9">
           <div class="is-active"></div>
           <div class="item_content" id="proj9text">
@@ -93,7 +105,7 @@
       <!--end of project 9-->
 
       <!--sql projects-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project5">
           <div class="is-active"></div>
           <div class="item_content" id="proj5text">
@@ -108,7 +120,7 @@
       <!--end of project item 5-->
 
       <!--android notes-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-code">
         <div class="card" id="project10">
           <div class="is-active"></div>
           <div class="item_content" id="proj10text">
@@ -120,7 +132,7 @@
       </div>
 
       <!--ios book tracker app-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-ux">
         <div class="card" id="project11">
         <div class="is-active"></div>
         <div class="item_content" id="proj11text">
@@ -132,7 +144,7 @@
       </div>
       
       <!--IA Rouyn Noranda project-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-ux">
         <div class="card" id="project12">
           <div class="is-active"></div>
           <div class="item_content" id="proj12text">
@@ -144,7 +156,7 @@
       </div>
 
       <!--tiny fingers discussion UX-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-ux">
         <div class="card" id="project13">
           <div class="is-active"></div>
           <div class="item_content" id="proj13text">
@@ -156,7 +168,7 @@
       </div>
 
       <!--peezyfind-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-ux">
         <div class="card" id="project14">
           <div class="is-active"></div>
           <div class="item_content" id="proj14text">
@@ -182,7 +194,7 @@
       <!--end of project item 6-->
 
       <!--fan art-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project1">
           <div class="is-active"></div>
           <div class="item_content" id="proj1text">
@@ -196,7 +208,7 @@
       <!--end of project item 1-->
     
       <!--monochrome celeb portraits-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project2">
           <div class="is-active"></div>
           <div class="item_content" id="proj2text">
@@ -210,7 +222,7 @@
       <!--end of project item 2-->
     
       <!--OCs-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project3">
           <div class="is-active"></div>
           <div class="item_content" id="proj3text">
@@ -225,7 +237,7 @@
       <!--end of project item 3-->
     
       <!--draw this in your style-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project4">
           <div class="is-active"></div>
           <div class="item_content" id="proj4text">
@@ -240,7 +252,7 @@
       <!--end of project item 4-->
 
       <!--ella collab-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project15">
           <div class="is-active"></div>
           <div class="item_content" id="proj15text">
@@ -252,7 +264,7 @@
       </div>
 
       <!--layouts-->
-      <div class="pcontainer">
+      <div class="pcontainer filter-art">
         <div class="card" id="project17">
           <div class="is-active"></div>
           <div class="item_content" id="proj17text">
@@ -2019,5 +2031,6 @@
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.min.js'></script>
     <script src="/basicEffects.js"></script>
+    <script src="/filter.js"></script>
   </body>
 </html>

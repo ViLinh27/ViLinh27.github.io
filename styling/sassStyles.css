@@ -312,6 +312,10 @@ table, th, td {
   background-image: url("/assets/art/layouts/layout5.jpg");
 }
 
+#project18 {
+  background-image: url("/assets/code/react-appThumbnail.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
