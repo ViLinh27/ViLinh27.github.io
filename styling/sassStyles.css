@@ -187,7 +187,8 @@ table, th, td {
 }
 
 .topnav button:hover,
-.topnav button.active {
+.topnav button.active,
+.filter-active {
   color: #bba6de;
   background-color: #7b4899;
   font-size: 17px;

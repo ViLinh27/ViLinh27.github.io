@@ -181,7 +181,8 @@ table,th,td{
 }
 
 .topnav button:hover,
-.topnav button.active {
+.topnav button.active,
+.filter-active{
     color: $lilac;
     background-color: $darkpinkpurple;
     font-size: 17px;
@@ -204,6 +205,7 @@ table,th,td{
 }
 
 /*--- PROJECT GRID STUFF ---*/
+
 #project-grid {
     display: grid;
     margin: 80px 0;
