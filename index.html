@@ -16,10 +16,20 @@
       <div class="top-banner">
         <div class="topnav" id="mainTopNav">
           <!--tabs container-->
-          <a><button class="tablinks filter-active" onclick="openTab(event,'project-grid')" id="defaultOpen" data-filter=".filter-code, .filter-ux, .filter-art">Home</button></a>
-          <a><button class="tablinks" onclick="" id="code-filter" data-filter=".filter-code">Code</button></a>
-          <a><button class="tablinks" onclick="" id="ux-filter" data-filter=".filter-ux">UX</button></a>
-          <a><button class="tablinks" onclick="" id="art-filter" data-filter=".filter-art">Art</button></a>
+          <ul id="portfolio-filters">
+              <li class="filter-active" data-filter=".filter-code, .filter-ux, .filter-art">
+                <a><button class="tablinks" onclick="openTab(event,'project-grid')" id="defaultOpen">Home</button></a>
+              </li>
+              <li data-filter=".filter-code">
+                <a><button class="tablinks" onclick="" id="code-filter" >Code</button></a>
+              </li>
+              <li data-filter=".filter-ux">
+                <a><button class="tablinks" onclick="" id="ux-filter">UX</button></a>
+              </li>
+              <li data-filter=".filter-art">
+                <a><button class="tablinks" onclick="" id="art-filter">Art</button></a>
+              </li>
+          </ul>
           <a><button class="tablinks" onclick="openTab(event,'about-grid')">About</button></a>
           <a><button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button></a>
           <a><button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button></a>
@@ -33,7 +43,11 @@
       <!--end of top banner-->
       <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
       <div class="top-banner_name">
-        Vi-Linh Nguyen
+        Hello, Visitor!
+      </div>
+      <div class="top-banner_desc">
+        <span>My name is Vi-Linh Nguyen </span>
+        <span>(VEE LINN WIN)</span>
       </div>
     </div>
     <!--end of banner-->

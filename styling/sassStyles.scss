@@ -163,7 +163,16 @@ table,th,td{
     font-size: 30px;
     font-weight: 700;
 }
-
+.top-banner_desc{
+    text-align:center;
+    font-size: 20px;
+    font-weight: 500;
+    margin:15px 5px 0 5px;
+}
+/*filter tabs*/
+#portfolio-filters{
+    list-style-type:none;
+}
 /*--- END OF SITE HEADER ---*/
 
 /*--- TABS AND TAB CONTENT*/
