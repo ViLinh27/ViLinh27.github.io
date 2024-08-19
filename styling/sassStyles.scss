@@ -134,7 +134,7 @@ table,th,td{
 }
 
 /*tab class*/
-.topnav a {
+.topnav button {
     float: left;
     text-align: center;
     text-decoration: none;
@@ -163,7 +163,16 @@ table,th,td{
     font-size: 30px;
     font-weight: 700;
 }
-
+.top-banner_desc{
+    text-align:center;
+    font-size: 20px;
+    font-weight: 500;
+    margin:15px 5px 0 5px;
+}
+/*filter tabs*/
+#portfolio-filters{
+    list-style-type:none;
+}
 /*--- END OF SITE HEADER ---*/
 
 /*--- TABS AND TAB CONTENT*/
@@ -172,7 +181,8 @@ table,th,td{
 }
 
 .topnav button:hover,
-.topnav button.active {
+.topnav button.active,
+.filter-active{
     color: $lilac;
     background-color: $darkpinkpurple;
     font-size: 17px;
@@ -195,6 +205,7 @@ table,th,td{
 }
 
 /*--- PROJECT GRID STUFF ---*/
+
 #project-grid {
     display: grid;
     margin: 80px 0;
@@ -287,6 +298,9 @@ table,th,td{
 }
 #project17{
     background-image: url('/assets/art/layouts/layout5.jpg');
+}
+#project18{
+    background-image: url('/assets/code/react-appThumbnail.jpg');
 }
 
 /*-- project square content --*/
