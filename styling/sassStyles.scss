@@ -790,6 +790,11 @@ input[type=submit]:hover {
         margin: 50px 0;
         grid-template-columns: auto;
     }
+    /*-- modals of projects --*/
+    .modal-body{
+        display:flex;
+        flex-direction:column;
+    }
 
     /*--- CV GRID ---*/
     .cv-s_tableInfo {

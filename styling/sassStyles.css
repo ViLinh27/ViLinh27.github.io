@@ -892,6 +892,16 @@ input[type=submit]:hover {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
+  /*-- modals of projects --*/
+  .modal-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   /*--- CV GRID ---*/
   .cv-s_tableInfo {
     width: 270px;
