@@ -741,7 +741,7 @@ input[type=submit]:hover {
 
 /*--- RESPONSIVENESS ---*/
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:700px) {
 
     /*--- TOP NAV BAR---*/
     .topnav button{
@@ -751,7 +751,8 @@ input[type=submit]:hover {
     .topnav a.icon {
         float: right;
         display: block;
-        font-size:50px;
+        font-size:40px;
+        top:10px;
     }
 
     .topnav.responsive {
@@ -760,16 +761,14 @@ input[type=submit]:hover {
 
     .topnav.responsive a.icon {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 5px;
+        top: 5px;
     }
 
     .topnav.responsive button {
         float: none;
         display: block;
-        text-align: left;
     }
-
     .dog {
         width: 200px;
         height: 200px;

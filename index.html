@@ -29,10 +29,17 @@
               <li data-filter=".filter-art">
                 <button class="tablinks" onclick="" id="art-filter">Art</button>
               </li>
+              <li>
+                <button class="tablinks" onclick="openTab(event,'about-grid')">About</button>
+              </li>
+              <li>
+                <button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button>
+              </li>
+              <li>
+                <button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button>
+              </li>
           </ul>
-          <button class="tablinks" onclick="openTab(event,'about-grid')">About</button>
-          <button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button>
-          <button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button>
+          
     
           <a href="javascript:void(0);" class="icon" onClick="responsiveMenu()">
             <i class="fa fa-bars"></i>
