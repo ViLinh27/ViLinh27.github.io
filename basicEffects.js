@@ -83,6 +83,12 @@ window.onclick = function(event){
   }
 }
 
+//--SCROLL TO TOP WHEN PROJECT GRID MODAL CLICKED --//
+function scrollTop(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 //---TAB FUNCTIONS ---//
 document.getElementById("defaultOpen").click();
 function openTab(e,t){
