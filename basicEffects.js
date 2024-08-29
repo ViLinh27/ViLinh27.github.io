@@ -47,6 +47,13 @@ function flipToFront(e,txt){
   }
 }
 
+//--SCROLL TO TOP --//
+function topFunc(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  window.scrollTop(0,0);
+}
+
 //--- MODAL FUNCTIONS ---//
 var modals = document.querySelectorAll(".modal");
 var modalbtn = document.querySelectorAll("button.modal-btn");
@@ -81,12 +88,6 @@ window.onclick = function(event){
       }
     }
   }
-}
-
-//--SCROLL TO TOP WHEN PROJECT GRID MODAL CLICKED --//
-function scrollTop(){
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 }
 
 //---TAB FUNCTIONS ---//
@@ -149,3 +150,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
