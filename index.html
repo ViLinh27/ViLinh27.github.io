@@ -29,10 +29,17 @@
               <li data-filter=".filter-art">
                 <button class="tablinks" onclick="" id="art-filter">Art</button>
               </li>
+              <li>
+                <button class="tablinks" onclick="openTab(event,'about-grid')">About</button>
+              </li>
+              <li>
+                <button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button>
+              </li>
+              <li data-filter=".filter-code, .filter-ux, .filter-art">
+                <button class="designbtn" id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button>
+              </li>
           </ul>
-          <button class="tablinks" onclick="openTab(event,'about-grid')">About</button>
-          <button class="tablinks" onclick="openTab(event,'cv-grid')">CV</button>
-          <button id="darkModebtn" onclick="toggleDarkMode()">Dark Mode</button>
+          
     
           <a href="javascript:void(0);" class="icon" onClick="responsiveMenu()">
             <i class="fa fa-bars"></i>
@@ -40,7 +47,7 @@
         </div>
         <!--end of topnav-->
       </div>
-      <!--end of top banner-->
+      <!-- top banner-->
       <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
       <div class="top-banner_name">
         Hello, Visitor!
@@ -125,7 +132,7 @@
           <div class="item_content" id="proj5text">
             <p class="item_title">SQL</p>
             <p class="item_description">I explore Sql here</p>
-            <button class="modal-btn" href="#myModal5">Click to explore more.</button>
+            <button class="modal-btn" href="#myModal5" onclick="topFunc()">Click to explore more.</button>
           </div>
           <!--end of item content-->
       
@@ -533,7 +540,7 @@
     <!--- MODALS --->
     
     <!--fan art-->
-    <div class="modal" id="myModal1">
+    <div class="modal" id="myModal1" >
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -682,7 +689,7 @@
     <!--end of modal containaer-->
 
     <!--my OCs-->
-    <div class="modal" id="myModal3">
+    <div class="modal" id="myModal3" >
       <div class="modal-content">
         <div class="modal-header">
           <!--<span class="close">
@@ -1135,7 +1142,7 @@
     </div>
 
     <!--IA Rouyn project-->
-    <div class="modal" id="myModal12">
+    <div class="modal" id="myModal12" >
       <div class="modal-content">
         <div class="modal-header">
           <h2>An Exploration of Rouyn Noranda's website</h2>
@@ -1996,6 +2003,10 @@
     </div> -->
     <!--end of modal container-->
     
+    <div id="jsScroll" class="scroll" onclick="topFunc()">
+      <i class="fa fa-angle-up"></i>
+    </div>
+
     <!--- FOOTER --->
     <div class="footer">
       <div class="f_contact">
