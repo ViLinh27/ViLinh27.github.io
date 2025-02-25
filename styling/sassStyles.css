@@ -331,6 +331,10 @@ td {
   background-image: url("/assets/code/react-appThumbnail.jpg");
 }
 
+#project19 {
+  background-image: url("/assets/code/");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
