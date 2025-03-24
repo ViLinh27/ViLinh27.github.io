@@ -555,8 +555,8 @@ td {
 .modal-body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 .modal-img {
