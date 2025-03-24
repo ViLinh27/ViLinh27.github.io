@@ -335,6 +335,10 @@ td {
   background-image: url("/assets/code/milliegame-screenshot.JPG");
 }
 
+#project20 {
+  background-image: url("/assets/art/NOLA/NOLA-ghostsBG.png");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
