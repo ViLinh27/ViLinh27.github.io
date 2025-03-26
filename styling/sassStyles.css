@@ -533,19 +533,19 @@ td {
 
 .secondModal {
   display: none;
-  position: fixed;
+  position: absolute;
   /* Ensures it stays in place */
   z-index: 500;
   /* Make sure it's above other elements */
   left: 50%;
-  top: 10%;
+  top: 15%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   /* Centers the modal */
   width: 100%;
   /* Prevents it from being too wide */
   background-color: rgba(0, 0, 0, 0.55);
-  padding: 100px 15px;
+  padding: 200px 15px 300px 15px;
 }
 
 .modal-btn,
