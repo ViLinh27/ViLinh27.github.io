@@ -517,7 +517,7 @@ td {
 }
 
 /*--- MODAL ---*/
-.modal {
+.modal, .secondModal {
   height: 100%;
   width: 100%;
   display: none;
@@ -546,7 +546,7 @@ td {
   font-weight: 600;
 }
 
-.modal-content {
+.modal-content, .secondModal_content {
   position: relative;
   background-color: #f8f7fc;
   margin: 5px auto;
@@ -561,7 +561,7 @@ td {
   animation-duration: 0.4s;
 }
 
-.modal-body {
+.modal-body, .secondModal_body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
