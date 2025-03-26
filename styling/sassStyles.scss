@@ -311,13 +311,15 @@ td {
     background-image: url('/assets/code/react-appThumbnail.jpg');
 }
 
-#project19{
-    background-image:url('/assets/code/milliegame-screenshot.JPG');
+#project19 {
+    background-image: url('/assets/code/milliegame-screenshot.JPG');
 }
-#project20{
-    background-image:url('/assets/art/NOLA/NOLA-ghostsBG.png');
+
+#project20 {
+    background-image: url('/assets/art/NOLA/NOLA-ghostsBG.png');
 }
-#project21{
+
+#project21 {
     background-image: url('/assets/art/hole-face/hole-face.png');
 }
 
@@ -444,7 +446,7 @@ td {
 }
 
 /*--- MODAL ---*/
-.modal,.secondModal {
+.modal {
     height: 100%;
     width: 100%;
     display: none;
@@ -457,6 +459,24 @@ td {
     background-color: rgba(0, 0, 0, 0.55);
     /*black with low opacity*/
 }
+
+.secondModal {
+    display: none;
+    position: fixed;
+    /* Ensures it stays in place */
+    z-index: 500;
+    /* Make sure it's above other elements */
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    /* Centers the modal */
+    width: 100%;
+    /* Prevents it from being too wide */
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 100px 15px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .modal-btn,
 .proj_outsideLink {
@@ -473,7 +493,8 @@ td {
     font-weight: 600;
 }
 
-.modal-content,.secondModal_content {
+.modal-content,
+.secondModal_content {
     position: relative;
     background-color: $white;
     margin: 5px auto;
@@ -487,7 +508,8 @@ td {
     animation-duration: 0.4s;
 }
 
-.modal-body,.secondModal_body {
+.modal-body,
+.secondModal_body {
     display: grid;
     grid-template-columns: auto;
 }
@@ -497,6 +519,12 @@ td {
     height: 350px;
     object-fit: cover;
     transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.secmodal-img {
+    width: 100%;
+    height: 100%;
     transition: all 0.3s ease-in-out;
 }
 
@@ -715,9 +743,7 @@ input[type=submit]:hover {
 /*--- END OF MODAL ---*/
 
 /*--- SCROLL BUTTON ---*/
-.scroll{
-    
-}
+.scroll {}
 
 /*--- FOOTER ---*/
 .footer {
@@ -759,15 +785,15 @@ input[type=submit]:hover {
 @media screen and (max-width:700px) {
 
     /*--- TOP NAV BAR---*/
-    .topnav button{
+    .topnav button {
         display: none;
     }
 
     .topnav a.icon {
         float: right;
         display: block;
-        font-size:40px;
-        top:10px;
+        font-size: 40px;
+        top: 10px;
     }
 
     .topnav.responsive {
@@ -787,13 +813,16 @@ input[type=submit]:hover {
         float: none;
         display: block;
     }
-    #portfolio-filters .tablinks, #portfolio-filters .designbtn{
-        font-size:22px;
+
+    #portfolio-filters .tablinks,
+    #portfolio-filters .designbtn {
+        font-size: 22px;
     }
+
     .dog {
         width: 200px;
         height: 200px;
-        z-index:0;
+        z-index: 0;
     }
 
     .top-banner_name {
@@ -805,10 +834,11 @@ input[type=submit]:hover {
         margin: 50px 0;
         grid-template-columns: auto;
     }
+
     /*-- modals of projects --*/
-    .modal-body{
-        display:flex;
-        flex-direction:column;
+    .modal-body {
+        display: flex;
+        flex-direction: column;
     }
 
     /*--- CV GRID ---*/
