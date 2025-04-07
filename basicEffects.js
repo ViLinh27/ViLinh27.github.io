@@ -69,7 +69,7 @@ for(var i = 0;i <modalbtn.length ;i++){
 }
 
 //user clicks close to close modal
-for(vari=0;i<spans.length;i++){
+for(var i=0;i<spans.length;i++){
   spans[i].onclick = function(){
     for(var index in modals){
       if(typeof modals[index].style !== "undefined"){
@@ -79,6 +79,34 @@ for(vari=0;i<spans.length;i++){
   }//end of anon func
 }//end of outer loop
 
+// Store the original onclick handler if it exists
+const originalOnClick = window.onclick;
+
+window.onclick = function(event) {
+  // Call the original handler if it exists
+  if (originalOnClick) {
+    originalOnClick(event);
+  }
+
+  // Handle primary modals
+  if (event.target.classList.contains("modal")) {
+    for (var index in modals) {
+      if (typeof modals[index].style !== "undefined") {
+        modals[index].style.display = "none";
+      }
+    }
+  }
+
+  // Handle secondary modals
+  secondModals.forEach(function(modal) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
+
+
+/* 
 //user clicks outside modal, close too
 window.onclick = function(event){
   if(event.target.classList.contains("modal")){
@@ -89,7 +117,7 @@ window.onclick = function(event){
     }
   }
 }
-
+ */
 //---TAB FUNCTIONS ---//
 document.getElementById("defaultOpen").click();
 function openTab(e,t){

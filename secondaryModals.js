@@ -7,16 +7,13 @@ secondModalBtns.forEach(function(btn) {
   btn.onclick = function(e) {
     var modalId = btn.getAttribute("data-target");
     var modal = document.querySelector(modalId);
-    console.log("Modal ID:", modalId);
-    document.querySelector("#mySecModal1").style.display = "block";
-
     if (modal) {
       modal.style.display = "block";
     }
   };
 });
 
-// Close second modals
+/* // Close second modals
 Array.from(closeButtons).forEach(function(closeBtn) {
   closeBtn.onclick = function() {
     secondModals.forEach(function(modal) {
@@ -32,4 +29,4 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
   });
-};
+}; */
