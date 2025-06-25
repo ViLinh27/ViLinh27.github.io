@@ -1,32 +1,36 @@
-let slideIndex = [1,1];
+let slideIndex = 1;
+showSlides(slideIndex);
 
-//each slideshow group gets its own classes for css
-let slideId = ["mySlides1", "mySlides2"] 
-showSlides(1, 0);
-showSlides(1, 1);
-
-//what the prev/next btns call.
-//this calls another func with actual slide changing logic to keep things clean
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+function plusSlides(n) {
+    console.log("plusSlides called, n:", n);
+  showSlides(slideIndex += n);
 }
 
-//slideshow logic of displaying appropriate slides
-function showSlides(n, no) {
+function currentSlide(n) {
+    console.log("currentSlide called, n:", n);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    console.log("showSlides called, n:", n);
   let i;
-  let x = document.getElementsByClassName(slideId[no]);
-  console.log("n = ",n);//debug
-  console.log("no = ",no);//debug
-  if (n > x.length) 
-    {
-      slideIndex[no] = 1;
-      //console.log("slideIndex[no] = ",slideIndex[no]);//debug
-      console.log("no = ",no);//debug
-    } 
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none"; 
+  let slides = document.getElementsByClassName("mySlides1");
+  let dots = document.getElementsByClassName("dot");
+
+  console.log("Total slides:", slides.length);
+  console.log("Current slideIndex (before adjustments):", slideIndex);
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+
+  console.log("slideIndex (after adjustments):", slideIndex);
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  console.log("Right before displaying the slides");//debug
-  x[slideIndex[no]-1].style.display = "block"; 
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }

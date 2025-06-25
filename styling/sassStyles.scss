@@ -322,14 +322,17 @@ td {
 #project21 {
     background-image: url('/assets/art/hole-face/hole-face.png');
 }
+
 #project22 {
     background-image: url('/assets/code/twitterBookMarks_screenshot.jpeg');
 }
-#project23{
+
+#project23 {
     background-image: url('/assets/art/fanart/everafterhigh/ravem-outfits.png');
 }
-#project24{
-    background-image:url('/assets/art/tablefor3/wholesome.png');
+
+#project24 {
+    background-image: url('/assets/art/tablefor3/wholesome.png');
 }
 
 /*-- project square content --*/
@@ -620,45 +623,59 @@ input[type=submit]:hover {
 } */
 
 /*slideshow*/
+/*slide show*/
+* {
+    box-sizing: border-box
+}
+
+.mySlides1 {
+    display: none;
+}
+
+.slideshow-img {
+    vertical-align: middle;
+    // height: 400px;
+    width: 100%;
+    z-index: 10;
+}
 
 .slideshow-container {
     max-width: 1000px;
+    // height: 800px;
     position: relative;
     margin: auto;
 }
 
-.mySlides {
-    display: none;
-}
-
-.prev,
-.next {
+.slideshow-prev,
+.slideshow-next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
     padding: 16px;
-    color: $darkModeBg;
+    margin-top: -22px;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+
 }
 
-.next {
+.slideshow-next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.slideshow-prev:hover,
+.slideshow-next:hover {
+    background-color: #f1f1f1;
+    color: black;
 }
 
-.slideText {
-    color: $darkModeBg;
+.slideshow-text {
+    color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -667,8 +684,8 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.slideNumbertext {
-    color: $darkModeBg;
+.numtext {
+    color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -705,6 +722,8 @@ input[type=submit]:hover {
         opacity: 1
     }
 }
+
+/* End of Slideshow*/
 
 @keyframes animatetop {
     from {
