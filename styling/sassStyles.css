@@ -359,6 +359,10 @@ td {
   background-image: url("/assets/code/artportfolio-react/homepage-lightmode.jpg");
 }
 
+#project26 {
+  background-image: url("/assets/code/rooms/home.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
