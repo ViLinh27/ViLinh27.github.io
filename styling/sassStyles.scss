@@ -335,12 +335,12 @@ td {
     background-image: url('/assets/art/tablefor3/wholesome.png');
 }
 
-#project25{
+#project25 {
     background-image: url('/assets/code/artportfolio-react/homepage-lightmode.jpg');
 }
 
-#project26{
-    background-image:url('/assets/code/rooms/home.jpg');
+#project26 {
+    background-image: url('/assets/code/rooms/home.jpg');
 }
 
 /*-- project square content --*/
@@ -920,6 +920,13 @@ input[type=submit]:hover {
     .top-banner_name {
         font-size: 20px;
     }
+
+    /*-- project grid*/
+    #project-grid {
+        width: 50%;
+    }
+
+    /*-- end of project grid*/
 }
 
 /*--- END OF RESPONSIVENESS ---*/

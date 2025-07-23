@@ -1036,6 +1036,11 @@ input[type=submit]:hover {
   .top-banner_name {
     font-size: 20px;
   }
+  /*-- project grid*/
+  #project-grid {
+    width: 50%;
+  }
+  /*-- end of project grid*/
 }
 
 /*--- END OF RESPONSIVENESS ---*/
