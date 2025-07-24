@@ -362,6 +362,7 @@ td {
 
 #project24 {
   background-image: url("/assets/art/tablefor3/wholesome.png");
+  background-position: 50% 60%;
 }
 
 #project25 {
@@ -370,6 +371,11 @@ td {
 
 #project26 {
   background-image: url("/assets/code/rooms/home.jpg");
+}
+
+#project27 {
+  background-image: url("/assets/art/animationstudies/thumbnail.png");
+  background-position: 50% 30%;
 }
 
 #project28 {
@@ -1044,8 +1050,10 @@ input[type=submit]:hover {
   .top-banner_name {
     font-size: 20px;
   }
-  /*-- project grid*/
-  /*-- end of project grid*/
+  #portfolio-filters .tablinks,
+  #portfolio-filters .designbtn {
+    font-size: 33px;
+  }
 }
 
 /*--- END OF RESPONSIVENESS ---*/
