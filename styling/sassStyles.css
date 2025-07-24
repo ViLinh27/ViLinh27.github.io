@@ -378,6 +378,10 @@ td {
   background-position: 50% 30%;
 }
 
+#project28 {
+  background-image: url("/assets/art/3dwork/skull1.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
