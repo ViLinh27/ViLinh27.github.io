@@ -341,6 +341,10 @@ td {
   background-image: url("/assets/code/electron-experiments-bg.jpg");
 }
 
+#project30 {
+  background-image: url("/assets/code/craftroom-homepage.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
