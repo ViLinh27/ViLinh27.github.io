@@ -10,8 +10,7 @@ body {
   background-color: #bba6de;
   margin: 0;
   padding: 0;
-  -webkit-perspective: 900px;
-          perspective: 900px;
+  perspective: 900px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -23,11 +22,9 @@ a {
   text-decoration: none;
   color: #230f44;
 }
-
 a:hover {
   text-decoration: underline;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
   font-weight: 600;
   background-color: #bba6de;
 }
@@ -87,8 +84,7 @@ td {
 
 .darkMode .footer {
   background-image: url('data:image/svg+xml,<svg id="eP6STWEU30G1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="2425.253232" height="1420.134913" rx="0" ry="0" transform="translate(-269.615181-228.696638)" fill="%23230f44" stroke-width="0"/><path d="M-175.8636,147.16973L168.801889,523.488172L534.569347,147.16973L590.841263,301.9175l109.026839-92.520788Q970.676701,632.51501,974.193695,632.51501t221.570671-144.196786l77.373885-172.332744l228.604661,284.876577l193.434713-432.590358l151.230776,288.393572l119.577822-330.59751q98.475855-246.189635,91.441865-246.189635c-7.03399,0-1948.415111-45.720932-1955.4491-45.720932q-7.033989,0-277.842588,313.012536Z" transform="translate(-3.516995 18.663898)" fill="%23926fcf" stroke-width="3.84"/></svg>');
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .darkMode .modal-btn {
@@ -106,19 +102,10 @@ td {
 /*--- SITE HEADER ---*/
 .banner {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url('data:image/svg+xml,<svg id="eAGeDqr0wZL1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><rect width="2425.253232" height="1420.134913" rx="0" ry="0" transform="translate(-269.615181-228.696638)" fill="%23bba6de" stroke-width="0"/><path d="M-175.8636,147.16973L168.801889,523.488172L534.569347,147.16973L590.841263,301.9175l109.026839-92.520788Q970.676701,632.51501,974.193695,632.51501t221.570671-144.196786l77.373885-172.332744l228.604661,284.876577l193.434713-432.590358l151.230776,288.393572l119.577822-330.59751q98.475855-246.189635,91.441865-246.189635c-7.03399,0-1948.415111-45.720932-1955.4491-45.720932q-7.033989,0-277.842588,313.012536Z" transform="translate(-3.516995 18.663898)" fill="%23ddc9ff" stroke-width="3.84"/></svg>');
 }
 
@@ -153,15 +140,11 @@ td {
   width: 200px;
   margin: 100px auto 0 auto;
   z-index: 1;
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
   transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .dog:hover {
-  -webkit-transform: rotate3d(0, 1, 0, 80deg);
-          transform: rotate3d(0, 1, 0, 80deg);
+  transform: rotate3d(0, 1, 0, 80deg);
 }
 
 .top-banner_name {
@@ -194,32 +177,15 @@ td {
   color: #bba6de;
   background-color: #7b4899;
   font-size: 17px;
-  -webkit-animation: fadeEffect 0.5s;
-          animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
 }
 
 .tabcontent {
-  -webkit-animation: fadeEffect 1.02s;
-          animation: fadeEffect 1.02s;
+  animation: fadeEffect 1.02s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @keyframes fadeEffect {
@@ -230,7 +196,6 @@ td {
     opacity: 1;
   }
 }
-
 /*--- PROJECT GRID STUFF ---*/
 /* #project-grid {
     display: grid;
@@ -239,8 +204,7 @@ td {
     // width:50%;
 } */
 .pcontainer {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  perspective: 1000px;
 }
 
 .card {
@@ -249,19 +213,10 @@ td {
   text-align: center;
   overflow: hidden;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-size: 1500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -382,6 +337,10 @@ td {
   background-image: url("/assets/art/3dwork/skull1.jpg");
 }
 
+#project29 {
+  background-image: url("/assets/code/electron-experiments-bg.jpg");
+}
+
 /*-- project square content --*/
 .is-active {
   position: absolute;
@@ -392,19 +351,13 @@ td {
   position: absolute;
   padding: 40px 80px;
   border-radius: 40px;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform: 50 50;
-          transform: 50 50;
-  -webkit-transition: -webkit-transform 1s 0s;
-  transition: -webkit-transform 1s 0s;
+  transform: scale(0);
+  transform: 50 50;
   transition: transform 1s 0s;
-  transition: transform 1s 0s, -webkit-transform 1s 0s;
 }
 
 .card:hover > .item_content {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 /*back of card*/
@@ -421,21 +374,11 @@ td {
 
 /*--- ABOUT GRID STUFF ---*/
 .about-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
   margin: auto auto 80px auto;
 }
 
@@ -456,21 +399,11 @@ td {
 
 /*--- CV GRID STUFF ---*/
 .cv-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
   width: 100%;
   margin: auto auto 80px auto;
 }
@@ -487,21 +420,11 @@ td {
 /*--- education ---*/
 .cv-e_item,
 .cv-w_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
 }
 
 .cv_Info {
@@ -516,43 +439,23 @@ td {
 
 .cv-s_tableInfo {
   width: 800px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
 }
 
 /*--- coursework / interests---*/
 .cv-c_container,
 .cv-i_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
 }
 
 /*--- MODAL ---*/
@@ -578,8 +481,7 @@ td {
   /* Make sure it's above other elements */
   left: 50%;
   top: 15%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   /* Centers the modal */
   width: 100%;
   /* Prevents it from being too wide */
@@ -610,8 +512,7 @@ td {
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -620,10 +521,8 @@ td {
 
 .modal-body,
 .secondModal_body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  grid-template-columns: auto;
 }
 
 .modal-img {
@@ -631,22 +530,18 @@ td {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.3s ease-in-out;
+  transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
 
 .secmodal-img {
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .modal-img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /*modal body captions*/
@@ -685,8 +580,7 @@ textarea {
   border: 2px solid #7b4899;
   border-radius: 4px;
   /* Rounded borders */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* Make sure that padding and width stays in place */
   margin-top: 6px;
   /* Add a top margin */
@@ -728,8 +622,7 @@ input[type=submit]:hover {
 /*slideshow*/
 /*slide show*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .mySlides1 {
@@ -758,12 +651,10 @@ input[type=submit]:hover {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -804,7 +695,6 @@ input[type=submit]:hover {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
@@ -814,41 +704,19 @@ input[type=submit]:hover {
 }
 
 .fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
   }
 }
-
 /* End of Slideshow*/
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
 @keyframes animatetop {
   from {
     top: -300px;
@@ -859,7 +727,6 @@ input[type=submit]:hover {
     opacity: 1;
   }
 }
-
 /*-- close button --*/
 .close {
   float: right;
@@ -895,21 +762,12 @@ input[type=submit]:hover {
 /*--- SCROLL BUTTON ---*/
 /*--- FOOTER ---*/
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .f_btns {
@@ -919,15 +777,13 @@ input[type=submit]:hover {
 }
 
 .f_btns:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .f_contact,
 .f_morelinks,
 .f_socials {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #i-insta,
@@ -980,68 +836,37 @@ input[type=submit]:hover {
   /*--- PROJECT GRID ---*/
   /*-- modals of projects --*/
   .modal-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   /*--- CV GRID ---*/
   .cv-s_tableInfo {
     width: 270px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: 8px;
   }
   /*--- ABOUT GRID ---*/
   .about-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: stretch;
-        align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
     margin: 60px auto 60px auto;
   }
   .about-item,
   .about-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   /*--- FOOTER ---*/
   .footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 @media screen and (max-width: 375px) {
   .dog {
     width: 100px;
@@ -1055,6 +880,4 @@ input[type=submit]:hover {
     font-size: 33px;
   }
 }
-
-/*--- END OF RESPONSIVENESS ---*/
-/*# sourceMappingURL=sassStyles.css.map */
+/*--- END OF RESPONSIVENESS ---*//*# sourceMappingURL=sassStyles.css.map */
