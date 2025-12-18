@@ -2880,7 +2880,184 @@
 
     <!-- craft site vue-->
     <div class="modal" id="myModal28">
-      
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h1>Learning Vue.js</h1>
+        </div>
+
+        <div class="modal-body">
+          <div class="mbc_container">
+            <h3>A Fibre Arts and Crafts Portfolio Site</h3>
+            <p>
+              This was an opportunity to try to teach myself the Vue.js framework. It's 
+              easier to grasp compared to Angular because the structure is similar to the
+              component based one of React.
+            </p>
+            <p>
+              This project is still kind of a work in progress, which is why there are placeholder images. I will link the site once it's deployed.
+            </p>
+          </div>
+
+          <div class="mbc_container">
+            <h4>Starting off</h4>
+            <p>The layout was more traditional at first, using web design conventions that's common in many portfolio sites. This is why the original layout looked like this:</p>
+            <img src="/assets/code/craftroom-old.jpg" alt="old layout craft room"/>
+            <p>But I wanted to update the look of the homepage to be more interesting. The new layout is more reminiscient of Y2K early internet sites as seen here: </p>
+            <img src="/assets/code/craftroom-site-plan-update.png" alt="new layout"/>
+            <p>
+              With the coding, I started off with the example code so I had something to work off of when creating the app. It also allows me to fiddle
+              with and figure out how a proper Vue app works instead of just building off vanilla js, html and css.
+            </p>
+          </div>
+
+          <div class="mbc_container">
+            <h4>Using codepen to test out ideas</h4>
+            <p>
+              Codepen helps test diferent ideas (mostly on styling) on a smaller scale so I don't mess with anything here too much
+              before committing.
+            
+              Here are related codepens I've used for this project:
+              <a href="https://codepen.io/vilinh27/pen/PwZBMpZ">visit the codepen</a>
+            </p>
+          </div>
+
+          <div class="mbc_container">
+            <h4>Issues I've encountered</h4>
+            <h5>Linking the non-navbar pages</h5>
+            <p>
+              There's an issue binding the yarn and sewing buttons(using RouterLink) on the homepage with the urlpath prop on
+              WelcomeItem component. Looks like it's a syntax issue.
+            </p>
+            <p>
+              When binding attributes to JS like prop variables, we have to use v-bind, or the
+            <pre>:</pre> No wrapping js variables in
+            <pre>{{}}</pre>
+            either.
+            </p>
+            <p>
+              What I had before:
+              <pre>
+                <code>
+                  &lt;Routerlink to={{urlpath}}&gt;&lt;/Routerlink&gt;
+                </code>
+              </pre>
+            </p>
+            <p>
+              What is correct:
+              <pre>
+                <code>
+                  &lt;RouterLink :to="urlpath"&gt;
+                </code>
+              </pre>
+            </p>
+            <p>
+              I also needed to define the props so vue knows what the hell urlpath is even for like so:
+              <pre>
+                <code>
+                  &lt;script setup lang="ts"&gt;
+                    import { RouterLink } from 'vue-router'
+                    defineProps({
+                      urlpath: {
+                        type: String,
+                        required: true
+                      }
+                    })
+                  &lt;/script&gt;
+                </code>
+              </pre>
+            </p>
+            
+            <h5>Trying to pass a style class as a prop from TheWelcome to WelcomeItem</h5>
+            <p>
+              I had a syntax issue again. I had everything right in defining like the urlpath liks so:
+              <pre>
+                <code>
+                  defineProps({
+                    urlpath:{
+                      type:String,
+                      required:true
+                    },
+                    classpath:{
+                      type:String,
+                      required:true
+                    }
+                  })
+                </code>
+              </pre>
+            </p>
+            <p>
+              But I used the prop inside the template incorrectly.
+              What I had before:
+              <pre>
+                <code>
+                  &lt;RouterLink :to="urlpath" class={{classpathname}}&gt;
+                </code>
+              </pre>
+            What is correct:
+              <pre>
+                <code>
+                  &lt;RouterLink :to="urlpath" :class="classpathname"&gt;
+                </code>
+              </pre>
+            </p>
+            
+            <h5>Slots for images</h5>
+            <p>
+              Since
+            <pre><code>&lt;slot&gt;&lt;/slot&gt;</code></pre> are used for injecting HTML for Vue template stuff, I looked up to see
+            if there was a way to use
+            it for images. It was as simple as this apparently:
+            <pre><code>&lt;slot name="media"&gt;&lt;/slot&gt;</code></pre>
+            </p>
+            
+            <h5>How do modals work in Vue and trying to get the gallery block (with the modal block) to work?</h5>
+            <p>
+              I tried starting off making a gallery component called GalleryBlock that would call the TextPicBlock and ModalBlock.
+              The
+              idea is a gallery component that would display the image of a craft, title heading and a description. The image would
+              be
+              clickable to open up a modal for a bigger image. The
+            <pre><code>&lt;template&gt;</code></pre> and
+            <pre><code></code>&lt;slot&gt;</pre> method is how I tried approaching it. I
+            had a good start but I didn't have much of a state management system that would control when the ModalBlock was
+            visible.
+            </p>
+            <p>
+              Ideally, the GalleryBlock component would manage the child ModalBlock component.
+            </p>
+            <p>
+              So the fixes needed here are:
+            </p>
+            <h6>GalleryBlock: Parent</h6>
+            <ul>
+              <li>Some kind of reference state to track if modal is open or not (the showModal in the data)</li>
+              <li>ModalBlock should be rendered based on the conditional v-if="showModal" (makes sense as a state management thing)
+              </li>
+              <li>show modal button needs a `@click` handler to change the showModal state to true (it started off as false since on
+                one
+                clicked the button yet)</li>
+              <li>ModalBlock needs to listen to @close event emitted (from methods) to set showModal back to false since we need
+                this
+                modal to be able to close back to gallery block.</li>
+            </ul>
+            <h6>ModalBlock: Modal Child</h6>
+            <ul>
+              <li>ModalBlock doesn't need to manage showModal since it's all visuals</li>
+              <li>setup script helps define emmited event (the closeModal)</li>
+              <li>closeModal method emits closing modal so i got that right</li>
+            </ul>
+            <h6>TextPicBlock: Child and what the viewer is gonna see</h6>
+            <ul>
+              <li>in charge of rendering one gallery item</li>
+              <li>gonna need to add props?</li>
+            </ul>
+          </div>
+
+          <div class="modal-footer">Learning Vue.js</div>
+        </div>
+
+      </div>
     </div>
 
     <!-- <div class="modal" id="myModal-e">
