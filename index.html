@@ -2854,6 +2854,110 @@
           </div>
 
           <div class="mbc_container">
+            <h5>What the screens would look like</h5>
+            <p>I have designed the assets around the dimensions of the app and what each screen will ideally look like in the final
+            product. Below are what I had planned each screen to look like.</p>
+            <p>It was only during development I had realized I forgot crucial elements of this app, like the timing display, and some
+            text to indicate to the user what was going on.</p>
+            <p>The Start Screen</p>
+            <img src="/assets/code/bakingtimer/bakingTimer-startMenu.png" alt=""/>
+            <p>The Pastry Choice Screen</p>
+            <img src="/assets/code/bakingtimer/bakingTimer-choiceMenu.png" alt="" />
+            <p>The Time Waiting Screen</p>
+            <img src="/assets/code/bakingtimer/bakingTimer-waitingTimerMenu.png" alt="" />
+            <p> The Time Complete Screen</p>
+            <img src="/assets/code/bakingtimer/bakingTimer-DoneTimerMenu.png" alt="" />
+          </div>
+
+          <div class="mbc_container">
+            <h5>My process with the code</h5>
+            <p>
+              I started off, after installing Electron with the quick tutorial, getting a base place app. Once that worked, I could
+              start stylizing with the Pixelify Sans font provided by the google fonts api, and add a custom background for my baking
+              timer app.
+            </p>
+            <p>
+              All the art assets are designed by me in Pixelorama, a free pixel art app on itch.io. I would stylize the base plate app
+              of each screen the best I could using the templates I made for myself shown above. Once each screen looked the way I
+              planned it to. Then came coding the functionality.
+            </p>
+            <h6>Code issues faced during this project:</h6>
+            <p>
+              I came to a point where the app worked in the browser just fine, but when launching the app via npm, the functionality
+              was gone. Some sources mention its how Electron works with its security. It's the context isolation part. The renderer
+              doesn't have access to Node.js but preload is supposed to fix that.
+            </p>
+            <h7>
+              What the dev tools say in electron app:
+            </h7>
+            <ul>
+              <li>
+                <p>1 - fixed</p>
+                <p>
+                  Refused to load the stylesheet
+                  'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+                  because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'style-src-elem'
+                  was not explicitly set, so 'default-src' is used as a fallback.
+                  index.html:16
+                  meta tag additions seems to have fixed this error
+                </p>
+              </li>
+              <li>
+                <p>2 - fixed</p>
+                <p>
+                  Failed to load resource: net::ERR_FILE_NOT_FOUND
+                  bgtimer-dog_waiting.png:1
+                </p>
+              </li>
+              <li>
+                <p>3 - fixed</p>
+                <p>
+                  Failed to load resource: net::ERR_FILE_NOT_FOUND
+                  oven-open.png:1
+                </p>
+              </li>
+              <li>
+                <p>4 - fixed</p>
+                <p>
+                  Failed to load resource: net::ERR_FILE_NOT_FOUND
+                  bgtimer-dog_donetimer.png:1
+                </p>
+              </li>
+              <li>
+                <p>5</p>
+                <p>Failed to load resource: net::ERR_FILE_NOT_FOUND
+                renderer.js:1</p>
+              </li>
+              <li>
+                <p>6 - fixed</p>
+                <p>Failed to load resource: net::ERR_FILE_NOT_FOUND
+                oven-closed.png:1</p>
+              </li>
+              <li>
+                <p>7 - fixed</p>
+                <p>Failed to load resource: net::ERR_FILE_NOT_FOUND
+                bakingTimer-bg.png:1</p>
+                <p>
+                  This seems to have fixed the resource loading errors 2,3,4,6,7 :
+                  <a href="https://stackoverflow.com/questions/72505239/failed-to-load-resource-neterr-file-not-found-using-im">https://stackoverflow.com/questions/72505239/failed-to-load-resource-neterr-file-not-found-using-im</a>
+                </p>
+              </li>
+              <li>
+                <p>8 -  fixed</p>
+                <p>
+                  Refused to load the stylesheet
+                  'https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+                  because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'style-src-elem'
+                  was not explicitly set, so 'default-src' is used as a fallback.
+                  index.html:1
+                  This fixed the font error:
+                  https://stackoverflow.com/questions/68445115/electron-google-fonts-violates-content-security-policy
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mbc_container">
             <h4>Electron Youtube filing cabinet</h4>
             <p>
               This project was another attempt at trying out the electron framework but to solve a personal
