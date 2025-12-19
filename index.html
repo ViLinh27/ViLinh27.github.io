@@ -3021,7 +3021,51 @@
 
           <div class="modal_container">
             <h5>Notes</h5>
-            
+            <p>
+              JSON file will hold the youtube channel data- array of objects where each obj is youtube channel
+            </p>
+            <h6>How does this work in file cabinet metaphor:</h6>
+            <ul>
+              <li>category field inside json is the file folder</li>
+              <li>channel is a file, each file within a folder</li>
+              <li>UI represetation: each category/folder and channels inside get dynamically renderred.</li>
+            </ul>
+            <h6>
+              Note about scalability, two options in case massive data sizes, but this is for personal use so json is fine:
+            </h6>
+            <ul>
+              <li>lowdb (which uses JSON files but offers more robust query/update methods) or even</li>
+              <li>sqlite3 for a more traditional relational approach. However, for most personal use cases,
+              a single JSON file is perfectly fine and simple.</li>
+            </ul>
+            <h6>Note about additional features:</h6>
+            <ul>
+              <li>
+                <p>add a search/filter thing. That could filter channels by name, link or cateogry</p>
+                <p>would still need to re-render channels based on filter criterira.</p>
+              </li>
+              <li>
+                <p>add an edit button for each channel so users can modify and save</p>
+              </li>
+              <li>
+                <p>would need to have better error handling with user feedback: like a toast for saves that works, or errors</p>
+              </li>
+              <li>
+                <p>add drag and drop so user can move channels between categories. would need html5 and drag and drop api</p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+              <li>
+                <p></p>
+              </li>
+            </ul>
           </div>
 
           <div class="modal-footer">Experiments with Electron</div>
