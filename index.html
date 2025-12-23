@@ -3054,17 +3054,88 @@
                 <p>add drag and drop so user can move channels between categories. would need html5 and drag and drop api</p>
               </li>
               <li>
-                <p></p>
+                <p>advanced feature is youtube api integration to fetch channel details like sub count and stuff,</p>
+                <p>would need api key and handling api requests</p>
               </li>
               <li>
-                <p></p>
+                <p>add user preferences that would allow users to mess with dsiplay options like sort order and save them in separate json
+                file</p>
+                <p>
+                  Electron has a app.getPath('userData') for the separte json
+                </p>
               </li>
               <li>
-                <p></p>
+                <p>
+                  consider adding framework like React with electron for better UI
+                </p>
               </li>
               <li>
-                <p></p>
+                <p>Electronlifecycle makes the entry point, main start first, then creates browserwindow,that browserwindow loads
+                index.html and renderer.js</p>
               </li>
+            </ul>
+          </div>
+          <div class="mbc_container">
+            <h5>Issues</h5>
+            <ul>
+              <li>
+                <h6>ipcMain handlers need to be registered before any browser windows are loaded and try to communicate with it</h6>
+                <p>ipcMain handlers had to be moved before the app.WhenReady to fix that issue. This makes sure the ipcmain handlers are
+                set up and ready before the entire app gets ready to be rendered to my understanding.</p>
+                <p>so it was a timing issue</p>
+              </li>
+              <li>
+                <h6>The race condition</h6>
+                <ul>
+                  <li>
+                    <p>
+                      Electron's lifecycle means that main process starts first, and then creates BrowserWindow (the createWindow part) which
+                      loads your index.html and renderer process (which allows us to see wtf is going on)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      renderer.js often starts executing code before the ipcMain.handle calls in main.js have fully registered their
+                      listeners. This includes the loadChannels at the end of the file. This creates a race condition. If the renderer tries
+                      to invoke a channel before ipcMain.handle for that channel has been called, you get this "No handler registered" error.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      how to fix this is ensure Handlers are Registered Before Window Loads
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      need to guarantee that all your ipcMain.handle calls are registered before the BrowserWindow loads any content that
+                      might try to use those IPC channels.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>Exit and Minimize windows not working at first</h6>
+                <ul>
+                  <li>
+                    <p>
+                      Need to expose minimizeWindow() and exitApp() in the preload.js file for it to render correctly in the other ones like
+                      render.js or main.js
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Note how contextIsolation: true in main.js helps for security reasons. It helps prevent direct access to Node.js API
+                      like ipcRenderer to communicate with main process (main.js).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      So preload is basically a bridge, exposing functionalities of the APi and main process stuff.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              
             </ul>
           </div>
 
