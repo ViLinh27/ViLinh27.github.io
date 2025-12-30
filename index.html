@@ -3135,7 +3135,117 @@
                   </li>
                 </ul>
               </li>
-              
+              <li>
+                <h6>typeerror with the Search window button</h6>
+                <ul>
+                  <li>
+                    <p>
+                      Uncaught TypeError: Cannot read properties of null (reading 'classList')
+                          at HTMLButtonElement.<anonymous> (render.js:150:16)
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      The searchForm const is null when trying to access classList property. So the line that says
+                      document.querySelector("search-form") didn't find anything
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      It was a typo. I was missing a .
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>The inputed channels are not persistent</h6>
+                <ul>
+                  <li>
+                    <p>
+                      The ipcMain.handle and ipcREnderer.invoke should be fine with helpign persistence.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      2 potential problems. The setup I had with the one json element already in json file or a path issue with loadChannels
+                    </p>
+                  </li>
+                  <li>
+                    <p>The one element in the json file might be messing with how save-channels works too because of how it might not add the
+                  data correctly, so i gotta empty the channels.json.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      how to address unexpected paths or environment issues:
+                      see if data file is being saved correctly in correct file.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      It looks like there's an issue of how ipcRenderer.invoke and ipcmain.hanlde pass arguments. The argument passsed into
+                      ipcRenderer.invoke are directly received as one after the other arguments in ipcMain.handle, after the event object.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      There's an issue here:
+                      saveChannels: (channels) => ipcRenderer.invoke('save-channels'),
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      saveChannels in preload got defined in a way where I called ipcRenderer.invoke without passing the channels argument to
+                      the invoke method itself. I only defined it as a paramter in the saveChannels function that contextBridge already
+                      creates.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Passing channels into the invoke directly seems to make it work now.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h6>
+                  Persistence works but why doesn't the empty array in channels.json change?
+                </h6>
+                <p>
+                  We can't have app data clutter main directory and it looks like it's also a security thing to keep user-modifiable data
+                  away from core app files.
+                  The line const app.getPath('userData') makes a special directory away from the main app files. The special directory is
+                  on the user's systems and is where we can find the json file.
+                </p>
+              </li>
+              <li>
+                <h6>
+                  After search implemented, the other buttons don't seem to work. Maybe a z-index issue.
+                </h6>
+                <ul>
+                  <li>
+                    <p>
+
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                  
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      
+                    </p>
+                  </li>
+                  
+                </ul>
+              </li>
             </ul>
           </div>
 
