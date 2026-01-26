@@ -244,6 +244,14 @@ td {
     background-repeat: no-repeat;
 }
 
+.pcontainer .card{
+    /*parallax:*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*-- individual project squares*/
 #project1 {
     background-image: url('https://pbs.twimg.com/media/FqjphO0WYAMtdu2?format=jpg&name=4096x4096');
