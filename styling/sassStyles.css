@@ -148,16 +148,22 @@ td {
 }
 
 .top-banner_name {
-  text-align: center;
+  display: none;
   font-size: 30px;
   font-weight: 700;
+  position: relative;
+  left: 50%;
+  transform: translateX(-145%);
 }
 
 .top-banner_desc {
-  text-align: center;
+  display: none;
+  position: relative;
   font-size: 20px;
   font-weight: 500;
-  margin: 15px 5px 0 5px;
+  /*margin: 15px 5px 0 5px;*/
+  right: 50%;
+  transform: translateX(70%);
 }
 
 /*filter tabs*/

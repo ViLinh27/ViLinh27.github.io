@@ -179,3 +179,20 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+/*
+--- PAGE LOAD IN ANIMATION ---
+*/
+$(document).ready(function(){
+  $(".top-banner_name").hide();
+  $(".top-banner_desc").hide();
+  $(".top-banner_name").animate({
+    left:'300px',
+    opacity:"toggle"
+  },750);
+
+  $(".top-banner_desc").animate({
+    right:'300px',
+    opacity:"toggle"
+  },1500);
+});
