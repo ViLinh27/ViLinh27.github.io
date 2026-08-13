@@ -1,2 +1,48 @@
 # ViLinh27.github.io
+
+## 2024
+
 I wanted to overhaul my portfolio website to put a bigger emphasis on code as my academic career has lead me into computer science and human-computer interaction. The flexibility and vastness of the field has allowed me to try different aspects of the domain. So this site will show the projects that have lead me to where I am now, including the art projects from my time in undergrad.
+
+### screenshots
+
+## 2026
+
+I am no longer satisfied with the layout of my multi-disciplinary portfolio so ths site will be getting another overhaul that will hopefully. be more scalable.
+
+### concept
+
+I'm basing the new format off of India Boechk's site here: https://indiaboeckh.com . She separates her disciplines by role. I did too techncally but it's not obvious enough since it's just a lot of modals and filtering on one whole page. Plus this is a good chance to include other more miscellaneous stuff I do like traditional art and fibre arts and sculpting (among other things). The main portfolio focuses will be visual development and illustration, software development and UX research.
+
+### prototype
+
+I'm working on a prototype (low fidelity) to have a visual plan for how this site will look. I'm missing a few disciplines and flows but overall helps the plan out of the site.
+https://design.penpot.app/#/view?file-id=81f57451-85cc-819d-8008-76595b67a5e2&page-id=512cf32f-1db5-804d-8008-7663d8b8e6b0&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-7a8550576425
+
+### flowchart
+
+The flow chart is a more complete overview of how the user is meant to navigate the information on the new multi disciplinary site. It helps me see what information I need to add to the site.
+
+### design system
+
+Here is a spreadsheet of a rudimentary design system (with some resources on how to achieve some goals for the website):
+| **#** | **Colours** | \***\* | \*\*** | **Font choices** | \***\* | \*\*** | \***\* | **Website references** | \*\*** | \*\*\*\* |
+|-------|--------------------------------------------|---------|--------------------|-----------------------------|--------------------------------------------|-----------------------------------------------------------------------------|---------|---------------------------------|--------------------------------------------------------------------------|--------------------------------------------------|
+| 1 | LIGHT MODE | | | name | where to find it | notes | example | goal | website | notes |
+| 2 | primary bg | ebebfb | rgb(235, 235, 251) | Atkinson Hyperlegibile font | https://www.brailleinstitute.org/freefont/ | seems to have good review and its’ free | | toggle dark mode in vanilla js | https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp | TOGGLE CLASSE |
+| 3 | secondary (button) bg | #A492D4 | rgb(164, 146, 212) | | | https://fonts.google.com/specimen/Atkinson+Hyperlegible?preview.script=Latn | | audio playing (onclick I guess) | https://jorpantech.medium.com/triggering-audio-w-vanilla-js-bc1235273c1a | would be good for record player bg music effect. |
+| 4 | accent bg | bdbbf2 | Rgb(189, 187, 242) | Roboto | https://fonts.google.com/specimen/Roboto | | | | https://www.w3schools.com/jsref/met_audio_play.asp | |
+| 5 | font colour | #110638 | rgb(17, 6, 56) | | | | | | | |
+| 6 | link | #244570 | rgb(36, 69, 112) | | | | | | | |
+| 7 | link hover | #F2D049 | Rgb(242, 208, 73) | | | | | | | |
+| 8 | link clicked | #684399 | rgb(104, 67, 153) | | | | | | | |
+| 9 | DARK MODE | | | | | | | | | |
+| 10 | primary bg | #544F70 | rgb(84, 79, 112) | | | | | | | |
+| 11 | secondary (button) bg | #78527D | Rgb(120, 82, 125) | | | | | | | |
+| 12 | accent bg | 957BB0 | rgb(149, 123, 176) | | | | | | | |
+| 13 | font colour | #FAF7FF | rgb(250, 247, 255) | | | | | | | |
+| 14 | link | #D9E3FF | rgb(217, 227, 255) | | | | | | | |
+| 15 | link hover | FFECA1 | rgb(255, 236, 161) | | | | | | | |
+| 16 | link clicked | #E3C0FA | rgb(227, 192, 250) | | | | | | | |
+| 17 | WHERE TO FIND MORE COLOURS: | | | | | | | | | |
+| 18 | https://htmlcolors.com/google-color-picker | | | | | | | | | |
