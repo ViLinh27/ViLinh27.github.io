@@ -2,6 +2,25 @@
 body {
   overflow-X: hidden;
   background-color: #ebebfb;
+  color: #110638;
 }
 
-/*--- SITE HEADER ---*//*# sourceMappingURL=sassStyles.css.map */
+.dark-mode {
+  background-color: #544f70;
+  color: #faf7ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-between;
+  background-color: yellow;
+}
+
+/*--- SITE HEADER ---*/
+.banner img {
+  height: 200px;
+}/*# sourceMappingURL=sassStyles.css.map */

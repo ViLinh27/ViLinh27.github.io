@@ -12,13 +12,29 @@ $linkclickedcolour: #684399;
 $darkmodebgcolour:#544f70;
 $darkmodebuttonycolour:#78527d;
 $darkmodeaccentbgcolour:#957bb0;
-$darmodefontcolour:#faf7ff;
+$darkmodefontcolour:#faf7ff;
 $darkmodelinkcolour:#d9e3ff;
 $darkmodelinkhovercolour:#ffeca1;
 $darkmodelinkclickedcolour:#e3c0fa;
 body {
     overflow-X: hidden;
     background-color: $lilac;
+    color: $fontcolour;
 }
-
+.dark-mode{
+    background-color:$darkmodebgcolour;
+    color:$darkmodefontcolour;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:no-wrap;
+    align-items:center;
+    align-content: stretch;
+    justify-content:space-between;
+    background-color:yellow;
+}
 /*--- SITE HEADER ---*/
+.banner img{
+   height:200px;
+}
