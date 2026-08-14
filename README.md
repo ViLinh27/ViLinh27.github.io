@@ -28,6 +28,9 @@ https://design.penpot.app/#/view?file-id=81f57451-85cc-819d-8008-76595b67a5e2&pa
 
 The flow chart is a more complete overview of how the user is meant to navigate the information on the new multi disciplinary site. It helps me see what information I need to add to the site.
 
+Here's the flow chart:
+![user flow chart](/assets/code/dumping-ground-revamp/dumpingground-portfolio-revamp-2026.webp)
+
 ### design system
 
 Here is a spreadsheet of a rudimentary design system (with some resources on how to achieve some goals for the website):
