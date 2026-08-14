@@ -15,22 +15,24 @@
     <header-component></header-component>
     <!--end of banner-->
     <!-- Nav bar-->
-     <nav class="main-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li class="dropdown">
-          <button class="dropbtn" href="#">Vis Dev & Illustration</button>
+     <nav class="main-nav" id="mainNav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <!-- <div class="dropdown">
+          <a class="dropbtn" href="#">Vis Dev & Illustration</a>
           <div class="dropdown-content">
             <a href="#">Visual Development</a>
             <a href="#">Illustration</a>
             <a href="#">Character Design</a>
           </div>
-        </li>
-        <li><a href="#">Software Dev</a></li>
-        <li><a href="#">UX Research</a></li>
-        <li><a href="#">Misc.</a></li>
-      </ul>
+        </div> -->
+        <a href="#">Vis Dev</a><!-- fix later-->
+        <a href="#">Software Dev</a>
+        <a href="#">UX Research</a>
+        <a href="#">Misc.</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNavFunc()">
+          <i class="fa fa-bars"></i>
+        </a>
      </nav>
     <!--end of nav bar-->
     <!--main container-->

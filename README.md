@@ -80,3 +80,37 @@ https://www.w3schools.com/css/css_navbar.asp
 
 for the dropdown part of the navbar:
 https://www.w3schools.com/css/css_dropdowns.asp
+
+## Issues encountered while trying to revamp dumping ground 2026
+
+### responsive nav bar
+
+I have a bug in this block in one of the 600 px media queries:
+
+```
+ .main-nav.icon {
+        display: block;
+        float: right;
+    }
+```
+
+First off I mixed off the selector types. `.main-nav.icon` tells css to look for element that has both classes on exact same element. `.icon` is a child of `<nav>` on an `<a>`, so the selector I had doesn't work period.
+
+There's also this issue on specificity. This code block:
+
+```
+.main-nav a{
+        display: none;
+    }
+```
+
+targets all `<a>` inside `.main-nav` class, so `.main-nav.icon` doesn't match the block above.
+
+How to fix is it is add a space and an extra `a` tag so the block looks like this:
+
+```
+.main-nav a.icon {
+        display: block;
+        float: right;
+    }
+```
