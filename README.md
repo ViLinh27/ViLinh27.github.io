@@ -1,10 +1,15 @@
 # ViLinh27.github.io
 
-## 2024
+## 2025
 
 I wanted to overhaul my portfolio website to put a bigger emphasis on code as my academic career has lead me into computer science and human-computer interaction. The flexibility and vastness of the field has allowed me to try different aspects of the domain. So this site will show the projects that have lead me to where I am now, including the art projects from my time in undergrad.
 
+I made a Codepen rendition to help visualize the idea: https://codepen.io/vilinh27/pen/ByBGBrY
+
 ### screenshots
+
+![portfolio screenshot](/assets/code/dumping-ground-revamp/2024-revamp/Image%208-14-26%20at%209.39%20AM.jpg)
+![portfolio screenshot 2](/assets/code/dumping-ground-revamp/2024-revamp/Image%208-14-26%20at%209.40%20AM.jpg)
 
 ## 2026
 
