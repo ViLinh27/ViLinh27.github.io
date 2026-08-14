@@ -54,3 +54,29 @@ Here is a spreadsheet of a rudimentary design system (with some resources on how
 | 16 | link clicked | #E3C0FA | rgb(227, 192, 250) | | | | | | | |
 | 17 | WHERE TO FIND MORE COLOURS: | | | | | | | | | |
 | 18 | https://htmlcolors.com/google-color-picker | | | | | | | | | |
+
+### references for extra effects
+
+#### web components
+
+This is the one I used:
+https://medium.com/front-end-weekly/how-to-build-reusable-html-components-without-component-based-frameworks-2f7747f4c5db
+
+This is extra:
+https://www.reddit.com/r/Frontend/comments/v2lqvv/begginer_question_how_to_write_reusable_part_of_a/
+
+#### flexbox
+
+Always handy for styling:
+https://the-echoplex.net/flexyboxes/?fixed-height=on&display=flex&flex-direction=column&flex-wrap=nowrap&justify-content=space-between&align-items=center&align-content=stretch&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto&order%5B%5D=0&flex-grow%5B%5D=0&flex-shrink%5B%5D=1&flex-basis%5B%5D=auto&align-self%5B%5D=auto
+
+#### navbar
+
+Talks about <nav>:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav
+
+Has styling tips:
+https://www.w3schools.com/css/css_navbar.asp
+
+for the dropdown part of the navbar:
+https://www.w3schools.com/css/css_dropdowns.asp
