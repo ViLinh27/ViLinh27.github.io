@@ -4,8 +4,8 @@ class Header extends HTMLElement {
         this.innerHTML = `
             <div class="banner">
                 <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
-                <h1 class="banner-title">ViLinh27</h1>
-                <p class="banner-desc">Welcome to my personal website!</p>
+                <h1 class="banner-title">Vi-Linh Nguyen</h1>
+                <p class="banner-desc">Visual Development & Illustration | Software Development | UX Research</p>
             </div>
         `;
     }

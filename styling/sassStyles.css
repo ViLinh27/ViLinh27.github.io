@@ -68,12 +68,21 @@ footer {
 
 .dropdown {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .dropbtn {
   background-color: #a492d4;
   color: #110638;
   border: none;
+  text-align: center;
+  padding: 8px 12px;
+  width: 100%;
 }
 
 .dropdown-content {
@@ -81,8 +90,8 @@ footer {
   position: absolute;
   background-color: #bdbbf2;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  top: 100%;
 }
 
 .dropdown-content a {
@@ -97,7 +106,12 @@ footer {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .dropdown:hover .dropbtn {
@@ -105,8 +119,9 @@ footer {
 }
 
 .main-nav {
-  overflow: hidden;
-  background-color: pink;
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .main-nav a {
@@ -141,7 +156,6 @@ show link that contains should open and close navbar icon
   .main-nav a.icon {
     display: block;
     float: right;
-    background-color: yellow;
   }
 }
 /*
@@ -157,7 +171,7 @@ responsiveness class added to main-nav with js when user clicks on icon
     justify-content: space-between;
     align-items: center;
     align-content: stretch;
-    height: 200px;
+    height: inherit;
   }
   .main-nav.responsive a.icon {
     position: absolute;

@@ -81,6 +81,9 @@ https://www.w3schools.com/css/css_navbar.asp
 for the dropdown part of the navbar:
 https://www.w3schools.com/css/css_dropdowns.asp
 
+for the responsiveness of navbar:
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+
 ## Issues encountered while trying to revamp dumping ground 2026
 
 ### responsive nav bar
@@ -114,3 +117,9 @@ How to fix is it is add a space and an extra `a` tag so the block looks like thi
         float: right;
     }
 ```
+
+### making sure the dropdown menus don't hide the other drop down menu content in mobile
+
+The drop down menu hides the other nav bar content when visible, so i needed a way to fix that. SImple change of position of hte drop down content. Change it from relative to static. THat way, the other nav bar buttons aren't hidden.
+
+But I'll keep it at relative for now so it doesn't change the height of the entire nav bar.
