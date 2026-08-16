@@ -10,6 +10,19 @@ body {
   color: #faf7ff;
 }
 
+.dark-mode .banner,
+.dark-mode .main-nav,
+.dark-mode footer {
+  background-color: #957bb0;
+  color: #faf7ff;
+}
+
+.dark-mode .main-nav a,
+.dark-mode .dropbtn {
+  background-color: #957bb0;
+  color: #d9e3ff;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -81,7 +94,7 @@ footer {
 }
 
 .dropbtn {
-  background-color: #a492d4;
+  background-color: #bdbbf2;
   color: #110638;
   border: none;
   text-align: center;

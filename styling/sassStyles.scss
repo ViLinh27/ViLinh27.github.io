@@ -21,10 +21,25 @@ body {
     background-color: $lilac;
     color: $fontcolour;
 }
+//
 .dark-mode{
     background-color:$darkmodebgcolour;
     color:$darkmodefontcolour;
 }
+
+.dark-mode .banner, 
+.dark-mode .main-nav,
+.dark-mode footer{
+    background-color:$darkmodeaccentbgcolour;
+    color: $darkmodefontcolour;
+}
+
+.dark-mode .main-nav a,
+.dark-mode .dropbtn{
+    background-color: $darkmodeaccentbgcolour;
+    color: $darkmodelinkcolour;
+}
+
 .container{
     display:flex;
     flex-direction:column;
@@ -94,7 +109,7 @@ footer {
 }
 
 .dropbtn{
-    background-color:$buttoncolour;
+    background-color:$accentbgcolour;
     color:$fontcolour;
     //padding: 10px;
     border:none;
