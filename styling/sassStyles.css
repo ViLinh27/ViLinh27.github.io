@@ -18,7 +18,8 @@ body {
 }
 
 .dark-mode .main-nav a,
-.dark-mode .dropbtn {
+.dark-mode .dropbtn,
+.dark-mode .dropdown-content {
   background-color: #957bb0;
   color: #d9e3ff;
 }
@@ -38,6 +39,13 @@ a {
 }
 
 /*--- SITE COMPONENTS ---*/
+.toggle-btns {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem 1rem 0 0;
+}
+
 .banner img {
   height: 200px;
   width: 200px;

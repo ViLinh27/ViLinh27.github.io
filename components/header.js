@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
             <div class="banner">
-                <button onclick="toggleDarkMode()">toggle dark mode</button>
+                <button class="toggle-btns" onclick="toggleDarkMode()">toggle dark mode</button>
                 <img src="https://pbs.twimg.com/media/GKQQB2lW4AAwvFo?format=png&name=small" alt="dog" class="dog" />
                 <h1 class="banner-title">Vi-Linh Nguyen</h1>
                 <p class="banner-desc">Visual Development & Illustration | Software Development | UX Research</p>
