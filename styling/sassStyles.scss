@@ -21,7 +21,7 @@ body {
     background-color: $lilac;
     color: $fontcolour;
 }
-//
+//---DARK MODE---
 .dark-mode{
     background-color:$darkmodebgcolour;
     color:$darkmodefontcolour;
@@ -182,7 +182,30 @@ footer {
 .main-nav a.icon{
     display: none;
 }
-
+//PROJECT GRIDS
+.portfolio-grid,.misc-grid{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    align-content:stretch;
+    width:100%;
+    //background-color:yellow;//change later
+}
+.grid-content{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:center;
+    align-content:stretch;
+    width:300px;
+    height:fit-content;
+    margin:1rem 0 1rem 0;
+    padding:1rem 0 1rem 0;
+    //background-color:orange;//change later
+}
 //---MEDIA QUERIES FOR RESPONSIVENESS ---
 /*
 when screen is <600px wide, hide all links

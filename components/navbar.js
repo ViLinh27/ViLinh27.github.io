@@ -24,6 +24,7 @@ class Navbar extends HTMLElement{
                 <div class="dropdown">
                 <a class="dropbtn" href="#">Misc. &#8964;</a>
                 <div class="dropdown-content">
+                    <a href="#">Writing</a>
                     <a href="#">traditional art</a>
                     <a href="#">sticker designs</a>
                     <a href="#">zines</a>
