@@ -40,6 +40,10 @@ a {
   background-color: #bdbbf2;
 }
 
+.banner-desc-responsive {
+  display: none;
+}
+
 footer {
   background-color: #bdbbf2;
   color: #110638;
@@ -156,6 +160,17 @@ show link that contains should open and close navbar icon
   .main-nav a.icon {
     display: block;
     float: right;
+  }
+  .banner-desc {
+    display: none;
+  }
+  .banner-desc-responsive {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 }
 /*
