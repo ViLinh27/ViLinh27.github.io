@@ -23,10 +23,20 @@ class ProjectGrid extends HTMLElement{
         const gridItemsRaw = this.getAttribute('grid-content-items') || '';
 
         //if the raw items exist split into a list, if not, use empty string
-        const gridItems = gridItemsRaw ? gridItemsRaw.split(',').map(item=>`<button> ${item.trim()}</button>`).join('') : '';
+        const gridItems = gridItemsRaw ? gridItemsRaw.split(',').map(item=>`
+            <a href="#"> ${item.trim()}</a>
+        `).join('') : '';
         
         this.shadowRoot.innerHTML=`
             <style>
+                .grid-title{
+                    background-color:yellow;
+                }
+                .grid-content a{
+                    color: $linkcolour;
+                    text-decoration:none;
+                    background-color:red;
+                }
                 .grid-content{
                     display:flex;
                     flex-direction:column;
@@ -38,7 +48,7 @@ class ProjectGrid extends HTMLElement{
                     height:fit-content;
                     margin:1rem 0 1rem 0;
                     padding:1rem 0 1rem 0;
-                    //background-color:orange;//change later
+                    background-color:orange;//change later
                 }
             </style>
 
