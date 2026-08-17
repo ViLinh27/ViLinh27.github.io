@@ -175,44 +175,44 @@ Instead of this
 
 ```
 class ProjectGrid extends HTMLElement{
-constructor(){
-super(); //inherits from superclass HTMLElement
-this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
-}
-static get observedAttributes(){
-//gotta monitor these to see for any changes
-return ['grid-title','grid-content-items',]
-}
-connectedCallback(){
-//runs when component injected into DOM
-this.render();
-}
-attributeChangedCallback(name,oldVal,newVal){
-//runs automatically if attributes being monitored are changed
-if (oldVal !== newVal){
-this.render();
-}
-}
-render(datalist){
-//render func to dynamically inject attribute vals
-const gridname = this.getAttribute('grid-title');
-if (!datalist) return;
-const gridContentItems = datalist.split(',').map(item=>
-`
-<button href="#">${item.trim()}</button>
-`
-).join('');
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return ['grid-title','grid-content-items',]
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+        this.render();
+        }
+    }
+    render(datalist){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title');
+        if (!datalist) return;
+        const gridContentItems = datalist.split(',').map(item=>
+        `
+        <button href="#">${item.trim()}</button>
+        `
+        ).join('');
 
-this.innerHTML = `
-<div class="grid-title">
-<h2>${gridname}</h2>
-</div>
-<div class="grid-content">
-${gridContentItems}
-</div>
-`;
+        this.innerHTML = `
+        <div class="grid-title">
+            <h2>${gridname}</h2>
+        </div>
+        <div class="grid-content">
+            ${gridContentItems}
+        </div>
+        `;
 
-}
+    }
 }
 
 customElements.define('project-grid-list',ProjectGrid)
