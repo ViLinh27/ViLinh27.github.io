@@ -169,6 +169,117 @@ How to RECTIFY THIS is to change `this.innerHTML` to `this.shadowRoot.innerHTML`
 
 How to RECTIFY THIS is to put the styling for the custom components into a `<style>` block directly inside `this.shadowROot.innerHTML` to make the component (custom one) more self contained.
 
+#### So the code should like this:
+
+Instead of this
+
+```
+class ProjectGrid extends HTMLElement{
+constructor(){
+super(); //inherits from superclass HTMLElement
+this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+}
+static get observedAttributes(){
+//gotta monitor these to see for any changes
+return ['grid-title','grid-content-items',]
+}
+connectedCallback(){
+//runs when component injected into DOM
+this.render();
+}
+attributeChangedCallback(name,oldVal,newVal){
+//runs automatically if attributes being monitored are changed
+if (oldVal !== newVal){
+this.render();
+}
+}
+render(datalist){
+//render func to dynamically inject attribute vals
+const gridname = this.getAttribute('grid-title');
+if (!datalist) return;
+const gridContentItems = datalist.split(',').map(item=>
+`
+<button href="#">${item.trim()}</button>
+`
+).join('');
+
+this.innerHTML = `
+<div class="grid-title">
+<h2>${gridname}</h2>
+</div>
+<div class="grid-content">
+${gridContentItems}
+</div>
+`;
+
+}
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
+We have this
+
+```
+class ProjectGrid extends HTMLElement{
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return ['grid-title','grid-content-items',]
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+            this.render();
+        }
+    }
+    render(){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title') || '';
+        const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+
+        //if the raw items exist split into a list, if not, use empty string
+        const gridItems = gridItemsRaw ? gridItemsRaw.split(',').map(item=>`<button> ${item.trim()}</button>`).join('') : '';
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .grid-content{
+                    display:flex;
+                    flex-direction:column;
+                    flex-wrap:nowrap;
+                    justify-content:space-between;
+                    align-items:center;
+                    align-content:stretch;
+                    width:300px;
+                    height:fit-content;
+                    margin:1rem 0 1rem 0;
+                    padding:1rem 0 1rem 0;
+                    //background-color:orange;//change later
+                }
+            </style>
+
+            <div class="grid-title">
+                <h2>
+                    ${gridname}
+                </h2>
+            </div>
+            <div class="grid-content">
+                ${gridItems}
+            </div>
+        `
+    }
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
 ## Web components
 
 These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.
