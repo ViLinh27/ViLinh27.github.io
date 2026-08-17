@@ -280,6 +280,296 @@ class ProjectGrid extends HTMLElement{
 customElements.define('project-grid-list',ProjectGrid)
 ```
 
+### Inserting image lists into the custom project grid component for the homepage
+
+Currently my html code looks like this:
+
+```
+<div class="project-grid">
+          <project-grid-list
+            grid-title="Portfolios"
+            grid-content-items="
+              Visual Development and Illustration,
+              Software Development,
+              UX Research
+            "
+            grid-content-imgs='[
+              "/assets/art/art-processed.png",
+              "/assets/code/code-processed.png",
+              "/assets/ux/peezyFindMoodboard.jpg"
+            ]'
+            ></project-grid-list>
+         </div>
+
+        <div class="project-grid">
+          <project-grid-list grid-title="Miscellaneous" grid-content-items="
+                                  Writing,
+                                  Traditional Art,
+                                  Sticker Designs,
+                                  Zines,
+                                  Sculptures,
+                                  Fibre Arts
+                                "></project-grid-list>
+        </div>
+
+```
+
+And the project-grid component looks like this:
+
+```
+class ProjectGrid extends HTMLElement{
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return ['grid-title','grid-content-items','grid-content-imgs']
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+            this.render();
+        }
+    }
+    render(){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title') || '';
+        const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+        const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
+
+        //if the raw items exist split into a list, if not, use empty string
+        const gridItems = gridItemsRaw ? gridItemsRaw.split(',').map(item=>`
+                <a href="#">${item.trim()}</a>
+        `).join('') : '';
+
+        let gridImgsList = [];
+
+        try{
+            gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
+        }catch (error){
+            console.error("Failed to parse image list in JSON", error);
+        }
+
+        const gridImgsRendered = gridImgsList.map(src=>`
+
+                    .grid-content a {
+                        background-image: ${src}.join('');
+                    }
+            `);
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .grid-title{
+                    margin:16px;
+                    padding:16px;
+                    width:1100px;
+                }
+                .grid-content{
+                    margin:16px;
+                    padding:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap;wrap;
+                    width:1100px;
+                }
+                .grid-content a{
+                    color: $linkcolour;
+                    text-decoration:none;
+                    height:140px;
+                    width:420px;
+                    margin:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap;wrap;
+                    border-radius:30px;
+                    background-image: ${gridItemsImg};
+                }
+
+                $
+
+                @media screen and (max-width: 600px){
+                    .grid-title{
+                        margin:0;
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content{
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content a{
+
+                        height:70px;
+                        width:220px;
+                        border-radius:15px;
+                    }
+                }
+
+            </style>
+
+            <div class="grid-title">
+                <h2>
+                    ${gridname}
+                </h2>
+            </div>
+            <div class="grid-content">
+                ${gridItems}
+            </div>
+        `
+    }
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
+#### What I'm doing wrong
+
+The project grid disappeared because of uncaught run time errors during the render() so the whole thing crashed before any DOM nodes were created.
+
+- First There's an undfined variable reference.
+
+Line 77 has a variable name mistake. There's a `gridItemsImg` when it's supposed to be `gridImgsRendered`. The `gridItemsImg` was never declared so this gives a `ReferenceError`.
+
+- TypeError with a String Method
+
+The `${src}.join('')` tried running `join()` on `src` (check line 39) inside the declaration of `gridImgsRendered`. This is trying to work on a string anyway (not array) so that's why there's a TypeError.
+
+- Syntax Typos with the CSS
+
+So many typos like `flex-wrap;wrap;` instead of `flex-wrap:wrap;`. And using SCSS variables like `$linkcolour` instead of CSS which seems more comptabile with shadow DOM styles.
+
+#### How to rectify
+
+Dynamically building CSS rules has been tedious and not that effective. So the better course of action is mapping the button item (name in this case) and image paths toegether by index in JS, then injecting an inline `style="background-image: url('...')"` attribute onto each generated `<a>` tag. I've been overthinking this.
+So the project grid component now looks like this:
+
+```
+class ProjectGrid extends HTMLElement{
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return ['grid-title','grid-content-items','grid-content-imgs']
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+            this.render();
+        }
+    }
+    render(){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title') || '';
+        const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+        const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
+
+        let gridImgsList = [];
+
+        try{
+            gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
+        }catch (error){
+            console.error("Failed to parse image list in JSON", error);
+        }
+
+        //split text items into array instead
+        const text_items = gridItemsRaw ? gridItemsRaw.split(',').map(item => item.trim()).filter(Boolean) : [];
+
+        //time to pair each text item to image url by index now
+        const gridItems = text_items.map((item,index)=>{
+            const imgSrc=gridImgsList[index];
+            const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:'';
+
+            return `<a href="#" ${bgStyle}>${item}</a>`;
+        }).join('');
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .grid-title{
+                    margin:16px;
+                    padding:16px;
+                    width:1100px;
+                }
+                .grid-content{
+                    margin:16px;
+                    padding:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    width:1100px;
+                }
+                .grid-content a{
+                    color: blue;
+                    text-decoration:none;
+                    height:140px;
+                    width:420px;
+                    margin:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    border-radius:30px;
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat: no-repeat;
+                }
+
+                @media screen and (max-width: 600px){
+                    .grid-title{
+                        margin:0;
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content{
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content a{
+
+                        height:70px;
+                        width:220px;
+                        border-radius:15px;
+                    }
+                }
+
+            </style>
+
+            <div class="grid-title">
+                <h2>
+                    ${gridname}
+                </h2>
+            </div>
+            <div class="grid-content">
+                ${gridItems}
+            </div>
+        `;
+    }
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
 ## Web components
 
 These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.

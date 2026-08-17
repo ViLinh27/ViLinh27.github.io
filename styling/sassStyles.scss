@@ -182,16 +182,16 @@ footer {
 .main-nav a.icon{
     display: none;
 }
-//PROJECT GRIDS
-.portfolio-grid,.misc-grid{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items:center;
-    align-content:stretch;
-    width:100%;
-    //background-color:yellow;//change later
+.project-grid {
+    //background-color: red; //change later
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 100%;
 }
 
 //---MEDIA QUERIES FOR RESPONSIVENESS ---

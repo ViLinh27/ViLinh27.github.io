@@ -169,13 +169,14 @@ footer {
   display: none;
 }
 
-.portfolio-grid, .misc-grid {
+.project-grid {
+  text-align: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  align-content: stretch;
+  align-content: center;
   width: 100%;
 }
 

@@ -5,7 +5,7 @@ class ProjectGrid extends HTMLElement{
     }
     static get observedAttributes(){
         //gotta monitor these to see for any changes
-        return ['grid-title','grid-content-items',]
+        return ['grid-title','grid-content-items','grid-content-imgs']
     }
     connectedCallback(){
         //runs when component injected into DOM
@@ -21,35 +21,81 @@ class ProjectGrid extends HTMLElement{
         //render func to dynamically inject attribute vals
         const gridname = this.getAttribute('grid-title') || '';
         const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+        const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
 
-        //if the raw items exist split into a list, if not, use empty string
-        const gridItems = gridItemsRaw ? gridItemsRaw.split(',').map(item=>`
-            <a href="#"> ${item.trim()}</a>
-        `).join('') : '';
+        let gridImgsList = [];
+
+        try{
+            gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
+        }catch (error){
+            console.error("Failed to parse image list in JSON", error);
+        }
+
+        //split text items into array instead
+        const text_items = gridItemsRaw ? gridItemsRaw.split(',').map(item => item.trim()).filter(Boolean) : [];
         
+        //time to pair each text item to image url by index now
+        const gridItems = text_items.map((item,index)=>{
+            const imgSrc=gridImgsList[index];
+            const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:''; 
+
+            return `<a href="#" ${bgStyle}>${item}</a>`;
+        }).join('');
+
         this.shadowRoot.innerHTML=`
             <style>
                 .grid-title{
-                    background-color:yellow;
-                }
-                .grid-content a{
-                    color: $linkcolour;
-                    text-decoration:none;
-                    background-color:red;
+                    margin:16px;
+                    padding:16px;
+                    width:1100px;
                 }
                 .grid-content{
+                    margin:16px;
+                    padding:16px;
                     display:flex;
                     flex-direction:column;
-                    flex-wrap:nowrap;
-                    justify-content:space-between;
+                    justify-content:space-around;
                     align-items:center;
-                    align-content:stretch;
-                    width:300px;
-                    height:fit-content;
-                    margin:1rem 0 1rem 0;
-                    padding:1rem 0 1rem 0;
-                    background-color:orange;//change later
+                    align-content:center;
+                    flex-wrap:wrap;
+                    width:1100px;
                 }
+                .grid-content a{
+                    color: white;
+                    text-decoration:none;
+                    height:140px;
+                    width:420px;
+                    margin:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    border-radius:30px;
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat: no-repeat;
+                }
+
+                @media screen and (max-width: 600px){
+                    .grid-title{
+                        margin:0;
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content{
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content a{
+                        
+                        height:70px;
+                        width:220px;
+                        border-radius:15px;
+                    }
+                }
+                
             </style>
 
             <div class="grid-title">
@@ -60,7 +106,7 @@ class ProjectGrid extends HTMLElement{
             <div class="grid-content">
                 ${gridItems}
             </div>
-        `
+        `;
     }
 }
 
