@@ -20,7 +20,7 @@ class Navbar extends HTMLElement{
                     <a href="#">Game Development</a>
                 </div>
                 </div>
-                <a href="#">UX Research</a>
+                <a href="/pages/portfolios/ux_research.html">UX Research</a>
                 <div class="dropdown">
                 <a class="dropbtn" href="#">Misc. &#8964;</a>
                 <div class="dropdown-content">
