@@ -16,7 +16,7 @@ class ProjectGrid extends HTMLElement{
         //runs when component injected into DOM
         this.render();
     }
-    attributeChangedCallback(name,oldVal,newVal){
+    attributeChangedCallback(oldVal,newVal){
         //runs automatically if attributes being monitored are changed
         if (oldVal !== newVal){
             this.render();
