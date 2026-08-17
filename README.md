@@ -574,6 +574,306 @@ customElements.define('project-grid-list',ProjectGrid)
 
 Using brightness is separate from the background image transformations and scaling with some box shadow makes the hover more obvious.
 
+### ADding a link attribute to the project grid
+
+I have this so far but it has not worked:
+
+```
+class ProjectGrid extends HTMLElement{
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return [
+            'grid-title',
+            'grid-content-items',
+            'grid-content-imgs',
+            'grid-content-links'
+        ]
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+            this.render();
+        }
+    }
+    render(){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title') || '';
+        const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+        const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
+        const gridItemsLinks = this.getAttribute('grid-content-links') || '';
+
+        let gridImgsList = [];
+        let gridLinksList = [];
+
+        try{
+            gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
+        }catch (error){
+            console.error("Failed to parse image list in JSON", error);
+        }
+
+        try{
+            gridLinksList = gridItemsLinks ? JSON.parse(gridItemsLinks) : [];
+        }catch(error){
+            console.error("Failed to parse links list in JSON", error);
+        }
+
+        //split text items into array instead
+        const text_items = gridItemsRaw ? gridItemsRaw.split(',').map(item => item.trim()).filter(Boolean) : [];
+
+        //split the links list into processed
+        const links_items_processed = gridItemsLinks ? gridItemsLinks.split(',').malp(item=>item.trim()).filter(Boolean):[];
+
+        //time to pair each text item to image url by index now
+        const gridItems = text_items.map((item,index,link)=>{
+            const imgSrc=gridImgsList[index];
+            const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:'';
+            const linkItem=links_items_processed[link];
+
+            return `<a class="grid-button" href="${linkItem}" ${bgStyle}>${item}</a>`;
+        }).join('');
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .grid-title{
+                    margin:16px;
+                    padding:16px;
+                    width:1100px;
+                }
+                .grid-content{
+                    margin:16px;
+                    padding:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    width:1100px;
+                }
+                .grid-content a{
+                    color: white;
+                    text-decoration:none;
+                    height:140px;
+                    width:420px;
+                    margin:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    border-radius:30px;
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat: no-repeat;
+                    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+                }
+                .grid-content a:hover{
+                    transform:scale(1.02);
+                    filter:brightness(1.11);
+                    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                }
+
+                @media screen and (max-width: 600px){
+                    .grid-title{
+                        margin:0;
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content{
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content a{
+
+                        height:70px;
+                        width:220px;
+                        border-radius:15px;
+                    }
+                }
+
+            </style>
+
+            <div class="grid-title">
+                <h2>
+                    ${gridname}
+                </h2>
+            </div>
+            <div class="grid-content">
+                ${gridItems}
+            </div>
+        `;
+    }
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
+#### Why above doesn't work
+
+There is a typo when mapping the links that made the grid disappear (line 51). I put `.malp(item...)` instead of `.map(item...)`. This made a Uncaught TypeError so the innerHTML stuff didn't execute at all.
+
+Another problem is double processing. THe links come in as JSON, but. used `split` which still includes the brackets. Pretty sure it's line 51. I needed to use `gridLinksList` which is already parsed instead of `gridItemsLinks`. Fixing this made the grid disppear again though.
+
+Another problem is I used mapping badly. Using link as a third parameter will leed links_items_processed[-link] in line 57 to be undefined.
+
+#### How to fix above code
+
+Get rid of the links_items_processed on line 51 where I'm attempting to map the raw links list since the split() still has brackets. We're basically going to parse the JSON directly wihtout the `split()` and the mapping (inside try catch block on line 41-45).
+
+Get rid of the 3rd item inside the mapping since it's the array itself that's the third item (line 54). We're going to look at the parsed list of links (from the try catch) using the already there index since it's supposed to be in the same order now.
+
+So we don't have any unused and unncessary extra lists anymore.
+
+#### What the fixed code looks like
+
+```
+class ProjectGrid extends HTMLElement{
+    constructor(){
+        super(); //inherits from superclass HTMLElement
+        this.attachShadow({mode: 'open'});//shadow DOM helps with style and markup encapsulation
+    }
+    static get observedAttributes(){
+        //gotta monitor these to see for any changes
+        return [
+            'grid-title',
+            'grid-content-items',
+            'grid-content-imgs',
+            'grid-content-links'
+        ]
+    }
+    connectedCallback(){
+        //runs when component injected into DOM
+        this.render();
+    }
+    attributeChangedCallback(name,oldVal,newVal){
+        //runs automatically if attributes being monitored are changed
+        if (oldVal !== newVal){
+            this.render();
+        }
+    }
+    render(){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title') || '';
+        const gridItemsRaw = this.getAttribute('grid-content-items') || '';
+        const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
+        const gridItemsLinks = this.getAttribute('grid-content-links') || '';
+
+        let gridImgsList = [];
+        let gridLinksList = [];
+
+        try{
+            gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
+        }catch (error){
+            console.error("Failed to parse image list in JSON", error);
+        }
+
+        try{
+            gridLinksList = gridItemsLinks ? JSON.parse(gridItemsLinks) : [];
+        }catch(error){
+            console.error("Failed to parse links list in JSON", error);
+        }
+
+        //split text items into array instead
+        const text_items = gridItemsRaw ? gridItemsRaw.split(',').map(item => item.trim()).filter(Boolean) : [];
+
+        //split the links list into processed
+        //const links_items_processed = gridLinksList ? gridLinksList.split(',').map(item=>item.trim()).filter(Boolean):[];
+
+        //time to pair each text item to image url by index now
+        const gridItems = text_items.map((item,index)=>{
+            const imgSrc=gridImgsList[index];
+            const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:'';
+            const linkItem=gridLinksList[index] || '#';//the # is inc ase there's no link
+
+            return `<a class="grid-button" href="${linkItem}" ${bgStyle}>${item}</a>`;
+        }).join('');
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .grid-title{
+                    margin:16px;
+                    padding:16px;
+                    width:1100px;
+                }
+                .grid-content{
+                    margin:16px;
+                    padding:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    width:1100px;
+                }
+                .grid-content a{
+                    color: white;
+                    text-decoration:none;
+                    height:140px;
+                    width:420px;
+                    margin:16px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
+                    align-content:center;
+                    flex-wrap:wrap;
+                    border-radius:30px;
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat: no-repeat;
+                    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+                }
+                .grid-content a:hover{
+                    transform:scale(1.02);
+                    filter:brightness(1.11);
+                    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                }
+
+                @media screen and (max-width: 600px){
+                    .grid-title{
+                        margin:0;
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content{
+                        padding:8px;
+                        width:500px;
+                    }
+                    .grid-content a{
+
+                        height:70px;
+                        width:220px;
+                        border-radius:15px;
+                    }
+                }
+
+            </style>
+
+            <div class="grid-title">
+                <h2>
+                    ${gridname}
+                </h2>
+            </div>
+            <div class="grid-content">
+                ${gridItems}
+            </div>
+        `;
+    }
+}
+
+customElements.define('project-grid-list',ProjectGrid)
+```
+
 ## Web components
 
 These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.

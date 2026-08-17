@@ -5,7 +5,12 @@ class ProjectGrid extends HTMLElement{
     }
     static get observedAttributes(){
         //gotta monitor these to see for any changes
-        return ['grid-title','grid-content-items','grid-content-imgs']
+        return [
+            'grid-title',
+            'grid-content-items',
+            'grid-content-imgs',
+            'grid-content-links'
+        ]
     }
     connectedCallback(){
         //runs when component injected into DOM
@@ -22,8 +27,10 @@ class ProjectGrid extends HTMLElement{
         const gridname = this.getAttribute('grid-title') || '';
         const gridItemsRaw = this.getAttribute('grid-content-items') || '';
         const gridItemsImgsRaw = this.getAttribute('grid-content-imgs') || '';
+        const gridItemsLinks = this.getAttribute('grid-content-links') || '';
 
         let gridImgsList = [];
+        let gridLinksList = [];
 
         try{
             gridImgsList = gridItemsImgsRaw ? JSON.parse(gridItemsImgsRaw) : [];
@@ -31,15 +38,25 @@ class ProjectGrid extends HTMLElement{
             console.error("Failed to parse image list in JSON", error);
         }
 
+        try{
+            gridLinksList = gridItemsLinks ? JSON.parse(gridItemsLinks) : [];
+        }catch(error){
+            console.error("Failed to parse links list in JSON", error);
+        }
+
         //split text items into array instead
         const text_items = gridItemsRaw ? gridItemsRaw.split(',').map(item => item.trim()).filter(Boolean) : [];
         
+        //split the links list into processed
+        //const links_items_processed = gridLinksList ? gridLinksList.split(',').map(item=>item.trim()).filter(Boolean):[];
+
         //time to pair each text item to image url by index now
         const gridItems = text_items.map((item,index)=>{
             const imgSrc=gridImgsList[index];
             const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:''; 
+            const linkItem=gridLinksList[index] || '#';//the # is inc ase there's no link
 
-            return `<a class="grid-button" href="#" ${bgStyle}>${item}</a>`;
+            return `<a class="grid-button" href="${linkItem}" ${bgStyle}>${item}</a>`;
         }).join('');
 
         this.shadowRoot.innerHTML=`
