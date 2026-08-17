@@ -570,6 +570,10 @@ class ProjectGrid extends HTMLElement{
 customElements.define('project-grid-list',ProjectGrid)
 ```
 
+#### ADding a hover effect to the a tag that has an injected style block
+
+Using brightness is separate from the background image transformations and scaling with some box shadow makes the hover more obvious.
+
 ## Web components
 
 These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.

@@ -39,7 +39,7 @@ class ProjectGrid extends HTMLElement{
             const imgSrc=gridImgsList[index];
             const bgStyle=imgSrc ? `style="background-image:url('${imgSrc}');"`:''; 
 
-            return `<a href="#" ${bgStyle}>${item}</a>`;
+            return `<a class="grid-button" href="#" ${bgStyle}>${item}</a>`;
         }).join('');
 
         this.shadowRoot.innerHTML=`
@@ -76,6 +76,12 @@ class ProjectGrid extends HTMLElement{
                     background-size:cover;
                     background-position:center;
                     background-repeat: no-repeat;
+                    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+                }
+                .grid-content a:hover{
+                    transform:scale(1.02);
+                    filter:brightness(1.11);
+                    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
                 }
 
                 @media screen and (max-width: 600px){
