@@ -4,18 +4,18 @@ class Navbar extends HTMLElement{
             <nav class="main-nav" id="mainNav">
                 <a href="#">About</a>
                 <div class="dropdown">
-                <a class="dropbtn" href="#">Vis Dev & Illustration &#8964;</a>
+                <a class="dropbtn" href="/pages/portfolios/visdev_illustration.html">Vis Dev & Illustration &#8964;</a>
                 <div class="dropdown-content">
-                    <a href="#">Visual Development</a>
+                    <a href="/pages/portfolios/visdev_illustration.html">Visual Development</a>
                     <a href="#">Illustration</a>
                     <a href="#">Character Design</a>
                 </div>
                 </div>
                 <!--<a href="#">Vis Dev</a> fix later-->
                 <div class="dropdown">
-                <a class="dropbtn" href="#">Software Dev &#8964;</a>
+                <a class="dropbtn" href="/pages/portfolios/software_dev.html">Software Dev &#8964;</a>
                 <div class="dropdown-content">
-                    <a href="#">Web Development</a>
+                    <a href="/pages/portfolios/software_dev.html">Web Development</a>
                     <a href="#">App Development</a>
                     <a href="#">Game Development</a>
                 </div>
