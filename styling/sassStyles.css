@@ -179,20 +179,6 @@ footer {
   width: 100%;
 }
 
-.grid-content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
-  width: 300px;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 1rem 0 1rem 0;
-  padding: 1rem 0 1rem 0;
-}
-
 /*
 when screen is <600px wide, hide all links
 except for first HOME

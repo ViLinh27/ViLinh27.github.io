@@ -123,3 +123,82 @@ How to fix is it is add a space and an extra `a` tag so the block looks like thi
 The drop down menu hides the other nav bar content when visible, so i needed a way to fix that. SImple change of position of hte drop down content. Change it from relative to static. THat way, the other nav bar buttons aren't hidden.
 
 But I'll keep it at relative for now so it doesn't change the height of the entire nav bar.
+
+### The custom web component for the project grid has bugs when implemented into the index file.
+
+There are 3 core bugs that are making it not work along with some style encapsulation issues.
+
+1. datalist parameter is off
+   This function `render(datalist)` exists when there's no datalist parameter. The full funciton looks like this:
+
+```
+render(datalist){
+        //render func to dynamically inject attribute vals
+        const gridname = this.getAttribute('grid-title');
+        if (!datalist) return;
+        const gridContentItems = datalist.split(',').map(item=>
+            `
+                <button href="#">${item.trim()}</button>
+            `
+        ).join('');
+
+        this.innerHTML = `
+            <div class="grid-title">
+                <h2>${gridname}</h2>
+            </div>
+            <div class="grid-content">
+            ${gridContentItems}
+            </div>
+        `;
+
+    }
+```
+
+The `render(datalist)` fails because `connectedCallback()` and `attributeChangedCallback()` both call `this.render()` with 0 arguments. This means `datalist` variable is ALWAYS UNDEFINED. So `render()` exists before doing anything...
+
+A way to RECTIFY THIS is to have `this.getAttrubte('grid-content-items')` directly inside a `render()` like I did with `grid-title` in the `render(datalist)`.
+
+2. Shadow DOM vs Light DOM mismatch
+
+Here the problem is that the Shadow DOM (that's supposed to help with markup and style encapsulation) was initialized inside the constructor with `this.attachShadow({mode: 'open'})` but inside `render()` this gets set to `this.innerHTML`. This is where the screwup happens. `this.innerHTML` writes to the LightDOM. When a web component has an open Shadow Root without a `<slot>`, browser renders Shadow DOM instead rendering Light DOM invisible. So there's a discrepency here.
+
+How to RECTIFY THIS is to change `this.innerHTML` to `this.shadowRoot.innerHTML` so the Light DOM isn't made invisible.
+
+3. Shadow DOM style isolation
+   The issue here is that the styles are defined in an external style sheet (especially for grid-content). The external stylesheet cannot penetrate the Shadow DOM
+
+How to RECTIFY THIS is to put the styling for the custom components into a `<style>` block directly inside `this.shadowROot.innerHTML` to make the component (custom one) more self contained.
+
+## Web components
+
+These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.
+
+Looks like the easiest way to approach that is through attributes.
+
+The goal is to turn the two divs inside this big project grid div into a template i can insert custom info into:
+
+```
+<div class="portfolio-grid">
+            <div class="grid-title">
+              <h2>Portfolios</h2>
+            </div>
+            <div class="grid-content">
+              <button href="#">Visual Development and Illustration</button>
+              <button href="#">Software Development</button>
+              <button href="#">UX Research</button>
+            </div>
+          </div>
+          <div class="misc-grid">
+            <div class="grid-title">
+              <h2>Miscellaneous</h2>
+            </div>
+            <div class="grid-content">
+              <button href="#">Writing</button>
+              <button href="#">Traditional Art</button>
+              <button href="#">Sticker Designs</button>
+              <button href="#">Zines</button>
+              <button href="#">Sculptures</button>
+              <button href="#">Fibre Arts</button>
+            </div>
+          </div>
+```
