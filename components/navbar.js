@@ -24,12 +24,13 @@ class Navbar extends HTMLElement{
                 <div class="dropdown">
                 <a class="dropbtn" href="#">Misc. &#8964;</a>
                 <div class="dropdown-content">
-                    <a href="#">Writing</a>
+                    <a href="/pages/misc/writing.html">Writing</a>
                     <a href="#">traditional art</a>
                     <a href="#">sticker designs</a>
                     <a href="#">zines</a>
                     <a href="#">sculptures</a>
                     <a href="#">fibre arts</a>
+                    <a href="#">Bookbinding</a>
                 </div>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="responsiveNavFunc()">
