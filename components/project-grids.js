@@ -97,8 +97,8 @@ class ProjectGrid extends HTMLElement{
                 }
                 .grid-content a:hover{
                     transform:scale(1.02);
-                    filter:brightness(1.11);
-                    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                    filter:brightness(0.8);
+                    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
                 }
 
                 @media screen and (max-width: 600px){
