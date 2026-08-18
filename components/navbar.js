@@ -2,7 +2,7 @@ class Navbar extends HTMLElement{
     connectedCallback(){
         this.innerHTML = `
             <nav class="main-nav" id="mainNav">
-                <a href="#">About</a>
+                <a href="/pages/about.html">About</a>
                 <div class="dropdown">
                 <a class="dropbtn" href="/pages/portfolios/visdev_illustration.html">Vis Dev & Illustration &#8964;</a>
                 <div class="dropdown-content">
