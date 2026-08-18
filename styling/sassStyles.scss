@@ -193,6 +193,18 @@ footer {
     align-content: center;
     width: 100%;
 }
+.projectType div{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.projectType div img{
+    width: 80%;
+    height: inherit;
+}
 
 //---MEDIA QUERIES FOR RESPONSIVENESS ---
 /*

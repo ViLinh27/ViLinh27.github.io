@@ -180,6 +180,20 @@ footer {
   width: 100%;
 }
 
+.projectType div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.projectType div img {
+  width: 80%;
+  height: inherit;
+}
+
 /*
 when screen is <600px wide, hide all links
 except for first HOME
