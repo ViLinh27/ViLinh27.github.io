@@ -874,7 +874,477 @@ class ProjectGrid extends HTMLElement{
 customElements.define('project-grid-list',ProjectGrid)
 ```
 
-## Web components
+### Slide show component
+
+#### what i had
+
+```
+class MySlideShow extends HTMLElement{
+    constructor(){
+        super();
+        this.attachShadow({mode: 'open'});
+    }
+    static get observedAttributes(){
+        return[
+            'slideshow-title',
+            'slideshow-imgs',
+            'slideshow-captions'
+        ]
+    }
+    connectedCallback(){
+        this.render();
+    }
+    attributeChangedCallback(oldVal,newVal){
+        if (oldVal!==newVal){
+            this.render();
+        }
+    }
+    render(){
+        const slideshowTitlesRaw = this.getAttribute('slideshow-title') || '';
+        const slideshowImgsRaw=this.getAttribute('slideshow-imgs') || '';
+        const slideshowCaptionsRaw = this.getAttribute('slideshow-captions') || '';
+
+        let slideshowTitlesList=[];
+        let slideshowImgsList=[];
+        let slideshowCaptionsList=[];
+
+        try{
+            slideshowTitlesList = slideshowTitlesRaw ? JSON.parse(slideshowTitlesRaw): [];
+        }catch(error){
+            console.error("Failed to parse titles list in JSON",error);
+        }
+        try{
+            slideshowImgsList = slideshowImgsRaw ? JSON.parse(slideshowImgsRaw) : [];
+        }catch(error){
+            console.error("Failed to parse image list",error);
+        }
+        try{
+            slideshowCaptionsList = slideshowCaptionsRaw ? JSON.parse(slideshowCaptionsRaw) : [];
+        }catch(error){
+            console.error("Failed to parse captions list",error);
+        }
+
+        let howManySlides = slideshowTitlesList.length;
+        const slideShowItems = slideshowTitlesList.map((item,index)=>{
+            const imgSrc = slideshowImgsList[index];
+            const captionSrc = slideshowCaptionsList[index];
+
+            return `
+                <div class="mySlides fade">
+                    <div class="numbertext">${index}/${howManySlides}</div>
+                    <img src=${imgSrc} style="width:100%">
+                    <div class="captionText">${captionSrc}</div>
+                </div>
+            `
+        }).join('');
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n){
+            showSlides(slideIndex+=n);
+        }
+
+        function currentSlide(n){
+            showSlides(slideIndex=n);
+        }
+
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        this.shadowRoot.innerHTML=`
+            <style>
+                .slideshow-container{
+                    max-width: 1000px;
+                    position: relative;
+                    margin: auto;
+                }
+                .mySlides {
+                    display: none;
+                }
+                .prev, .next {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    width: auto;
+                    margin-top: -22px;
+                    padding: 16px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+                    user-select: none;
+                }
+                .next {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+                .prev:hover, .next:hover {
+                    background-color: rgba(0,0,0,0.8);
+                }
+                .captionText {
+                    color: #f2f2f2;
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                }
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+                .dot {
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 2px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+                }
+                .active, .dot:hover {
+                    background-color: #717171;
+                }
+                .fade {
+                    animation-name: fade;
+                    animation-duration: 1.5s;
+                }
+
+                @keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+            </style>
+            <div class="slideshow-container">
+                ${slideShowItems}
+                <!--next prev buttons-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- dots-->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        `
+    }
+}
+
+customElements.define('slideshow-component',MySlideShow);
+
+```
+
+##### Problems
+
+1. Attribute parsing
+
+i'm passing in raw HTML, but component wants JSON strings. the HTML has unquoted arrays with spaces, which JSOn doesn't like. I forgot the '' around the [] of the JSON arrays basically.
+
+2. Event handlers in Shadow DOM
+
+The plusSlides() and currentSlide() functions are inside render() which aren't accesisible outside it in teh global scale.
+
+3. DOM element selction
+
+`document.getElementByClassName()` searches main document but not the shadow DOM where slides are (line 72).
+
+4. Dots are hardcoded so doesn't match the number of dots any slideshow could have
+
+Because the dots are hardcoded, the dots will always be 3 and not be customizable to the slideshows
+
+5. no state management
+
+The slide index resets every time render() is called
+
+#### How to fix
+
+First remove listeners by cloning and replacing the hardcoded buttons into new consts to make the slideshow more custommizable
+
+```
+const prevBtn = shadow.querySelector('.prev');
+        const nextBtn = shadow.querySelector('.next');
+        const dots = shadow.querySelectorAll('.dot');
+```
+
+Show initial slide inside the class constructor like so:
+
+```
+ this.showSlides(this.slideIndex);
+```
+
+Move the slide functions outside the class constructor for global scope:
+
+```
+plusSlides(n) {
+        this.showSlides(this.slideIndex += n);
+    }
+
+    currentSlide(n) {
+        this.showSlides(this.slideIndex = n);
+    }
+
+    showSlides(n) {
+        const shadow = this.shadowRoot;
+        let slides = shadow.querySelectorAll(".mySlides");
+        let dots = shadow.querySelectorAll(".dot");
+
+        if (slides.length === 0) return;
+
+        if (n > slides.length) { this.slideIndex = 1; }
+        if (n < 1) { this.slideIndex = slides.length; }
+
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = "none";
+        });
+
+        // Remove active class from all dots
+        dots.forEach(dot => {
+            dot.className = dot.className.replace(" active", "");
+        });
+
+        // Show current slide and activate corresponding dot
+        slides[this.slideIndex - 1].style.display = "block";
+        if (dots[this.slideIndex - 1]) {
+            dots[this.slideIndex - 1].className += " active";
+        }
+    }
+```
+
+Inside the showSlides() function, hide all slides first by default. Then remove active class from all dots, then show current slide and activate corresponding dot.
+
+Inside render() parse attributes that should be json strings like so:
+
+```
+ const slideshowTitlesRaw = this.getAttribute('slideshow-title') || '[]';
+        const slideshowImgsRaw = this.getAttribute('slideshow-imgs') || '[]';
+        const slideshowCaptionsRaw = this.getAttribute('slideshow-captions') || '[]';
+
+        let slideshowTitlesList = [];
+        let slideshowImgsList = [];
+        let slideshowCaptionsList = [];
+
+        try {
+            slideshowTitlesList = JSON.parse(slideshowTitlesRaw);
+        } catch (error) {
+            console.error("Failed to parse titles list in JSON", error);
+            // Try parsing as array literal if JSON fails
+            try {
+                slideshowTitlesList = eval(slideshowTitlesRaw);
+            } catch (e) {
+                console.error("Failed to parse titles as array literal", e);
+            }
+        }
+
+        try {
+            slideshowImgsList = JSON.parse(slideshowImgsRaw);
+        } catch (error) {
+            console.error("Failed to parse image list", error);
+            try {
+                slideshowImgsList = eval(slideshowImgsRaw);
+            } catch (e) {
+                console.error("Failed to parse images as array literal", e);
+            }
+        }
+
+        try {
+            slideshowCaptionsList = JSON.parse(slideshowCaptionsRaw);
+        } catch (error) {
+            console.error("Failed to parse captions list", error);
+            try {
+                slideshowCaptionsList = eval(slideshowCaptionsRaw);
+            } catch (e) {
+                console.error("Failed to parse captions as array literal", e);
+            }
+        }
+```
+
+Make sure all the arrays for the slideshows have the same length so every slideshow item alligns peroperly:
+
+```
+ const howManySlides = Math.min(
+            slideshowTitlesList.length,
+            slideshowImgsList.length,
+            slideshowCaptionsList.length
+        );
+```
+
+Make sure to generate slideds through slicing the titles list and mapping from that :
+
+```
+const slideShowItems = slideshowTitlesList.slice(0, howManySlides).map((item, index) => {
+            const imgSrc = slideshowImgsList[index] || '';
+            const captionSrc = slideshowCaptionsList[index] || '';
+            const title = item || `Slide ${index + 1}`;
+
+            return `
+                <div class="mySlides fade">
+                    <div class="numbertext">${index + 1} / ${howManySlides}</div>
+                    <img src="${imgSrc}" style="width:100%" alt="${title}">
+                    <div class="captionText">${captionSrc || title}</div>
+                </div>
+            `;
+        }).join('');
+```
+
+Generate dots dynamically so the dots match the number of slides and are not hard coded:
+
+```
+const dotsHtml = Array.from({ length: howManySlides }, (_, i) => {
+            const activeClass = i === 0 ? ' active' : '';
+            return `<span class="dot${activeClass}"></span>`;
+        }).join('');
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                .slideshow-container {
+                    max-width: 1000px;
+                    position: relative;
+                    margin: auto;
+                }
+                .mySlides {
+                    display: none;
+                }
+                .prev, .next {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    width: auto;
+                    margin-top: -22px;
+                    padding: 16px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                    transition: 0.6s ease;
+                    border-radius: 0 3px 3px 0;
+                    user-select: none;
+                    background-color: rgba(0,0,0,0.3);
+                    text-decoration: none;
+                }
+                .next {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+                .prev:hover, .next:hover {
+                    background-color: rgba(0,0,0,0.8);
+                }
+                .captionText {
+                    color: #f2f2f2;
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                    background: rgba(0,0,0,0.5);
+                }
+                .numbertext {
+                    color: #f2f2f2;
+                    font-size: 12px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    top: 0;
+                }
+                .dot {
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 2px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: background-color 0.6s ease;
+                }
+                .active, .dot:hover {
+                    background-color: #717171;
+                }
+                .fade {
+                    animation-name: fade;
+                    animation-duration: 1.5s;
+                }
+                @keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+                .slide-container {
+                    position: relative;
+                }
+            </style>
+            <div class="slideshow-container">
+                <div class="slide-container">
+                    ${slideShowItems}
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
+                <div style="text-align:center">
+                    ${dotsHtml}
+                </div>
+            </div>
+        `;
+```
+
+Reset the slide index at the end of render()
+
+```
+this.slideIndex = 1;
+```
+
+Fix the formatting of the json strings:
+
+```
+<slideshow-component
+    slideshow-title='["Main", "Sketch1", "Sketch2"]'
+    slideshow-imgs='[
+        "https://images.pexels.com/photos/37345053/pexels-photo-37345053.jpeg",
+        "https://images.pexels.com/photos/11326583/pexels-photo-11326583.jpeg",
+        "https://images.pexels.com/photos/29590815/pexels-photo-29590815.jpeg"
+    ]'
+    slideshow-captions='["caption1", "caption2", "caption3"]'
+></slideshow-component>
+```
+
+In summary:
+Key Changes Made:
+
+1. JSON parsing: Properly parses JSON strings with double quotes
+2. Event listeners: Uses addEventListener instead of inline onclick
+3. Shadow DOM queries: Uses shadowRoot.querySelectorAll() instead of document.getElementsByClassName()
+4. Dynamic dots: Generates dots based on the number of slides
+5. State management: Maintains slideIndex as a class property
+6. Error handling: Falls back to eval() if JSON parsing fails (for your current HTML format)
+7. Event listener cleanup: Clones nodes to remove old listeners when re-renderin
+
+#### Fixed code
+
+```
+
+```
+
+## Notes
+
+Some reference and things I've learned from them
+
+### Web components
 
 These have been useful in learning so i don't need to repeat html blocks (like for headers and footers) over and over again in different pages. I wanted to also see if I can make web components with custom info so I don't need to repeat code for the project grids.
 
@@ -907,3 +1377,7 @@ The goal is to turn the two divs inside this big project grid div into a templat
             </div>
           </div>
 ```
+
+### querySelector/\*/All vs getElementByTag/ClassName/ID
+
+What is the diffference? Some return different things, some depend on DOM size. IT's listed here: https://stackoverflow.com/questions/14377590/queryselector-and-queryselectorall-vs-getelementsbyclassname-and-getelementbyid
