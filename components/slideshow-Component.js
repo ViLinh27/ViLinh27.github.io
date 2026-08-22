@@ -204,15 +204,21 @@ class MySlideShow extends HTMLElement{
                     border-radius: 0 3px 3px 0;
                     user-select: none;
                 }
+                .prev{
+                    left:0;
+                    background-color:rgba(0,0,0,0,0.3);
+                }
                 .next {
                     right: 0;
                     border-radius: 3px 0 0 3px;
+                    background-color:rgba(0,0,0,0,0.3);
                 }
                 .prev:hover, .next:hover {
                     background-color: rgba(0,0,0,0.8);
                 }
                 .captionText {
-                    color: #f2f2f2;
+                    color:#ebebfb;
+                    background-color: rgba(0,0,0,0.4);
                     font-size: 15px;
                     padding: 8px 12px;
                     position: absolute;
