@@ -86,9 +86,10 @@ a:hover{
 }
 //FOOTER
 footer {
+    //background-color: red;
     background-color: $accentbgcolour;
     color: $fontcolour;
-    padding: 1rem;
+    padding: 0;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -97,6 +98,9 @@ footer {
     align-items: center;
     align-content: center;
     width: 100%;
+}
+footer div{
+    margin: 30px;
 }
 //NAVBAR
 .main-nav{
@@ -261,6 +265,14 @@ show link that contains should open and close navbar icon
     .about-text{
         width:80%;
     }
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        footer div {
+            margin: 10px;
+        }
 }   
 
 /*
