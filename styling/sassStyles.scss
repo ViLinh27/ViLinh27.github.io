@@ -209,7 +209,21 @@ footer {
     width: 80%;
     height: inherit;
 }
-
+.about-content{
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+.about-pic{
+    width:40%;
+}
+.about-text{
+    width:40%;
+}
 //---MEDIA QUERIES FOR RESPONSIVENESS ---
 /*
 when screen is <600px wide, hide all links
@@ -235,6 +249,17 @@ show link that contains should open and close navbar icon
         justify-content: center;
         align-items: center;
         align-content: center;
+    }
+    .about-content{
+        display:flex;
+        flex-direction: column;
+        width:95%;
+    }
+    .about-pic{
+        width:80%;
+    }
+    .about-text{
+        width:80%;
     }
 }   
 
