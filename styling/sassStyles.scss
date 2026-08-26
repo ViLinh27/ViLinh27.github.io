@@ -1,5 +1,6 @@
 
 /*--- UNIVERSAL ---*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 // $white: #f8f7fc;
 $lilac: #ebebfb;
 $buttoncolour: #a492d4;
@@ -20,6 +21,16 @@ body {
     overflow-X: hidden;
     background-color: $lilac;
     color: $fontcolour;
+    font-family: "Roboto",
+        sans-serif;
+}
+.roboto-dummyfont {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 //---DARK MODE---
 .dark-mode{
