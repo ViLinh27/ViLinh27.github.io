@@ -69,6 +69,13 @@ a:hover{
     text-decoration: underline;
     background-color: $accentbgcolour;
 }
+
+table,th,td{
+    background-color: $accentbgcolour;
+    border-color: $darkmodebgcolour;
+    border-style: solid;
+    border-width: 2px;
+}
 /*--- SITE COMPONENTS ---*/
 //HEADER
 //toggle buttons
